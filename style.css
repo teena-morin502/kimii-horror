@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding:0px;
+    background-color: rgba(0, 0, 0, 0.943);
+}
+header{
+    background: url();
+   background-repeat: no-repeat;
+    z-index: auto;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+.header{
+    display:flex;
+    align-items: center;
+    gap: 30px;
+}
+.nav{
+  text-decoration: none;
+  /* padding-left: 30px; */
+  color: azure;
+ font-size: 20px;
+}
+.span{
+    color: rgb(225, 42, 42);
+    text-decoration: none;
+} 
+
+.see-password{
+    position: relative;
+    width: 100%;
+  }
+    #show-password-toggle{
+      position: absolute;
+      margin-top: 20px;
+      right: 25px;
+      cursor: pointer;
+      color: red;
+    }
+    a{
+      text-decoration: none;
+    }

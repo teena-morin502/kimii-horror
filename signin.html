@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    background: url(https://img.freepik.com/free-photo/dark-fantasy-scene_23-2151136092.jpg?ga=GA1.1.1801975709.1723731682&semt=ais_hybrid);
+    background-size: cover;
+    background-position: center;
+    height:500px;
+}
+        .login{
+    font-family: "esteban";
+    border:1px solid black;
+    width:400px;
+    height:650px;
+    background: url(https://img.freepik.com/free-photo/dark-fantasy-scene_23-2151136092.jpg?ga=GA1.1.1801975709.1723731682&semt=ais_hybrid);
+    color:white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.75);
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+   position: absolute;
+   left: 35%;
+   top:15% ;
+}
+form{
+    display: block;
+    box-sizing: border-box;
+    padding:40px;
+    width:100%;
+    height:100%;
+    backdrop-filter: brightness(60%);
+    flex-direction: column;
+    display: flex;
+    gap:5px;
+    border-radius: 25px;
+   
+}
+h1{
+    font-weight:normal ;
+    font-size:40px;
+    text-shadow:2px rgba(0,0,0,0.5) ;
+    margin-bottom: 20px;
+    text-align: center;
+}
+h4{
+    text-align: center;
+}
+label{
+    color:rgba(255,255,255,0.8);
+    text-transform:uppercase;
+    font-size:10px;
+    letter-spacing:2px;
+    padding-left: 10px;
+
+}
+input{
+    background: rgba(255,255,255,0.3);
+    height:40px;
+    line-height: 40px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    border: none;
+    margin-bottom: 20px;
+    color:white;
+}
+.homePage{
+    background:rgb(224, 41, 41);
+    height: 40px;
+    line-height: 40px;
+    border-radius: 40px;
+    border:none;
+    box-shadow: 0px 0px 5px rgba(255,255,255,0.3);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+
+}
+.span{
+    color: rgb(224, 41, 41); 
+    text-decoration: none;   
+}
+    </style>
+</head>
+<body>
+    <section class="login" >
+        <form id="Sign-up" novalidate>
+            <h1>CREATE AN ACCOUNT</h1>
+            <label >username</label>
+            <input type="text" id="name" required>
+            <span id="nameError"></span>
+            <label >email</label>
+            <input type="email" id="email" required>
+            <span id="emailError"></span>
+            <label>password</label>
+            <div class="see-password">
+                <span id="show-password-toggle">Show</span>
+             </div>
+            <input type="password" id="password" required>
+            <span id="passwordError"></span>
+            <label> confirm password</label>
+            <div class="see-password">
+                <span id="show-password-toggle">Show</span>
+             </div>
+            <input type="password" id="confirmPassword" required>
+            <span id="confirmPasswordError"></span>
+            <button class="homePage" type="submit" target="_blank">submit</button>
+            <h4>if you have an account ? <a href="login.html" class="span" target="_blank">click here</a></h4>
+        </form>
+    </section>
+    <script src="signin.js"></script>
+</body>
+</html>
