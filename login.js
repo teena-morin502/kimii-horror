@@ -58,7 +58,7 @@ form.addEventListener("submit", (event) => {
 
 // Email input validation with real-time feedback
 email.addEventListener("input", function() {
-  emailError.textContent = "index.-home.html";
+  emailError.textContent = "index-home.html";
   emailError.style.display = "none";
   const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
   if (!gmailRegex.test(email.value)) {
