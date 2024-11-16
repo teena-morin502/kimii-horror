@@ -1,135 +1,168 @@
-// // Import the functions you need from the SDKs
-// import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
 
-// // Firebase configuration
-// const firebaseConfig = {
-//   apiKey: "AIzaSyAaJ8_qJrVVJnYlSdLQ1D5vaVRpS79GZ1E",
-//   authDomain: "kimii-horror.firebaseapp.com",
-//   projectId: "kimii-horror",
-//   storageBucket: "kimii-horror.appspot.com",
-//   messagingSenderId: "425936807279",
-//   appId: "1:425936807279:web:35d001bc3eb90dd49ff49a",
-//   measurementId: "G-7KM8QRZTCR",
-// };
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAaJ8_qJrVVJnYlSdLQ1D5vaVRpS79GZ1E",
+  authDomain: "kimii-horror.firebaseapp.com",
+  projectId: "kimii-horror",
+  storageBucket: "kimii-horror.firebasestorage.app",
+  messagingSenderId: "425936807279",
+  appId: "1:425936807279:web:35d001bc3eb90dd49ff49a",
+  measurementId: "G-7KM8QRZTCR"
+};
 
-// Select form elements
-// Get references to DOM elements
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 const form = document.getElementById("Sign-up");
-const username = document.getElementById("name");
-const usernameError = document.getElementById("nameError");
+const name = document.getElementById("name");
 const email = document.getElementById("email");
-const emailError = document.getElementById("emailError");
 const password = document.getElementById("password");
+const conformPassword = document.getElementById("conformPassword");
+const nameError = document.getElementById("nameError");
+const emailError = document.getElementById("emailError");
 const passwordError = document.getElementById("passwordError");
-const confirmPassword = document.getElementById("confirmPassword");
-const confirmPasswordError = document.getElementById("confirmPasswordError");
-
-// Password visibility toggle
-document.querySelectorAll(".see-password").forEach((toggleWrapper, index) => {
-  const toggleButton = toggleWrapper.querySelector("#show-password-toggle");
-  const targetPassword = index === 0 ? password : confirmPassword;
-
-  toggleButton.addEventListener("click", () => {
-    const isPasswordVisible = targetPassword.getAttribute("type") === "password";
-    targetPassword.setAttribute("type", isPasswordVisible ? "text" : "password");
-    toggleButton.textContent = isPasswordVisible ? "Hide" : "Show";
-  });
+const conformPasswordError = document.getElementById("conformPasswordError");
+const btn = document.querySelector("button[type='submit']");
+const showPasswordToggle = document.getElementById("show-password-toggle");
+const passwordField = document.getElementById("password");
+showPasswordToggle.addEventListener("click", () => {
+  // Toggle the password visibility
+  const isPasswordVisible = passwordField.getAttribute("type") === "password";
+  passwordField.setAttribute("type", isPasswordVisible ? "text" : "password");
+  // Update the toggle text
+  showPasswordToggle.textContent = isPasswordVisible ? "Hide" : "Show";
 });
-
-// Form submission event listener
-form.addEventListener("submit", (event) => {
-  event.preventDefault(); // Prevent default form submission
-
+const showConformPasswordToggle = document.getElementById("show-conformPassword-toggle");
+const conformPasswordField = document.getElementById("conformPassword");
+showConformPasswordToggle.addEventListener("click", () => {
+  // Toggle the password visibility
+  const isConformPasswordVisible = conformPasswordField.getAttribute("type") === "password";
+  conformPasswordField.setAttribute("type", isConformPasswordVisible ? "text" : "password");
+  // Update the toggle text
+  showConformPasswordToggle.textContent = isConformPasswordVisible ? "Hide" : "Show";
+});
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
   // Clear previous error messages
-  usernameError.textContent = "";
+  nameError.textContent = "";
   emailError.textContent = "";
   passwordError.textContent = "";
-  confirmPasswordError.textContent = "";
-
-  let isValid = true; // A flag to check form validity
-
-  // Validate username
-  if (!username.value) {
-    usernameError.textContent = "Username is required!";
-    usernameError.style.color = "red";
-    isValid = false;
-  } else if (username.value.length < 4) {
-    usernameError.textContent = "Username must be at least 4 characters long!";
-    usernameError.style.color = "red";
+  conformPasswordError.textContent = "";
+  let isValid = true;
+  // Name validation
+  if (!name.checkValidity()) {
+    if (name.validity.valueMissing) {
+      nameError.textContent = "Name is required!";
+    } else if (name.value.length < 4) {
+      nameError.textContent = "Name must be at least 4 characters long!";
+    }
     isValid = false;
   }
-
-  // Validate email
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  if (!email.value) {
-    emailError.textContent = "Email is required!";
-    emailError.style.color = "red";
-    isValid = false;
-  } else if (!emailRegex.test(email.value)) {
-    emailError.textContent = "Please enter a valid email address!";
-    emailError.style.color = "red";
+  // Basic validation for email format and password length
+  if (!email.value.endsWith("@gmail.com")) {
+    emailError.textContent = "Only @gmail.com email addresses are allowed!";
     isValid = false;
   }
-
-  // Validate password
-  if (!password.value) {
-    passwordError.textContent = "Password is required!";
-    passwordError.style.color = "red";
-    isValid = false;
-  } else if (password.value.length < 7 || password.value.length > 15) {
-    passwordError.textContent = "Password must be 7-15 characters long!";
-    passwordError.style.color = "red";
+  // Email validation
+  if (!email.checkValidity()) {
+    if (email.validity.valueMissing) {
+      emailError.textContent = "Email is required!";
+    } else if (email.validity.typeMismatch) {
+      emailError.textContent = "Please enter a valid email address!";
+    }
     isValid = false;
   }
-
-  // Validate confirm password
-  if (!confirmPassword.value) {
-    confirmPasswordError.textContent = "Confirm Password is required!";
-    confirmPasswordError.style.color = "red";
-    isValid = false;
-  } else if (confirmPassword.value !== password.value) {
-    confirmPasswordError.textContent = "Passwords do not match!";
-    confirmPasswordError.style.color = "red";
+  // Password validation
+  if (!password.checkValidity()) {
+    if (password.validity.valueMissing) {
+      passwordError.textContent = "Password is required!";
+    } else if (password.value.length < 7 || password.value.length > 15) {
+      passwordError.textContent = "Password must be 7-15 characters long!";
+    }
     isValid = false;
   }
-
-  // If the form is valid, simulate successful account creation
+  // Confirm password validation
+  if (password.value !== conformPassword.value) {
+    conformPasswordError.textContent = "Passwords do not match!";
+    isValid = false;
+  }
+  // Proceed with signup if the form is valid
   if (isValid) {
-    alert("Account created successfully!");
-    form.reset(); // Reset the form
+    const emailValue = email.value;
+    const passwordValue = password.value;
+    // Disable button to prevent multiple submissions
+    btn.disabled = true;
+    btn.innerText = 'Creating account...';
+    // Firebase Authentication sign-up
+    createUserWithEmailAndPassword(auth, emailValue, passwordValue)
+      .then((userCredential) => {
+        // Successfully signed up
+        const user = userCredential.user;
+        console.log('Sign Up successful:', user);
+        // Reset form and button state
+        form.reset();
+        btn.disabled = false;
+        btn.innerText = 'Create an account';
+        // Set sign-up completion flag and redirect
+        localStorage.setItem("isSignedUp", "true");
+        window.location.href = "index-home.html"; // Redirect after successful sign-up
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        if (error.code === 'auth/email-already-in-use') {
+          emailError.textContent = "The email is already in use. Please try another email or log in.";
+        } else {
+          emailError.textContent = "An error occurred during sign-up. Please try again.";
+        }
+        console.error('Error during sign up:', errorMessage);
+        // Reset button state
+        btn.disabled = false;
+        btn.innerText = 'Create an account';
+      });
   }
 });
-
-// Real-time username validation
-username.addEventListener("input", () => {
-  if (username.value.length >= 4) {
-    usernameError.textContent = "";
+name.addEventListener("input", function() {
+   nameError.textContent="";
+   if(name.value.length<4){
+    nameError.textContent = "Name must be at least 4 characters long!";
+   }
+   else{
+    nameError.textContent="";
+   }
+});
+email.addEventListener("input", function() {
+  emailError.textContent = "";
+  // Regular expression for a valid Gmail address
+  const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+  // Check if the email matches the regex pattern
+  if (!gmailRegex.test(email.value)) {
+    emailError.textContent = "Please enter a valid @gmail.com email address!";
+  } else {
+    emailError.textContent = ""; // Clear the error if the email is valid
   }
 });
-
-// Real-time email validation
-email.addEventListener("input", () => {
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  if (emailRegex.test(email.value)) {
-    emailError.textContent = "";
+password.addEventListener("input", function() {
+  passwordError.textContent = "";
+  // Check if the passwords match
+  if (password.value.length < 7 || password.value.length > 15 ) {
+    passwordError.textContent = `Password must be at least ${password.minLength} characters`;
+  } else {
+    passwordError.textContent = ""; // Clear the error if passwords match
   }
 });
-
-// Real-time password validation
-password.addEventListener("input", () => {
-  if (password.value.length >= 7 && password.value.length <= 15) {
-    passwordError.textContent = "";
-  }
-});
-
-// Real-time confirm password validation
-confirmPassword.addEventListener("input", () => {
-  if (confirmPassword.value === password.value) {
-    confirmPasswordError.textContent = "";
+conformPassword.addEventListener("input", function() {
+  conformPasswordError.textContent = "";
+  // Check if the passwords match
+  if (conformPassword.value !== password.value) {
+    conformPasswordError.textContent = "Passwords do not match!";
+  } else {
+    conformPasswordError.textContent = ""; // Clear the error if passwords match
   }
 });
