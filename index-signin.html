@@ -15,7 +15,7 @@
     font-family: "esteban";
     border:1px solid black;
     width:400px;
-    height:650px;
+    /* height:650px; */
     background: url(https://img.freepik.com/free-photo/dark-fantasy-scene_23-2151136092.jpg?ga=GA1.1.1801975709.1723731682&semt=ais_hybrid);
     color:white;
     border-radius: 20px;
@@ -25,7 +25,7 @@
     margin: 0 auto;
    position: absolute;
    left: 35%;
-   top:15% ;
+   top: 5% ;
 }
 form{
     display: block;
@@ -84,6 +84,21 @@ input{
     color: rgb(224, 41, 41); 
     text-decoration: none;   
 }
+
+.see-password{
+    position: relative;
+    width: 100%;
+  }
+    #show-password-toggle{
+      position: absolute;
+      margin-top: 20px;
+      right: 25px;
+      cursor: pointer;
+      color: red;
+    }
+    a{
+      text-decoration: none;
+    }
     </style>
 </head>
 <body>
@@ -112,6 +127,6 @@ input{
             <h4>if you have an account ? <a href="index.html" class="span" target="_blank">click here</a></h4>
         </form>
     </section>
-    <script src="signin.js"></script>
+    <script src="signin.js" type="module"></script>
 </body>
 </html>

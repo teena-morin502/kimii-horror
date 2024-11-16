@@ -1,3 +1,24 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAaJ8_qJrVVJnYlSdLQ1D5vaVRpS79GZ1E",
+    authDomain: "kimii-horror.firebaseapp.com",
+    projectId: "kimii-horror",
+    storageBucket: "kimii-horror.firebasestorage.app",
+    messagingSenderId: "425936807279",
+    appId: "1:425936807279:web:35d001bc3eb90dd49ff49a",
+    measurementId: "G-7KM8QRZTCR"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
 // Get references to DOM elements
 const form = document.getElementById("loginPage");
 const email = document.getElementById("email");
