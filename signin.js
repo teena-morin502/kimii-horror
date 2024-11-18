@@ -107,8 +107,15 @@ form.addEventListener("submit", (event) => {
 
   // If the form is valid, simulate successful account creation
   if (isValid) {
+    try{
     alert("Account created successfully!");
+    window.location.href = "index-home.html";
     }
+    catch(error){
+      console.error(error)
+    }
+  }
+  
 });
 
 // Real-time username validation
