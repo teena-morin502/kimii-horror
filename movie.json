@@ -1,0 +1,88 @@
+{
+    "category": {
+        "top-10":[
+    {
+      "movie_name": "The Exorcist (1973)",
+      "image_url": "https://i.ebayimg.com/images/g/73cAAOSwGyxkuaw~/s-l400.jpg"
+    },
+    {
+      "movie_name": "Hereditary (2018)",
+      "image_url": "https://m.media-amazon.com/images/M/MV5BNTEyZGQwODctYWJjZi00NjFmLTg3YmEtMzlhNjljOGZhMWMyXkEyXkFqcGc@._V1_.jpg"
+    },
+    {
+      "movie_name": "The Conjuring (2013)",
+      "image_url": "https://m.media-amazon.com/images/I/5147F62RsML._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "movie_name": "The Shining (1980)",
+      "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxaD7Q3rBuroKh019YNJc1zGkOlhAoWZopxRLABFJE4j8sZ0sGKCU14XJK9kLTcMGMfEWsnwnGaAo_sosvaXHjEq21SQEDFBIJXxrhU10wVPFbTjazYQWjRr6ak8_33fxRlkG2NW486uU/s1600/The+Shining+2.png"
+    },
+    {
+      "movie_name": "The Texas Chainsaw Massacre (1974)",
+      "image_url": "https://posterspy.com/wp-content/uploads/2024/01/The-Texas-Chainsaw-Massacre.png"
+    },
+    {
+      "movie_name": "The Ring (2002)",
+      "image_url": "https://m.media-amazon.com/images/M/MV5BNDA2NTg2NjE4Ml5BMl5BanBnXkFtZTYwMjYxMDg5._V1_FMjpg_UX1000_.jpg"
+    },
+    {
+      "movie_name": "Halloween (1978)",
+      "image_url": "https://i.ebayimg.com/00/s/MTQxNFgxMDAw/z/L7cAAOSwhWZgU7Z8/$_57.JPG?set_id=8800005007"
+    },
+    {
+      "movie_name": "Sinister (2012)",
+      "image_url": "https://m.media-amazon.com/images/M/MV5BMjI5MTg1Njg0Ml5BMl5BanBnXkFtZTcwNzg2Mjc4Nw@@._V1_FMjpg_UX1000_.jpg"
+    },
+    {
+      "movie_name": "Insidious (2010)",
+      "image_url": "https://image.tmdb.org/t/p/original/tmlDFIUpGRKiuWm9Ixc6CYDk4y0.jpg"
+    },
+    {
+      "movie_name": " IT (2017)",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/5/5a/It_%282017%29_poster.jpg"
+    }
+  ],
+  "Thriller":[
+    {
+        "movie_name": "When evil lurks (2023)",
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEWT9kP4iCfZQ2PVmls2PWQiYxFdH3C6STXg&s"
+      },
+      {
+        "movie_name": "Hereditary (2018)",
+        "image_url": "https://m.media-amazon.com/images/M/MV5BNTEyZGQwODctYWJjZi00NjFmLTg3YmEtMzlhNjljOGZhMWMyXkEyXkFqcGc@._V1_.jpg"
+      },
+      {
+        "movie_name": "The Conjuring (2013)",
+        "image_url": "https://m.media-amazon.com/images/I/5147F62RsML._AC_UF1000,1000_QL80_.jpg"
+      },
+      {
+        "movie_name": "The Shining (1980)",
+        "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxaD7Q3rBuroKh019YNJc1zGkOlhAoWZopxRLABFJE4j8sZ0sGKCU14XJK9kLTcMGMfEWsnwnGaAo_sosvaXHjEq21SQEDFBIJXxrhU10wVPFbTjazYQWjRr6ak8_33fxRlkG2NW486uU/s1600/The+Shining+2.png"
+      },
+      {
+        "movie_name": "The Texas Chainsaw Massacre (1974)",
+        "image_url": "https://posterspy.com/wp-content/uploads/2024/01/The-Texas-Chainsaw-Massacre.png"
+      },
+      {
+        "movie_name": "The Ring (2002)",
+        "image_url": "https://m.media-amazon.com/images/M/MV5BNDA2NTg2NjE4Ml5BMl5BanBnXkFtZTYwMjYxMDg5._V1_FMjpg_UX1000_.jpg"
+      },
+      {
+        "movie_name": "Halloween (1978)",
+        "image_url": "https://i.ebayimg.com/00/s/MTQxNFgxMDAw/z/L7cAAOSwhWZgU7Z8/$_57.JPG?set_id=8800005007"
+      },
+      {
+        "movie_name": "Sinister (2012)",
+        "image_url": "https://m.media-amazon.com/images/M/MV5BMjI5MTg1Njg0Ml5BMl5BanBnXkFtZTcwNzg2Mjc4Nw@@._V1_FMjpg_UX1000_.jpg"
+      },
+      {
+        "movie_name": "Insidious (2010)",
+        "image_url": "https://image.tmdb.org/t/p/original/tmlDFIUpGRKiuWm9Ixc6CYDk4y0.jpg"
+      },
+      {
+        "movie_name": " IT (2017)",
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/5/5a/It_%282017%29_poster.jpg"
+      }
+  ]
+  }
+  }

@@ -1,24 +1,23 @@
+// import { initializeApp } from "firebase/app";
+// import { getFirestore, collection, addDoc } from "firebase/firestore";
+// import { getAnalytics } from "firebase/analytics";
 
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// // Firebase configuration
+// const firebaseConfig = {
+//   apiKey: "AIzaSyAaJ8_qJrVVJnYlSdLQ1D5vaVRpS79GZ1E",
+//   authDomain: "kimii-horror.firebaseapp.com",
+//   projectId: "kimii-horror",
+//   storageBucket: "kimii-horror.appspot.com",
+//   messagingSenderId: "425936807279",
+//   appId: "1:425936807279:web:35d001bc3eb90dd49ff49a",
+//   measurementId: "G-7KM8QRZTCR",
+// };
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyAaJ8_qJrVVJnYlSdLQ1D5vaVRpS79GZ1E",
-  authDomain: "kimii-horror.firebaseapp.com",
-  projectId: "kimii-horror",
-  storageBucket: "kimii-horror.firebasestorage.app",
-  messagingSenderId: "425936807279",
-  appId: "1:425936807279:web:35d001bc3eb90dd49ff49a",
-  measurementId: "G-7KM8QRZTCR"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
+// // Initialize Firestore
+// const db = getFirestore(app);
 
 // Select form elements
 // Get references to DOM elements
@@ -26,6 +25,9 @@ const form = document.getElementById("Sign-up");
 const username = document.getElementById("name");
 const usernameError = document.getElementById("nameError");
 const email = document.getElementById("email");
+
+
+// dom elements
 const emailError = document.getElementById("emailError");
 const password = document.getElementById("password");
 const passwordError = document.getElementById("passwordError");
@@ -60,10 +62,12 @@ form.addEventListener("submit", (event) => {
   if (!username.value) {
     usernameError.textContent = "Username is required!";
     usernameError.style.color = "red";
+
     isValid = false;
   } else if (username.value.length < 4) {
     usernameError.textContent = "Username must be at least 4 characters long!";
     usernameError.style.color = "red";
+
     isValid = false;
   }
 
@@ -104,14 +108,15 @@ form.addEventListener("submit", (event) => {
   // If the form is valid, simulate successful account creation
   if (isValid) {
     alert("Account created successfully!");
-    form.reset(); // Reset the form
-  }
+    }
 });
 
 // Real-time username validation
 username.addEventListener("input", () => {
   if (username.value.length >= 4) {
     usernameError.textContent = "";
+
+
   }
 });
 
@@ -120,6 +125,7 @@ email.addEventListener("input", () => {
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   if (emailRegex.test(email.value)) {
     emailError.textContent = "";
+
   }
 });
 
