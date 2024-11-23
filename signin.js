@@ -1,23 +1,22 @@
-// import { initializeApp } from "firebase/app";
-// import { getFirestore, collection, addDoc } from "firebase/firestore";
-// import { getAnalytics } from "firebase/analytics";
+// Firebase Configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAaJ8_qJrVVJnYlSdLQ1D5vaVRpS79GZ1E",
+  authDomain: "kimii-horror.firebaseapp.com",
+  projectId: "kimii-horror",
+  storageBucket: "kimii-horror.firebasestorage.app",
+  messagingSenderId: "425936807279",
+  appId: "1:425936807279:web:35d001bc3eb90dd49ff49a",
+  measurementId: "G-7KM8QRZTCR"
+};
 
-// // Firebase configuration
-// const firebaseConfig = {
-//   apiKey: "AIzaSyAaJ8_qJrVVJnYlSdLQ1D5vaVRpS79GZ1E",
-//   authDomain: "kimii-horror.firebaseapp.com",
-//   projectId: "kimii-horror",
-//   storageBucket: "kimii-horror.appspot.com",
-//   messagingSenderId: "425936807279",
-//   appId: "1:425936807279:web:35d001bc3eb90dd49ff49a",
-//   measurementId: "G-7KM8QRZTCR",
-// };
+// Initialize Firebase
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
 
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
-// // Initialize Firestore
-// const db = getFirestore(app);
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
 
 // Select form elements
 // Get references to DOM elements
@@ -34,6 +33,7 @@ const passwordError = document.getElementById("passwordError");
 const confirmPassword = document.getElementById("confirmPassword");
 const confirmPasswordError = document.getElementById("confirmPasswordError");
 
+
 // Password visibility toggle
 document.querySelectorAll(".see-password").forEach((toggleWrapper, index) => {
   const toggleButton = toggleWrapper.querySelector("#show-password-toggle");
@@ -47,7 +47,7 @@ document.querySelectorAll(".see-password").forEach((toggleWrapper, index) => {
 });
 
 // Form submission event listener
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
   event.preventDefault(); // Prevent default form submission
 
   // Clear previous error messages
@@ -105,47 +105,33 @@ form.addEventListener("submit", (event) => {
     isValid = false;
   }
 
-  // If the form is valid, simulate successful account creation
+
   if (isValid) {
-    try{
-    alert("Account created successfully!");
-    window.location.href = "index-home.html";
+    try {
+      // Check if email is already registered
+      const userDocRef = doc(db, "users", email.value);
+      const userDoc = await getDoc(userDocRef);
+
+      if (userDoc.exists()) {
+        emailError.textContent = "Email is already in use!";
+        emailError.style.color = "red";
+        return;
+      }
+
+      // Create user in Firebase Auth
+      await createUserWithEmailAndPassword(auth, email.value, password.value);
+
+      // Save user to Firestore
+      await setDoc(userDocRef, {
+        username: username.value,
+        email: email.value,
+      });
+
+      alert("Signup successful!");
+      window.location.href = "index.html"; // Redirect to login
+    } catch (error) {
+      console.error(error);
+      alert("An error occurred. Please try again.");
     }
-    catch(error){
-      console.error(error)
-    }
-  }
-  
-});
-
-// Real-time username validation
-username.addEventListener("input", () => {
-  if (username.value.length >= 4) {
-    usernameError.textContent = "";
-
-
-  }
-});
-
-// Real-time email validation
-email.addEventListener("input", () => {
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  if (emailRegex.test(email.value)) {
-    emailError.textContent = "";
-
-  }
-});
-
-// Real-time password validation
-password.addEventListener("input", () => {
-  if (password.value.length >= 7 && password.value.length <= 15) {
-    passwordError.textContent = "";
-  }
-});
-
-// Real-time confirm password validation
-confirmPassword.addEventListener("input", () => {
-  if (confirmPassword.value === password.value) {
-    confirmPasswordError.textContent = "";
   }
 });

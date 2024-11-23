@@ -1,100 +1,103 @@
+// Firebase Configuration and Initialization
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
 
-// import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
-// // TODO: Add SDKs for Firebase products that you want to use
-// // https://firebase.google.com/docs/web/setup#available-libraries
+const firebaseConfig = {
+  apiKey: "AIzaSyAaJ8_qJrVVJnYlSdLQ1D5vaVRpS79GZ1E",
+  authDomain: "kimii-horror.firebaseapp.com",
+  projectId: "kimii-horror",
+  storageBucket: "kimii-horror.firebasestorage.app",
+  messagingSenderId: "425936807279",
+  appId: "1:425936807279:web:35d001bc3eb90dd49ff49a",
+  measurementId: "G-7KM8QRZTCR"
+};
 
-// // Your web app's Firebase configuration
-// // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// const firebaseConfig = {
-//   apiKey: "AIzaSyAaJ8_qJrVVJnYlSdLQ1D5vaVRpS79GZ1E",
-//   authDomain: "kimii-horror.firebaseapp.com",
-//   projectId: "kimii-horror",
-//   storageBucket: "kimii-horror.firebasestorage.app",
-//   messagingSenderId: "425936807279",
-//   appId: "1:425936807279:web:35d001bc3eb90dd49ff49a",
-//   measurementId: "G-7KM8QRZTCR"
-// };
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
-
-// Get references to DOM elements
+// DOM Elements
 const form = document.getElementById("loginPage");
 const email = document.getElementById("email");
 const emailError = document.getElementById("emailError");
 const password = document.getElementById("password");
 const passwordError = document.getElementById("passwordError");
-
-// Create and add a toggle button for password visibility
 const showPasswordToggle = document.getElementById("show-password-toggle");
-const passwordField = document.getElementById("password");
-// Toggle password visibility
+
+let failedAttempts = 0; // Counter for failed attempts
+
+// Toggle Password Visibility
 showPasswordToggle.addEventListener("click", () => {
-  const isPasswordVisible = passwordField.getAttribute("type") === "password";
-  passwordField.setAttribute("type", isPasswordVisible ? "text" : "password");
+  const isPasswordVisible = password.getAttribute("type") === "password";
+  password.setAttribute("type", isPasswordVisible ? "text" : "password");
   showPasswordToggle.textContent = isPasswordVisible ? "Hide" : "Show";
 });
 
-// Form submission event listener
-form.addEventListener("submit", (event) => {
-  event.preventDefault(); // Prevent default form submission
+// Form Submission
+form.addEventListener("submit", async (event) => {
+  event.preventDefault(); // Prevent form submission
 
-  // Clear any previous error messages
+  // Clear previous error messages
   emailError.textContent = "";
   passwordError.textContent = "";
   emailError.style.display = "none";
   passwordError.style.display = "none";
 
-  let isValid = true; // A flag to check form validity
+  let isValid = true; // Validation flag
 
-  // Validate email
-  if (!email.value){
+  // Validate Email
+  if (!email.value) {
     emailError.textContent = "Email is required!";
     emailError.style.display = "block";
+    emailError.style.color = "red";
     isValid = false;
   } else if (!email.value.endsWith("@gmail.com")) {
     emailError.textContent = "Only @gmail.com email addresses are allowed!";
     emailError.style.display = "block";
+    emailError.style.color = "red";
     isValid = false;
   }
 
-  // Validate password
+  // Validate Password
   if (!password.value) {
     passwordError.textContent = "Password is required!";
     passwordError.style.display = "block";
+    passwordError.style.color = "red";
     isValid = false;
   } else if (password.value.length < 7 || password.value.length > 15) {
     passwordError.textContent = "Password must be 7-15 characters long!";
     passwordError.style.display = "block";
+    passwordError.style.color = "red";
     isValid = false;
   }
 
-  // If the form is valid, proceed with login
+  // Handle Firebase Authentication
   if (isValid) {
-    alert("Login successful!");
-    window.location.href = "index-home.html"; // Redirect to your desired page
-  }
-});
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email.value, password.value);
+      alert("Login successful!");
+      window.location.href = "index-home.html"; // Redirect to homepage
+    } catch (error) {
+      // Increment failed attempts counter
+      // failedAttempts++;
 
-// Email input validation with real-time feedback
-email.addEventListener("input", function() {
-  emailError.textContent ="";
-  emailError.style.display = "none";
-  const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
-  if (!gmailRegex.test(email.value)) {
-    emailError.textContent = "Please enter a valid @gmail.com email address!";
-    emailError.style.display = "block";
-  }
-});
+      // Handle Firebase authentication errors
+      if (error.code === "auth/user-not-found") {
+        emailError.textContent = "The given email is not found.";
+        emailError.style.display = "block";
+        emailError.style.color = "red";
+      } else if (error.code === "auth/wrong-password") {
+        passwordError.textContent = "The password is incorrect.";
+        passwordError.style.display = "block";
+        passwordError.style.color = "red";
+      } else {
+        console.error("Error:", error);
+      }
 
-// Password input validation with real-time feedback
-password.addEventListener("input", function() {
-  passwordError.textContent = "";
-  passwordError.style.display = "none";
-  if (password.value.length < 7 || password.value.length > 15) {
-    passwordError.textContent = "Password must be 7-15 characters long!";
-    passwordError.style.display = "block";
+      // Alert after 3 failed attempts
+      // if (failedAttempts >= 10) {
+      //   alert("Please try later.");
+      //   failedAttempts = 0; // Reset the counter
+      // }
+    }
   }
 });
