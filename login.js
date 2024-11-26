@@ -78,10 +78,10 @@ form.addEventListener("submit", async (event) => {
       window.location.href = "index-home.html"; // Redirect to homepage
     } catch (error) {
       // Increment failed attempts counter
-      // failedAttempts++;
+    failedAttempts++;
 
       // Handle Firebase authentication errors
-      if (error.code === "auth/user-not-found") {
+      if (error.code === "auth/-not-found") {
         emailError.textContent = "The given email is not found.";
         emailError.style.display = "block";
         emailError.style.color = "red";
@@ -91,13 +91,14 @@ form.addEventListener("submit", async (event) => {
         passwordError.style.color = "red";
       } else {
         console.error("Error:", error);
+        alert("Account not recognized or wrong password entered.");
       }
 
       // Alert after 3 failed attempts
-      // if (failedAttempts >= 10) {
-      //   alert("Please try later.");
-      //   failedAttempts = 0; // Reset the counter
-      // }
+      if (failedAttempts >= 10) {
+        alert("Please try later.");
+        failedAttempts = 0; // Reset the counter
+      }
     }
   }
 });

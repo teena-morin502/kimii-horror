@@ -92,7 +92,24 @@ form.addEventListener("submit", async (event) => {
     passwordError.textContent = "Password must be 7-15 characters long!";
     passwordError.style.color = "red";
     isValid = false;
+  } else if (!/[A-Z]/.test(password.value)) {
+    passwordError.textContent = "Password must include at least one uppercase letter!";
+    passwordError.style.color = "red";
+    isValid = false;
+  } else if (!/[a-z]/.test(password.value)) {
+    passwordError.textContent = "Password must include at least one lowercase letter!";
+    passwordError.style.color = "red";
+    isValid = false;
+  } else if (!/[0-9]/.test(password.value)) {
+    passwordError.textContent = "Password must include at least one number!";
+    passwordError.style.color = "red";
+    isValid = false;
+  } else if (!/[\W_]/.test(password.value)) {
+    passwordError.textContent = "Password must include at least one special character!";
+    passwordError.style.color = "red";
+    isValid = false;
   }
+  
 
   // Validate confirm password
   if (!confirmPassword.value) {

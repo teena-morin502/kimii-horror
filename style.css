@@ -60,23 +60,13 @@ article{
     font-size: 20px;
 }
 .movie_slide{
-  gap:15px;
+  gap:1px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
-.movie {
-   
-    width: 250px;
-    margin-left: 10px;
-    border: 2px solid gray;
-    border-radius: 10px;
-    gap:15px;
-    transition: transform 0.3s ease;
-    height: 340px;
-    margin-right: 15px;
-  }
-
-  .movie:hover{
-    transform: scale(0.5);
+  .movie_slide:hover{
+    transform: scale(1.1);
   }
 
   
