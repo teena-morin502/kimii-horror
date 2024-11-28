@@ -52,7 +52,7 @@ const firebaseConfig = {
          data.category.thriller.forEach(movie => {
            thriller_movie_container.innerHTML += `
              <div>
-               <img src="${movie.image_url}" class="movie_slide" alt="${movie.movie_name}" width="200px" height="300px">
+               <img src="${movie.image_url}" class="movie" alt="${movie.movie_name}" width="200px" height="300px">
                <p class="movie_name">${movie.movie_name}</p>
              </div>`;
          });
@@ -77,14 +77,22 @@ const firebaseConfig = {
                 <p class="movie_name">${movie.movie_name}</p>
                </div>`;
           });
-                  
-      
-
+          
+          //Render hero tag slides
+          const title_movie_container = document.getElementById("titleMoviesContainer");
+          data.category.slide.forEach(movie => {
+            title_movie_container.innerHTML += `
+              <div>
+                 <img src="${movie.img}" class="movie_slide" alt="${movie.movie_name}">
+                <button>watch now</button>
+               </div>`;
+          });
 
     } catch (error) {
         console.error("Error uploading JSON data:", error);
         document.getElementById("thrillerMoviesContainer").innerHTML = "<p>Failed to load movies.</p>";
     }
-}
-
+  }
 window.addEventListener("load", uploadJSONToFirebase);
+
+

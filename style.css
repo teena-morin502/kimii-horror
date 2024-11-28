@@ -42,6 +42,15 @@ h2{
   width: 200px;
 }
 
+/* hero tag */
+.top_10_movie_container{
+  display: flex;
+  overflow-x: scroll;
+  gap:15px;
+  padding-top: 20px;
+}
+
+
 article{
  background-color: rgb(33, 33, 33);
 }

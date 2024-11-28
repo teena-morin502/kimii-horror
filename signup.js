@@ -145,7 +145,7 @@ form.addEventListener("submit", async (event) => {
       });
 
       alert("Signup successful!");
-      window.location.href = "index.html"; // Redirect to login
+      window.location.href = "index-home.html"; // Redirect to login
     } catch (error) {
       console.error(error);
       alert("An error occurred. Please try again.");
