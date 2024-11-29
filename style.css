@@ -43,14 +43,11 @@ h2{
 }
 
 /* hero tag */
-.top_10_movie_container{
-  display: flex;
-  overflow-x: scroll;
-  gap:15px;
-  padding-top: 20px;
-}
 
 
+
+
+/* movie cards */
 article{
  background-color: rgb(33, 33, 33);
 }
@@ -84,7 +81,6 @@ article{
   display: flex;
   overflow-x: scroll;
   gap:15px;
-  padding-top: 20px;
 }
 
 ::-webkit-scrollbar {

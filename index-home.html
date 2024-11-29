@@ -6,6 +6,22 @@
     <title>Kimii horror</title>
     <link  rel ="stylesheet" href="style.css">
     <script src="home.js" type="module" defer></script>
+    <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: red !important;
+      background-color: transparent !important;
+    }
+    
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      color: #ff4d4d !important;
+      background-color: rgba(255, 0, 0, 0.2) !important; 
+      transition: color 0.3s ease, background-color 0.3s ease; 
+    }
+</style>
 </head>
 <body>
 <header class="navBar">
@@ -21,16 +37,14 @@
     </nav>
 </header>
 <article>
- <!-- title -->
-
- <div class="title_movie_container" id="titleMoviesContainer">
-    <div class="carousel">
-      
+  <!-- Swiper Carousel -->
+  <section class="swiper">
+    <div id="titleMoviesContainer" class="swiper-wrapper" >
     </div>
-    <button class="carousel-control prev">‹</button>
-    <button class="carousel-control next">›</button>
-  </div>
-  
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</section>
+
 
 <!-- top-10 movie -->
 
@@ -76,5 +90,19 @@
         </div>
     </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop:true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+    </script>
 </body>
 </html>

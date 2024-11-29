@@ -52,7 +52,7 @@ const firebaseConfig = {
          data.category.thriller.forEach(movie => {
            thriller_movie_container.innerHTML += `
              <div>
-               <img src="${movie.image_url}" class="movie" alt="${movie.movie_name}" width="200px" height="300px">
+               <img src="${movie.image_url}" class="movie_slide" alt="${movie.movie_name}" width="200px" height="300px">
                <p class="movie_name">${movie.movie_name}</p>
              </div>`;
          });
@@ -61,10 +61,11 @@ const firebaseConfig = {
           const real_horror_movie_container = document.getElementById("real_horrorMovieContainer");
           data.category.real_horror.forEach(movie => {
             real_horror_movie_container.innerHTML += `
-              <div>
+              <div >
                 <img src="${movie.image_url}" class="movie_slide" alt="${movie.movie_name}" width="200px" height="300px">
                 <p class="movie_name">${movie.movie_name}</p>
              </div>`;
+            
          });
 
 
@@ -82,9 +83,8 @@ const firebaseConfig = {
           const title_movie_container = document.getElementById("titleMoviesContainer");
           data.category.slide.forEach(movie => {
             title_movie_container.innerHTML += `
-              <div>
-                 <img src="${movie.img}" class="movie_slide" alt="${movie.movie_name}">
-                <button>watch now</button>
+              <div class="swiper-slide">
+                 <img src="${movie.img}" class="movie" alt="${movie.movie_name}"" width="100%" height="700px">
                </div>`;
           });
 

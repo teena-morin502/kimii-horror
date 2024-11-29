@@ -62,9 +62,16 @@ form.addEventListener("submit", async (event) => {
   if (!username.value) {
     usernameError.textContent = "Username is required!";
     usernameError.style.color = "red";
-
     isValid = false;
-  } else if (username.value.length < 4) {
+} else if (/^\d+$/.test(username.value)) {
+    usernameError.textContent = "Username cannot consist of only numbers!";
+    usernameError.style.color = "red";
+    isValid = false;
+}else if (username.value.startsWith(" ")) {
+  usernameError.textContent = "Username cannot start with a space!"; // Show error for leading spaces
+  usernameError.style.color = "red";
+  isValid = false;
+}  else if (username.value.length < 3) {
     usernameError.textContent = "Username must be at least 4 characters long!";
     usernameError.style.color = "red";
 
@@ -77,8 +84,20 @@ form.addEventListener("submit", async (event) => {
     emailError.textContent = "Email is required!";
     emailError.style.color = "red";
     isValid = false;
+  } else if (email.value.includes(" ")) {
+    emailError.textContent = "Email should not contain spaces!";
+    emailError.style.color = "red";
+    isValid = false;
+  }  else if (email.value.length > 200) {
+    emailError.textContent = "Email is too long! Maximum 200 characters allowed.";
+    emailError.style.color = "red";
+    isValid = false;
   } else if (!emailRegex.test(email.value)) {
     emailError.textContent = "Please enter a valid email address!";
+    emailError.style.color = "red";
+    isValid = false;
+  } else if (!email.value.endsWith("@gmail.com")) {
+    emailError.textContent = "Only @gmail.com email addresses are allowed!";
     emailError.style.color = "red";
     isValid = false;
   }

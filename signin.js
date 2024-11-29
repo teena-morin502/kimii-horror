@@ -1,7 +1,4 @@
-// Firebase Configuration and Initialization
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-
+// Firebase Configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAaJ8_qJrVVJnYlSdLQ1D5vaVRpS79GZ1E",
   authDomain: "kimii-horror.firebaseapp.com",
@@ -12,8 +9,14 @@ const firebaseConfig = {
   measurementId: "G-7KM8QRZTCR"
 };
 
+// Initialize Firebase
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getFirestore(app);
 
 // DOM Elements
 const form = document.getElementById("loginPage");
@@ -22,7 +25,6 @@ const emailError = document.getElementById("emailError");
 const password = document.getElementById("password");
 const passwordError = document.getElementById("passwordError");
 const showPasswordToggle = document.getElementById("show-password-toggle");
-
 let failedAttempts = 0; // Counter for failed attempts
 
 // Toggle Password Visibility
@@ -37,16 +39,32 @@ form.addEventListener("submit", async (event) => {
   event.preventDefault(); // Prevent form submission
 
   // Clear previous error messages
+
   emailError.textContent = "";
   passwordError.textContent = "";
   emailError.style.display = "none";
   passwordError.style.display = "none";
-
   let isValid = true; // Validation flag
 
-  // Validate Email
-  if (!email.value) {
+// Validate Email
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+if (!email.value) {
     emailError.textContent = "Email is required!";
+    emailError.style.display = "block";
+    emailError.style.color = "red";
+    isValid = false;
+  } else if (email.value.includes(" ")) {
+    emailError.textContent = "Email should not contain spaces!";
+    emailError.style.display = "block";
+    emailError.style.color = "red";
+    isValid = false;
+  }  else if (email.value.length > 200) {
+    emailError.textContent = "Email is too long! Maximum 200 characters allowed.";
+    emailError.style.display = "block";
+    emailError.style.color = "red";
+    isValid = false;
+   } else if (!emailRegex.test(email.value)) {
+    emailError.textContent = "Please enter a valid email address!";
     emailError.style.display = "block";
     emailError.style.color = "red";
     isValid = false;
@@ -68,7 +86,27 @@ form.addEventListener("submit", async (event) => {
     passwordError.style.display = "block";
     passwordError.style.color = "red";
     isValid = false;
-  }
+ } else if (!/[A-Z]/.test(password.value)) {
+  passwordError.textContent = "Password must include at least one uppercase letter!";
+  passwordError.style.display = "block";
+  passwordError.style.color = "red";
+  isValid = false;
+} else if (!/[a-z]/.test(password.value)) {
+  passwordError.textContent = "Password must include at least one lowercase letter!";
+  passwordError.style.display = "block";
+  passwordError.style.color = "red";
+  isValid = false;
+} else if (!/[0-9]/.test(password.value)) {
+  passwordError.textContent = "Password must include at least one number!";
+  passwordError.style.display = "block";
+  passwordError.style.color = "red";
+  isValid = false;
+} else if (!/[\W_]/.test(password.value)) {
+  passwordError.textContent = "Password must include at least one special character!";
+  passwordError.style.display = "block";
+  passwordError.style.color = "red";
+  isValid = false;
+}
 
   // Handle Firebase Authentication
   if (isValid) {
