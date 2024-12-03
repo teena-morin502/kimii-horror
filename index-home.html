@@ -6,6 +6,7 @@
     <title>Kimii horror</title>
     <link  rel ="stylesheet" href="style.css">
     <script src="home.js" type="module" defer></script>
+    <script src="search.js" type="module" defer></script>
     <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
@@ -27,7 +28,7 @@
 <header class="navBar">
         <img src="kimiihorror.png" alt="website logo" width="250px">
     <nav class="header">
-        <input type="text" width="60px" class="search" placeholder="search....">
+            <input type="text" width="60px" class="search" id="filter" placeholder="search....">
         <a href="#home" class="nav">Home</a>
         <a href="#top_10"  class="nav">Top 10</a>
         <a href="#thriller"  class="nav">Thriller</a>
@@ -36,6 +37,12 @@
         <img src="user.png" alt="profile" width="60px"   height="60px" class="profile" >
     </nav>
 </header>
+<div id="display" style="display: none;">
+    <h1>Movie Search Results</h1>
+    <div id="result-container">
+      <div class="Card" id="results"></div>
+    </div>
+</div>
 <article>
   <!-- Swiper Carousel -->
   <section class="swiper">

@@ -38,45 +38,58 @@ const firebaseConfig = {
 
         const top_10_movie_container=document.getElementById("top_10MoviesContainer");
           data.category.top_10.forEach(movie => {
-            top_10_movie_container.innerHTML+=`
+            top_10_movie_container.innerHTML+=
+            `
+            <a href="details.html">
                   <div>
                       <img src="${movie.image_url}" class="movie_slide" alt="${movie.movie_name}" width="200px" height="300px">
-                        <p class="movie_name"  >${movie.movie_name} </p>
-                  </div>`
+                        <p class="movie_name"  >${movie.movie_name}  </p>
+                  </div>
+            <a>      
+                  `
                   
           });
-
-
          // Render thriller movies
          const thriller_movie_container = document.getElementById("thrillerMoviesContainer");
          data.category.thriller.forEach(movie => {
-           thriller_movie_container.innerHTML += `
-             <div>
-               <img src="${movie.image_url}" class="movie_slide" alt="${movie.movie_name}" width="200px" height="300px">
-               <p class="movie_name">${movie.movie_name}</p>
-             </div>`;
+           thriller_movie_container.innerHTML += 
+            `
+            <a href="details.html">
+                  <div>
+                      <img src="${movie.image_url}" class="movie_slide" alt="${movie.movie_name}" width="200px" height="300px">
+                        <p class="movie_name"  >${movie.movie_name}  </p>
+                  </div>
+            <a>      
+                  `
          });
 
           // Render based_on_real_horror movies
           const real_horror_movie_container = document.getElementById("real_horrorMovieContainer");
           data.category.real_horror.forEach(movie => {
-            real_horror_movie_container.innerHTML += `
-              <div >
-                <img src="${movie.image_url}" class="movie_slide" alt="${movie.movie_name}" width="200px" height="300px">
-                <p class="movie_name">${movie.movie_name}</p>
-             </div>`;
-            
+            real_horror_movie_container.innerHTML += 
+            `
+            <a href="details.html">
+                  <div>
+                      <img src="${movie.image_url}" class="movie_slide" alt="${movie.movie_name}" width="200px" height="300px">
+                        <p class="movie_name"  >${movie.movie_name}  </p>
+                  </div>
+            <a>      
+                  `
          });
 
 
           // Render based_on_real_stories movies
           const real_stories_movie_container = document.getElementById("real_storiesMovieContainer");
           data.category.real_story.forEach(movie => {
-            real_stories_movie_container.innerHTML += `
-              <div>
-                 <img src="${movie.image_url}" class="movie_slide" alt="${movie.movie_name}" width="200px" height="300px">
-                <p class="movie_name">${movie.movie_name}</p>
-               </div>`;
+            real_stories_movie_container.innerHTML += 
+            `
+            <a href="details.html">
+                  <div>
+                      <img src="${movie.image_url}" class="movie_slide" alt="${movie.movie_name}" width="200px" height="300px">
+                        <p class="movie_name"  >${movie.movie_name}  </p>
+                  </div>
+            <a>      
+                  `
           });
           
           //Render hero tag slides
