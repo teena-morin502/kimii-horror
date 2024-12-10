@@ -113,7 +113,7 @@ if (!email.value) {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email.value, password.value);
       alert("Login successful!");
-      window.location.href = "index-home.html"; // Redirect to homepage
+      window.location.href = "index.html"; // Redirect to homepage
     } catch (error) {
       // Increment failed attempts counter
     failedAttempts++;

@@ -1,0 +1,118 @@
+*{
+    margin: 0%;
+}
+body{
+    font-family: 'Cinzel Decorative', serif;
+    background-color: rgb(20, 20, 20); 
+}
+#video-container {
+    text-align: center;
+    padding: 20px;
+}
+
+#movie-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.video-js {
+    margin: 0 auto;
+    max-width: 100%;
+    border: 3px solid #fff;
+    border-radius: 10px;
+}
+/* Header and Navigation */
+.navBar {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeaR2VmVMc9wCa0tQxbhksU7kkoIlqTqGpXg&s);
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    height: 70px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  
+  
+  
+  
+  /* Search and Profile Animations */
+  .search {
+    background: transparent;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    color: white;
+    border: 1px solid white;
+    width: 400px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .search:focus {
+    box-shadow: 0 0 10px rgb(255, 50, 54);
+    transform: scale(1.05);
+    outline: none;
+  }
+  
+  .profile {
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile:hover {
+    transform: rotate(360deg);
+  }
+  /* Footer Section */
+footer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Footer Left: Kimii Horror Logo and Copyright */
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .footer-left img {
+    width: 150px;
+  }
+  
+  .copy {
+    font-size: 16px;
+    color: blanchedalmond;
+  }
+  
+  /* Social Media Icons */
+  .social {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .media {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: 2px solid white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .media:hover {
+    transform: scale(1.2);
+  }
+  
+  

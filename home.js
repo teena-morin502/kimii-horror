@@ -1,111 +1,78 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
-// Note: Removed firebase-analytics.js import since it's not being used here
-
-const firebaseConfig = {
-    apiKey: "AIzaSyAaJ8_qJrVVJnYlSdLQ1D5vaVRpS79GZ1E",
-    authDomain: "kimii-horror.firebaseapp.com",
-    projectId: "kimii-horror",
-    storageBucket: "kimii-horror.firebasestorage.app",
-    messagingSenderId: "425936807279",
-    appId: "1:425936807279:web:35d001bc3eb90dd49ff49a",
-    measurementId: "G-7KM8QRZTCR"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  async function uploadJSONToFirebase() {
+async function fetchMoviesByGenre() {
     try {
-        const response = await fetch('movie.json'); // Assuming movie.json is in your public directory
-        if (!response.ok){
-          throw new Error("JSON file not found!");
-        }
-        const data = await response.json();  // Parse JSON data
 
-        // Loop through categories in the JSON data
-        for (const category in data.category) {
-            const categoryData = data.category[category];
+        const response = await fetch('movies.json');
+        const data = await response.json();
+
+        console.log('Fetched data:', data);
+
+
+        const movies = data.movies || data.categories || [];
+
+        if (!Array.isArray(movies)) {
+            throw new Error('Movies data is not an array');
+        }
+
+        const top10Container = document.querySelector('#top_10MoviesContainer');
+        const thrillerContainer = document.querySelector('#thrillerMoviesContainer');
+        const realHorrorContainer = document.querySelector('#real_horrorMovieContainer');
+        const supernaturalContainer = document.querySelector('#supernaturalMovieContainer');
+        const title_movie_container = document.getElementById("titleMoviesContainer");
+
+        movies.forEach(movie => {
+
+            const movieDiv = document.createElement('div');
+            movieDiv.classList.add('movie_slide');
+        
+            const movieImage = document.createElement('img');
+            movieImage.alt = movie.movie_name || 'Unknown Movie';
+            movieImage.src = movie.image_url || 'path/to/default-image.jpg'; // Add default image URL if needed
+            movieImage.width = 200;
+            movieImage.height = 300;
+
+            const movieLink = document.createElement('a');
+
+                    const queryParams = new URLSearchParams({
+                        movie_name: movie.movie_name || 'Unknown',
+                        description: movie.description || 'No description available',
+                        image_url: movie.image_url || '',
+                        rating: movie.rating || 'N/A',
+                        genre: movie.gener?.join(', ') || 'Unknown',
+                        cast: movie.details?.cast?.join(', ') || 'Unknown',
+                        director: movie.details?.director || 'Unknown',
+                        producer: movie.details?.producer || 'Unknown',
+                        duration: movie.details?.duration || 'N/A',
+                        language: movie.details?.language?.join(', ') || 'Unknown',
+                        year: movie.details?.year || 'Unknown'
+                    }).toString();
+
             
-            // Create a new document reference in the 'categories' collection using category name
-            const docRef = doc(db, "categories", category);
+            movieLink.href = `details.html?${queryParams}`;
+ 
+            movieLink.appendChild(movieDiv);
+            movieDiv.appendChild(movieImage);
+        
 
-            // Set the data for that category, including the movies inside that category
-            await setDoc(docRef, { movies: categoryData });
-            console.log(`Uploaded category: ${category}`);
-        }
+            if (movie.rating >= 8) {
+                top10Container.appendChild(movieLink.cloneNode(true));
+            }
+            if (movie.gener?.includes('Thriller')) {
+                thrillerContainer.appendChild(movieLink.cloneNode(true));
+            }
+            if (movie.gener?.includes('docudrama')) {
+                realHorrorContainer.appendChild(movieLink.cloneNode(true));
+            }
+            if (movie.gener?.includes('Supernatural')) {
+                supernaturalContainer.appendChild(movieLink.cloneNode(true));
+            }
+        });
+        
 
-        const top_10_movie_container=document.getElementById("top_10MoviesContainer");
-          data.category.top_10.forEach(movie => {
-            top_10_movie_container.innerHTML+=
-            `
-            <a href="details.html">
-                  <div>
-                      <img src="${movie.image_url}" class="movie_slide" alt="${movie.movie_name}" width="200px" height="300px">
-                        <p class="movie_name"  >${movie.movie_name}  </p>
-                  </div>
-            <a>      
-                  `
-                  
-          });
-         // Render thriller movies
-         const thriller_movie_container = document.getElementById("thrillerMoviesContainer");
-         data.category.thriller.forEach(movie => {
-           thriller_movie_container.innerHTML += 
-            `
-            <a href="details.html">
-                  <div>
-                      <img src="${movie.image_url}" class="movie_slide" alt="${movie.movie_name}" width="200px" height="300px">
-                        <p class="movie_name"  >${movie.movie_name}  </p>
-                  </div>
-            <a>      
-                  `
-         });
-
-          // Render based_on_real_horror movies
-          const real_horror_movie_container = document.getElementById("real_horrorMovieContainer");
-          data.category.real_horror.forEach(movie => {
-            real_horror_movie_container.innerHTML += 
-            `
-            <a href="details.html">
-                  <div>
-                      <img src="${movie.image_url}" class="movie_slide" alt="${movie.movie_name}" width="200px" height="300px">
-                        <p class="movie_name"  >${movie.movie_name}  </p>
-                  </div>
-            <a>      
-                  `
-         });
-
-
-          // Render based_on_real_stories movies
-          const real_stories_movie_container = document.getElementById("real_storiesMovieContainer");
-          data.category.real_story.forEach(movie => {
-            real_stories_movie_container.innerHTML += 
-            `
-            <a href="details.html">
-                  <div>
-                      <img src="${movie.image_url}" class="movie_slide" alt="${movie.movie_name}" width="200px" height="300px">
-                        <p class="movie_name"  >${movie.movie_name}  </p>
-                  </div>
-            <a>      
-                  `
-          });
-          
-          //Render hero tag slides
-          const title_movie_container = document.getElementById("titleMoviesContainer");
-          data.category.slide.forEach(movie => {
-            title_movie_container.innerHTML += `
-              <div class="swiper-slide">
-                 <img src="${movie.img}" class="movie" alt="${movie.movie_name}"" width="100%" height="700px">
-               </div>`;
-          });
 
     } catch (error) {
-        console.error("Error uploading JSON data:", error);
-        document.getElementById("thrillerMoviesContainer").innerHTML = "<p>Failed to load movies.</p>";
+        console.error('Error loading movies:', error);
     }
-  }
-window.addEventListener("load", uploadJSONToFirebase);
+}
 
+document.addEventListener('DOMContentLoaded', fetchMoviesByGenre);
 

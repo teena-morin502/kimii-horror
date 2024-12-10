@@ -1,0 +1,222 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark theme background */
+    color: white; /* White text for contrast */
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(0, 0, 0, 0.929);
+    padding: 15px 20px;
+    color: white;
+    padding: 15px 20px;
+    height: 70px;
+}
+.navBar {
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeaR2VmVMc9wCa0tQxbhksU7kkoIlqTqGpXg&s);
+  display: flex;
+  background-size: cover;
+  background-position: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    height: 70px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+
+footer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Footer Left: Kimii Horror Logo and Copyright */
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .footer-left img {
+    width: 150px;
+  }
+  
+  .copy {
+    font-size: 16px;
+    color: blanchedalmond;
+  }
+  
+  /* Social Media Icons */
+  .social {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .media {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: 2px solid white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .media:hover {
+    transform: scale(1.2);
+  }
+
+
+
+/* Movie Card Styles */
+.movie-card {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin:20px;
+}
+
+.movie-card img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 10px rgba(54, 53, 53, 0.5);
+    margin:30px;
+}
+.details{
+    margin:30px;
+}
+.movie-card h2 {
+    font-size: 2rem;
+    margin: 0;
+    color: #e50914; /* Red for emphasis */
+}
+
+.movie-card p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.movie-card p strong {
+    color: #e50914; /* Highlighted labels */
+}
+
+.button {
+    background-color: #e50914; /* Horror red theme */
+    color: white;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(153, 110, 110, 0.5);
+}
+
+button:hover {
+    background-color: #c40812; /* Darker red for hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+button:active {
+    transform: scale(0.98); /* Slightly shrink on click */
+    background-color: #a3060f; /* Even darker red for click */
+}
+
+button:focus {
+    outline: 2px solid #e50914; /* Focus indicator */
+    outline-offset: 2px;
+}
+
+.search {
+    background: transparent;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    color: white;
+    border: 1px solid white;
+    width: 400px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .search:focus {
+    box-shadow: 0 0 10px rgb(255, 50, 54);
+    transform: scale(1.05);
+    outline: none;
+  }
+  
+  .profile {
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile:hover {
+    transform: rotate(360deg);
+  }
+  
+/* search */
+#result-container {
+  position: absolute;
+  top: 50px;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+  max-height: 300px; 
+  overflow-y: auto;
+}
+
+#result-container .movie-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px; 
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #222;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#result-container .movie-card img {
+  width: 70px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+#result-container .movie-card div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; 
+}
+
+#result-container .movie-card h3 {
+  font-size: 16px;
+  color: white;
+  margin: 0;
+}
+
+
+#result-container .movie-card p {
+  font-size: 14px;
+  color: #bbb; 
+  margin: 0;
+}

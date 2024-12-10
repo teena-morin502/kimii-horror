@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Video</title>
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet">
+    <link rel="stylesheet" href="video.css">
+</head>
+<body>
+    <header class="navBar">
+        <img src="kimiihorror.png" alt="website logo" width="250px">
+    <nav class="header">
+        <div style="position: relative; width: 100%;">
+            <input type="text" class="search" id="filter" placeholder="search....">
+            <div id="result-container"></div>
+        </div>
+
+        <img src="user.png" alt="profile" width="60px"   height="60px" class="profile" >
+    </nav>
+</header>
+<main id="video-container">
+    <h2 id="movie-title"></h2>
+    <video id="video-player" class="video-js" controls preload="auto" width="800" height="450">
+    </video>
+</main>
+    <footer>
+        <div class="footer-left">
+            <img src="kimiihorror.png" alt="Kimii Horror Logo" width="150px">
+            <p class="copy">© Kimii Horror 2024</p>
+        </div>
+       <div class="social">
+                <img src="https://static.vecteezy.com/system/resources/previews/022/484/516/non_2x/google-mail-gmail-icon-logo-symbol-free-png.png" alt="gmail" style="width: 40px;  border-radius:100%;"  class="media">
+                <img src="https://cdn-icons-png.freepik.com/256/15707/15707884.png?semt=ais_hybrid" alt="facebook"style="width: 40px; border-radius: 100%;" class="media">
+                <img src="https://cdn-icons-png.freepik.com/256/2496/2496112.png?semt=ais_hybrid" alt="whatsapp"style="width: 40px; border-radius: 100%;" class="media">
+                <img src="https://cdn-icons-png.freepik.com/256/15707/15707869.png?semt=ais_hybrid" alt="instagram"style="width: 40px; border-radius: 100%;" class="media">
+                <img src="https://cdn.pixabay.com/photo/2021/12/27/10/50/telegram-6896827_1280.png" alt="telegram"style="width: 40px; border-radius: 100%;" class="media">
+            </div>
+    
+    </footer>
+    <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+    
+    <!-- Now load the YouTube plugin script -->
+    <script src="https://cdn.jsdelivr.net/npm/videojs-youtube@2.10.0/dist/Youtube.min.js"></script>
+
+    <script>
+        // Parse URL Parameters to get the video URL and Movie Title
+        const params = new URLSearchParams(window.location.search);
+        const videoUrl = params.get('video_url');
+        const movieTitle = params.get('movie_name');
+
+        // Set the movie title
+        const movieTitleElement = document.getElementById('movie-title');
+        movieTitleElement.textContent = movieTitle || 'Unknown Movie';
+
+        // Initialize Video.js player
+        const videoPlayer = videojs('video-player', {
+            controls: true,
+            autoplay: false,
+            preload: 'auto',
+            fluid: true
+        });
+
+        // Check if videoUrl is valid and load the video
+        if (videoUrl) {
+            // Check if the URL is from YouTube
+            if (videoUrl.includes('youtube.com')) {
+                videoPlayer.src({
+                    src: videoUrl,
+                    type: 'video/youtube'
+                });
+            }        
+        } else {
+            // Fallback if no video URL is found
+            movieTitleElement.textContent = 'Video not available';
+            videoPlayer.poster('https://via.placeholder.com/800x450.png?text=Video+Not+Available');
+            console.error('Video URL is missing or invalid.');
+        }
+    </script>
+    </body>
+</html>

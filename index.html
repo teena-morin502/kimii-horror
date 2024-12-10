@@ -3,42 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="signin.css">
+    <title>Kimii horror</title>
+    <link  rel ="stylesheet" href="style.css">
+    <script src="home.js" type="module" defer></script>
+    <script src="search.js" type="module" defer></script>  
+    <!-- Link Swiper's CSS  -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: rgb(121, 120, 120) !important;
+      background-color: transparent !important;
+    }
     
-    <title>kimii horror</title>
-    <style>
-       
-    </style>
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+     color: rgb(121, 120, 120) !important;
+      background-color: rgba(169, 167, 167, 0.2) !important; 
+      transition: color 0.3s ease, background-color 0.3s ease; 
+    }
+</style>
 </head>
 <body>
-    <img src="kimiihorror.png" width="200px">
-    <section class="mid">
-    <p>Unlock the door to the otherworldly. The spirits are waiting for you</p>
-    <section class="login">
-        <form id="loginPage" novalidate>
-
-            <h1>SIGN IN</h1>
-            <label >Email</label>
-            <input type="email" id="email" required >
-            <span id="emailError" style="color:red; display:none;"></span>
-            <label>password</label>
-            <div class="see-password">
-               <span id="show-password-toggle">Show</span>
+<header class="navBar">
+        <img src="kimiihorror.png" alt="website logo" width="250px">
+    <nav class="header">
+        <div style="position: relative; width: 100%;">
+            <input type="text" class="search" id="filter" placeholder="search....">
+            <div id="result-container"></div>
+        </div>
+        <div class="profile-container">
+            <a href="#" id="profileLink">
+                <img src="user.png" alt="profile" width="60px" height="60px" class="profile">
+            </a>
+            <div id="guest" style="display: block;">
+                <p id="guestName">Guest</p>
+                <a href="login.html" id="loginBtn">Login</a>
             </div>
-            <input type="password" id="password" required>
-            <span id="passwordError" style="color:red; display:none;"></span>
+            <div id="userProfile" style="display: none;">
+                <p id="userName">User Name</p>
+                <a href="logout.html" id="logout">Logout</a>
+            </div>
+        </div>
+        
+    </nav>
+</header>
 
-            <button  type="submit"id="login-btn" class="homePage">submit</button>
-            <h4>if you dont have an account? <a href="index-signin.html" class="span">click here</a></h4>
-        </form>     
-    </section>
-</section>
-
-<script type="module" src="signin.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js"></script>
+<article > 
+  <!-- Swiper Carousel  -->
+  <div class="swiper">
+    <div class="swiper-wrapper" id="titleMoviesContainer"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
 
 
+
+<!-- top-10 movie -->
+
+<div class="title">
+    <h2 id="top_10">TOP_10</h2>
+  </div>
+  <div class="top_10_movie_container" id="top_10MoviesContainer">
+</div>
+<!--based on docudrama -->
+<div class="title">
+    <h2 id="real_horror">BASED ON REAL STORIES</h2>
+</div>
+<div class="real_horror_movie_container" id="real_horrorMovieContainer">
+</div> 
+
+
+<!-- thriller movie -->
+<div class="title">
+  <h2 id="thriller">THRILLERS</h2>
+</div>
+<div class="thriller_movie_container" id="thrillerMoviesContainer">
+</div>
+
+<!-- based on supernatural -->
+<div class="title">
+    <h2 id="supernatural">SUPERNATURAL</h2>
+</div>
+<div class="supernatural_movie_container" id="supernaturalMovieContainer">
+</div>
+<div class="arrow" onclick="scrollToTop()">^</div>
+</article>
+<footer>
+    <div class="footer-left">
+        <img src="kimiihorror.png" alt="Kimii Horror Logo" width="150px">
+        <p class="copy">© Kimii Horror 2024</p>
+    </div>
+   <div class="social">
+            <img src="https://static.vecteezy.com/system/resources/previews/022/484/516/non_2x/google-mail-gmail-icon-logo-symbol-free-png.png" alt="gmail" style="width: 40px;  border-radius:100%;"  class="media">
+            <img src="https://cdn-icons-png.freepik.com/256/15707/15707884.png?semt=ais_hybrid" alt="facebook"style="width: 40px; border-radius: 100%;" class="media">
+            <img src="https://cdn-icons-png.freepik.com/256/2496/2496112.png?semt=ais_hybrid" alt="whatsapp"style="width: 40px; border-radius: 100%;" class="media">
+            <img src="https://cdn-icons-png.freepik.com/256/15707/15707869.png?semt=ais_hybrid" alt="instagram"style="width: 40px; border-radius: 100%;" class="media">
+            <img src="https://cdn.pixabay.com/photo/2021/12/27/10/50/telegram-6896827_1280.png" alt="telegram"style="width: 40px; border-radius: 100%;" class="media">
+        </div>
+
+</footer>
+<!--  Swiper Script -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    const jsonPath = 'movies.json';
+
+    async function loadMovies() {
+        try {
+            const response = await fetch(jsonPath);
+
+            const movies = await response.json();
+            const movieArray = movies.movies || [];
+
+
+            const titleMoviesContainer = document.getElementById('titleMoviesContainer');
+            titleMoviesContainer.classList.add('swiper-wrapper');  
+
+ 
+            for (let i = 0; i < movieArray.length; i++) {
+    const movie = movieArray[i];
+
+    const slide = document.createElement('div');
+    slide.classList.add('swiper-slide');
+    slide.innerHTML = `
+        <img src="${movie.swiper}" alt="${movie.movie_name}" width='1490px' height='600px'>
+    `;
+    titleMoviesContainer.appendChild(slide);
+}
+
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev', 
+                },
+                slidesPerView: 1,
+                spaceBetween: 10,
+            });
+            setInterval(() => {
+                swiper.slideNext();
+            }, 5000);
+        } catch (error) {
+            console.error('Error loading movies:', error);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadMovies);
+    document.getElementById('profileLink').addEventListener('click', function() {
+        document.getElementById('guest').style.display = 'block';
+    });
+</script>
+<script>
+    // Firebase initialization (Assuming Firebase is already configured)
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+import { firebaseApp } from "./firebaseConfig.js"; // Update with your firebase config import
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAaJ8_qJrVVJnYlSdLQ1D5vaVRpS79GZ1E",
+  authDomain: "kimii-horror.firebaseapp.com",
+  projectId: "kimii-horror",
+  storageBucket: "kimii-horror.firebasestorage.app",
+  messagingSenderId: "425936807279",
+  appId: "1:425936807279:web:35d001bc3eb90dd49ff49a",
+  measurementId: "G-7KM8QRZTCR"
+};
+
+const auth = getAuth(firebaseApp);
+const guestSection = document.getElementById("guest");
+const userProfileSection = document.getElementById("userProfile");
+const userNameElement = document.getElementById("userName");
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        // User is signed in
+        guestSection.style.display = "none";
+        userProfileSection.style.display = "flex";
+        userNameElement.textContent = user.displayName || user.email; // Show user display name or email
+    } else {
+        // User is not signed in
+        guestSection.style.display = "flex";
+        userProfileSection.style.display = "none";
+    }
+});
+
+</script>
+<script>
+    function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
 </body>
-</html> 
+</html>

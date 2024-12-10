@@ -1,0 +1,434 @@
+{
+    "movies":[
+          {
+            "movie_name": "The Exorcist",
+            "description": "A horrifying tale of a young girl possessed by a demon.",
+            "image_url": "https://i.ebayimg.com/images/g/73cAAOSwGyxkuaw~/s-l400.jpg",
+            "swiper":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtuWEOKzGfXzqls4PQEWjnksUWW7uYtOA4MQ&s",
+            "gener": ["Horror", "Supernatural"],
+            "rating": 8, 
+            "details": {
+              "cast": ["Ellen Burstyn", "Max von Sydow", "Linda Blair", "Jason Miller"],
+              "director": "William Friedkin",
+              "producer": "William Peter Blatty",
+              "duration": "122 mins", 
+              "year": 1973,
+              "language": ["English"],
+              "video_url":"https://www.youtube.com/embed/BU2eYAO31Cc?si=swfkHCgtLZHZOHnw"
+            }
+          },
+          {
+            "movie_name": "Hereditary",
+            "description": "A chilling tale of a family's descent into darkness as they uncover a terrifying, inherited curse.",
+            "image_url": "https://m.media-amazon.com/images/M/MV5BNTEyZGQwODctYWJjZi00NjFmLTg3YmEtMzlhNjljOGZhMWMyXkEyXkFqcGc@._V1_.jpg",
+            "gener": ["Horror", "Supernatural"],
+            "rating": 9, 
+            "details": {
+              "cast": ["Toni Collette", "Alex Wolff", "Milly Shapiro", "Gabriel Byrne"],
+              "director": "Ari Aster",
+              "producer": "Kevin Frakes",
+              "duration": "127 mins",
+              "language": ["English"],
+              "year":2018,
+              "video_url":"https://www.youtube.com/embed/MJNR58zaStE?si=fixNprXcCbRf5HBA"
+            }
+          },
+          {
+        "movie_name": "The Conjuring",
+        "description": "A family is terrorized by dark forces after moving into a new home. Paranormal investigators Ed and Lorraine Warren are called to help them.",
+        "image_url": "https://m.media-amazon.com/images/I/5147F62RsML._AC_UF1000,1000_QL80_.jpg",
+        "gener": ["Horror", "Thriller"],
+        "rating": 7,
+        "details": {
+          "cast": ["Patrick Wilson", "Vera Farmiga", "Lili Taylor", "Ron Livingston"],
+          "director": "James Wan",
+          "producer": "Tony DeRosa-Grund",
+          "duration": "112 mins",
+          "year": 2013,
+          "language": ["English"]
+        }
+      },
+      {
+        "movie_name": "The Shining",
+        "description": "A psychological horror film where a family is haunted by terrifying supernatural forces while staying in an isolated hotel.",
+        "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxaD7Q3rBuroKh019YNJc1zGkOlhAoWZopxRLABFJE4j8sZ0sGKCU14XJK9kLTcMGMfEWsnwnGaAo_sosvaXHjEq21SQEDFBIJXxrhU10wVPFbTjazYQWjRr6ak8_33fxRlkG2NW486uU/s1600/The+Shining+2.png",
+        "gener": ["Horror", "Psychological", "Supernatural"],
+        "rating": 8.4, 
+        "details": {
+          "cast": ["Jack Nicholson", "Shelley Duvall", "Danny Lloyd", "Scatman Crothers"],
+          "director": "Stanley Kubrick",
+          "producer": "Stanley Kubrick",
+          "duration": "146 mins", 
+          "year": 1980,
+          "language": ["English"]
+        }
+      },
+      {
+        "movie_name": "The Texas Chainsaw Massacre",
+        "description": "A terrifying horror film about a group of friends who encounter a family of cannibals and a chainsaw-wielding maniac in rural Texas.",
+        "image_url": "https://posterspy.com/wp-content/uploads/2024/01/The-Texas-Chainsaw-Massacre.png",
+        "gener": ["Horror", "Slasher","Supernatural"],
+        "rating": 7.5,
+        "details": {
+          "cast": ["Marilyn Burns", "Paul A. Partain", "Edwin Neal", "Jim Siedow"],
+          "director": "Tobe Hooper",
+          "producer": "Tobe Hooper",
+          "duration":" 83 mins",
+          "language": ["English"]
+        }
+      },
+      {
+        "movie_name": "The Ring",
+        "description": "A journalist investigates a mysterious videotape that causes anyone who watches it to die in seven days.",
+        "image_url": "https://m.media-amazon.com/images/M/MV5BNDA2NTg2NjE4Ml5BMl5BanBnXkFtZTYwMjYxMDg5._V1_FMjpg_UX1000_.jpg",
+        "gener": ["Horror", "Mystery", "Thriller","Supernatural"],
+        "rating": 8,
+        "details": {
+          "cast": ["Naomi Watts", "Martin Henderson", "Brian Cox", "Daveigh Chase"],
+          "director": "Gore Verbinski",
+          "producer": "Sam Raimi",
+          "duration": "115 mins",
+          "year": 2002,
+          "language": ["English"]
+        }
+      },
+      {
+        "movie_name": "Halloween",
+        "description": "A masked killer, Michael Myers, escapes a mental institution and returns to his hometown to terrorize a babysitter and her friends on Halloween night.",
+        "image_url": "https://i.ebayimg.com/00/s/MTQxNFgxMDAw/z/L7cAAOSwhWZgU7Z8/$_57.JPG?set_id=8800005007",
+        "gener": ["Horror", "Thriller"],
+        "rating": 7.8,
+        "details": {
+          "cast": ["Jamie Lee Curtis", "Donald Pleasence", "Tony Moran", "Nick Castle"],
+          "director": "John Carpenter",
+          "producer": "Debra Hill",
+          "duration": "91 mins",
+          "year": 1978,
+          "language": ["English"]
+        }
+      },
+      {
+        "movie_name": "Sinister",
+        "description": "True-crime writer Ellison Oswalt discovers a box of home movies that put his family in great danger as he uncovers a supernatural force tied to the horrific events.",
+        "image_url": "https://m.media-amazon.com/images/M/MV5BMjI5MTg1Njg0Ml5BMl5BanBnXkFtZTcwNzg2Mjc4Nw@@._V1_FMjpg_UX1000_.jpg",
+        "gener": ["Horror", "Supernatural", "Thriller"],
+        "rating": 8.3,
+        "details": {
+          "cast": ["Ethan Hawke", "Juliet Rylance", "Fred Thompson", "James Ransone"],
+          "director": "Scott Derrickson",
+          "producer": "Jason Blum",
+          "duration":" 110 mins",
+          "year": 2012,
+          "language": ["English"]
+        }
+      },
+      {
+        "movie_name": "Insidious",
+        "description": "A family looks to prevent evil spirits from trapping their comatose child in a realm called The Further.",
+        "image_url": "https://image.tmdb.org/t/p/original/tmlDFIUpGRKiuWm9Ixc6CYDk4y0.jpg",
+        "gener": ["Horror", "Supernatural"],
+        "rating": 9,
+        "details": {
+          "cast": ["Patrick Wilson", "Rose Byrne", "Lin Shaye"],
+          "director": "James Wan",
+          "producer": "Oren Peli",
+          "duration": "103 mins",
+          "year": 2010,
+          "language": ["English"]
+        }
+      },
+      {
+        "movie_name": "IT",
+        "description": "A group of bullied kids band together when a monster, taking the appearance of a clown, begins hunting children.",
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/5/5a/It_%282017%29_poster.jpg",
+        "gener": ["Horror", "Mystery","Thriller"],
+        "rating": 7,
+        "details": {
+          "cast": ["Jaeden Lieberher", "Bill Skarsgård", "Finn Wolfhard"],
+          "director": "Andy Muschietti",
+          "producer": "Dan Lin",
+          "duration": "135 mins",
+          "year": 2017,
+          "language": ["English"]
+        }
+      }
+    ,
+    {
+      "movie_name": "Demonte Colony",
+      "description": "A group of friends visit a deserted colony, only to experience supernatural horrors. The horror intensifies as they uncover the dark secrets of the place.",
+      "image_url": "https://www.justwatch.com/images/poster/321354041/s166/demonte-colony",
+      "swiper":"https://sund-images.sunnxt.com/7245/1600x1200_DemonteColonyTamil_7245_110c2609-539a-4fba-9448-59fad30b3723.jpg",
+      "gener": ["Horror", "Thriller"],
+      "rating": 5.8,
+      "details": {
+        "cast": ["Abhishek Singh", "Aadarsh Balakrishna", "Nandita Swetha", "Ramesh Thilak"],
+        "director": "R. Ramkumar",
+        "producer": "R. Ramkumar, D. K. Ranjit",
+        "duration": "121 mins",
+        "year": 2015,
+        "language": ["Tamil"]
+      }
+    },
+    {
+      "movie_name": "Arunthathi",
+      "description": "A woman seeks revenge against those who wronged her and her family, as she becomes involved in a chilling series of supernatural events.",
+      "image_url": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p194655_v_v8_ab.jpg",
+      "gener": ["Horror","Thriller", "Supernatural"],
+      "rating": 6,
+      "details": {
+        "cast": ["Jyothika", "Sujatha", "Radhika", "Sundar C"],
+        "director": "Sundar C", 
+        "producer": "A. M. Rathnam",
+        "duration": "155 mins",
+        "year": 2009,
+        "language": ["Tamil"]
+      }
+    },
+    {
+      "movie_name": "Annabelle",
+      "description": "A couple begins to experience terrifying events when they are gifted a vintage doll that is possessed by an evil spirit.",
+      "image_url": "https://musicart.xboxlive.com/7/17105100-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080",
+      "swiper":"data:image/jpeg;base64,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",
+      "gener": ["Horror", "Supernatural", "Thriller"],
+      "rating": 8.4,
+      "details": {
+        "cast": ["Annabelle Wallis", "Ward Horton", "Tony Amendola", "Alfre Woodard"],
+        "director": "John R. Leonetti",
+        "producer": "James Wan",
+        "duration": "99 mins",
+        "year": 2014,
+        "language": ["English"]
+      }
+    },
+    {
+      "movie_name": "Final Destination 4",
+      "description": "A group of people survive a deadly accident after a series of premonitions, but they soon realize that Death itself is coming after them one by one.",
+      "image_url": "https://preview.redd.it/final-destination-6-updates-news-v0-j2mnwarminzb1.jpg?width=640&crop=smart&auto=webp&s=60293afc2902eca2cd8a314a6a4fedf9c2020664",
+      "gener": ["Horror", "Thriller", "Supernatural"],
+      "rating": 5.9,
+      "details": {
+        "cast": ["Bobby Campo", "Shantel VanSanten", "Nick Zano"],
+        "director": "David R. Ellis",
+        "producer": "Craig Perry",
+        "duration": "82 mins",
+        "year": 2009,
+        "language": ["English"]
+      }
+    },
+    {
+      "movie_name": "A Quiet Place",
+      "description": "In a post-apocalyptic world, a family is forced to live in silence while hiding from monsters with ultra-sensitive hearing.",
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/a/a0/A_Quiet_Place_film_poster.png",
+      "gener": ["Horror", "Thriller", "Drama"],
+      "rating": 7.5,
+      "details": {
+        "cast": ["Emily Blunt", "John Krasinski", "Millicent Simmonds", "Noah Jupe"],
+        "director": "John Krasinski",
+        "producer": "Michael Bay, Andrew Form, Brad Fuller",
+        "duration": "90 mins",
+        "year": 2018,
+        "language": ["English"]
+      }
+    },
+    {
+      "movie_name": "Maya",
+      "description": "A supernatural horror thriller about a struggling single mother who becomes entangled in the haunting mysteries surrounding an abandoned movie theater.",
+      "image_url": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/maya-et00032649-13-11-2020-05-48-07.jpg",
+      "gener": ["Horror", "Thriller"],
+      "rating": 8,
+      "details": {
+        "cast": ["Nayanthara", "Aari Arujunan"],
+        "director": "Ashwin Saravanan",
+        "producer": "S. R. Prabhu",
+        "duration": "138 mins",
+        "year": 2015,
+        "language": ["Tamil"]
+      }
+    },
+    {
+      "movie_name": "Megalomaniac",
+      "description": "A chilling dive into the mind of a disturbed individual, exploring themes of madness, brutality, and the terrifying depths of human depravity.",
+      "image_url": "https://m.media-amazon.com/images/M/MV5BNGY0MTdlMDUtNzNhZC00MWQzLWJiZDAtNjdjODU3ZmM5ZWNhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "gener": ["Horror", "Psychological Thriller"],
+      "rating": 7.5,
+      "details": {
+        "cast": ["Eline Schumacher", "Benjamin Ramon"],
+        "director": "Karim Ouelhaj",
+        "producer": "Hélène Cœur",
+        "duration": "100 mins",
+        "year": 2022,
+        "language": ["French"]
+      }
+    },
+    {
+      "movie_name": "Thirteen Ghosts",
+      "description": "A family inherits a luxurious glass mansion, unaware that it houses vengeful spirits and a deadly secret.",
+      "image_url": "https://m.media-amazon.com/images/I/81eWCj5NltS.jpg",
+      "gener": ["Horror", "Supernatural Thriller"],
+      "rating": 6,
+      "details": {
+        "cast": ["Tony Shalhoub", "Embeth Davidtz", "Matthew Lillard", "Shannon Elizabeth"],
+        "director": "Steve Beck",
+        "producer": "Gilbert Adler",
+        "duration": "91 mins",
+        "year": 2001,
+        "language": ["English"]
+      }
+    },
+    {
+      "movie_name": "Ghoul",
+      "description": "A horrifying tale of three filmmakers who venture into Ukraine to document the story of a cannibalistic spirit.",
+      "image_url": "https://m.media-amazon.com/images/M/MV5BMzA2NTMxNzE2M15BMl5BanBnXkFtZTgwOTQwOTU3NDE@._V1_.jpg",
+      "gener": ["Horror", "Supernatural"],
+      "rating": 5,
+      "details": {
+        "cast": ["Jennifer Armour", "Alina Golovlyova", "Jeremy Isabella"],
+        "director": "Petr Jákl",
+        "producer": "Kristian Vamos",
+        "duration": "86 mins",
+        "year": 2015,
+        "language": ["English", "Ukrainian"]
+      }
+    },
+
+    {
+      "movie_name": "The Amityville Horror",
+      "description": "A chilling story of a family terrorized by paranormal forces in their new home, based on real-life events.",
+      "image_url": "https://play-lh.googleusercontent.com/HK4Mu4Fv7DzqpuliW9PrZwhLgColUP4MNq1sHKsBA9RXj3s6k9nXUhq0PECr1gooOcC6Ftr3TFG-wecSRmo",
+      "swiper":"https://www.joblo.com/wp-content/uploads/2023/12/the-amityville-horror-2005-featured-1280x720.jpg",
+      "gener": ["Horror", "Supernatural","docudrama"],
+      "rating": 6.2,
+      "details": {
+        "cast": ["James Brolin", "Margot Kidder", "Rod Steiger"],
+        "director": "Stuart Rosenberg",
+        "producer": "Elliot Geisinger",
+        "duration": "117 mins",
+        "year": 1979,
+        "language": ["English"]
+      }
+    },
+    {
+      "movie_name": "The Conjuring 2",
+      "description": "The Warrens travel to north London to help a single mother whose children are being tormented by an angry spirit.",
+      "image_url": "https://static.wixstatic.com/media/c28f72_5fef23933b2941948a027fff2e10c650~mv2.jpg/v1/fill/w_552,h_782,al_c,lg_1,q_85,enc_avif,quality_auto/c28f72_5fef23933b2941948a027fff2e10c650~mv2.jpg",
+      "gener": ["Horror", "Supernatural", "Mystery","docudrama"],
+      "rating": 9,
+      "details": {
+        "cast": ["Vera Farmiga", "Patrick Wilson", "Madison Wolfe", "Frances O'Connor"],
+        "director": "James Wan",
+        "producer": "James Wan",
+        "duration": "134 mins",
+        "year": 2016,
+        "language": ["English"]
+      }
+    },
+    {
+      "movie_name": "The Curse of La Llorona",
+      "description": "A social worker and her children are drawn into a frightening supernatural world when a troubled mother is accused of child endangerment and haunted by the ghostly figure of La Llorona.",
+      "image_url": "https://i-viaplay-com.akamaized.net/viaplay-prod/132/8/1562848858-08ada0cc8fdf2068d822876879047a00e7a3e0bc.jpg?width=400&height=600",
+      "swiper":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDyWrz47kH0jW-uOXwx4mQpwBM8gt2u1gDxuIH53WwOPesF0zTLdtzKL_rY2CVLbPAuhQ&usqp=CAU",      "gener": ["Horror", "Supernatural", "Thriller","docudrama"],
+      "rating": 9,
+      "details": {
+        "cast": ["Linda Cardellini", "Raymond Cruz", "Patricia Velásquez", "Marisol Ramirez"],
+        "director": "Michael Chaves",
+        "producer": "James Wan",
+        "duration": "93 mins",
+        "year": 2019,
+        "language": ["English"]
+      }
+    },
+    {
+      "movie_name": "Veronica",
+      "description": "A young girl is left alone with her siblings and is drawn into a terrifying world after using a Ouija board to contact her deceased father, unleashing a malevolent force.",
+      "image_url": "https://mlmillerwrites.com/wp-content/uploads/2018/10/veronica.jpg",
+    "gener": ["Horror", "Supernatural", "Thriller","docudrama"],
+      "rating": 4,
+      "details": {
+        "cast": ["Sandra Escacena", "Bruna González", "Claudia Placer", "Iván Chavero"],
+        "director": "Paco Plaza",
+        "producer": "Rodrigo Cortés",
+        "duration": "105 mins",
+        "year": 2017,
+        "language": ["Spanish"]
+      }
+    },
+    {
+      "movie_name": "The Crucifixion",
+      "description": "A journalist investigates a case of a nun's death, leading her to uncover terrifying truths about an alleged demonic possession.",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxoql2teRpBnTAnqLYV8ES90PzrbM8l9wMZLsdZ6m5mDrlELIdSoEaLkj9z9jw8jZZtQ&usqp=CAU",
+      "swiper":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc3f0_P3DCFhjY7XSil8sKLrv-lJCpZbfNLWHKZERsYLyKH6yEaizKTNVFGzYeXHIQSE4&usqp=CAU",
+      "gener": ["Horror", "Supernatural", "Mystery","docudrama"],
+      "rating": 3,
+      "details": {
+        "cast": ["Sophie Cookson", "Corneliu Ulici", "Laure Killing"],
+        "director": "Xavier Gens",
+        "producer": "Todd Garner",
+        "duration": "90 mins",
+        "year": 2017,
+        "language": ["English"]
+      }
+    },
+    {
+      "movie_name": "Annabelle: Creation",
+      "description": "The prequel to Annabelle, revealing the origin of the possessed doll as a group of orphans and a nun become its victims.",
+      "image_url": "https://image.tmdb.org/t/p/original/6LksVLIziTsb1O9TLWNujVSGGcj.jpg",
+      "swiper":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVCK5C_GiLyVCuj8Mq7tJ-R6pQYczspssjhQ&s",
+      "gener": ["Horror", "Supernatural", "Thriller","docudrama"],
+      "rating": 7,
+      "details": {
+        "cast": ["Stephanie Sigman", "Talitha Bateman", "Anthony LaPaglia"],
+        "director": "David F. Sandberg",
+        "producer": "Peter Safran",
+        "duration": "109 mins",
+        "year": 2017,
+        "language": ["English"]
+      }
+    },
+    {
+      "movie_name": "The Babadook",
+      "description": "A grieving mother battles her son's fear of a monster lurking in their home, only to discover a sinister presence is haunting them.",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYWWajw40kgltfYFUOUGEkd9XNnPKjTYVEmCFoP7x79S_B7zu4P9UVmx5Z8QDOlhL3luM&usqp=CAU",
+      "gener": ["Horror", "Psychological","docudrama"],
+      "rating": 7,
+      "details": {
+        "cast": ["Essie Davis", "Noah Wiseman", "Daniel Henshall"],
+        "director": "Jennifer Kent",
+        "producer": "Kristina Ceyton",
+        "duration": "94 mins",
+        "year": 2014,
+        "language": ["English"]
+      }
+    },  {
+      "movie_name": "The Grudge",
+      "description": "A young woman becomes involved in a terrifying curse after investigating a house where a supernatural entity resides.",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStrNiDirHtLwfBgHInEGvYlPooxI9WTkLpQw&s",
+      "swiper":"https://occ-0-8407-114.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdWiyf4DZsLAOC5bWA7xzG5ns-ZRl0XlS143NAHp0w2aDsXW6nG9Rem9oqxBIhVK4poksZk2F3qO_qoLEDSctRh-Vk2uOmydh-ks.jpg?r=32d",
+      "gener": ["Horror", "Supernatural"],
+      "rating": 5.9,
+      "details": {
+        "cast": ["Sarah Michelle Gellar", "Jason Behr", "Cleopatra Coleman"],
+        "director": "Takashi Shimizu",
+        "producer": "Sam Raimi",
+        "duration": "92 mins",
+        "year": 2004,
+        "language": ["English"]
+      }
+    },
+    {
+      "movie_name": "Scream",
+      "description": "A group of teenagers is stalked by a masked killer who targets them based on horror movie tropes. As they try to uncover the identity of the killer, they must confront their worst fears.",
+      "image_url": "https://image.tmdb.org/t/p/original/xVjk4TPttO1dddHRw5YwKGgQPRP.jpg",
+      "gener": ["Horror", "Mystery", "Thriller","docudrama"],
+      "rating": 7,
+      "details": {
+        "cast": ["Neve Campbell", "Courteney Cox", "David Arquette"],
+        "director": "Wes Craven",
+        "producer": "Cathy Konrad",
+        "duration": "111 mins",
+        "year": 1996,
+        "language": ["English"]
+      }
+    }
+  ]
+  
+  }
