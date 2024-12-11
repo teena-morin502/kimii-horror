@@ -271,77 +271,16 @@ footer {
   color: #bbb; 
   margin: 0;
 }
-/* Profile Container */
+.dropdown-card {
+  position: absolute;
+  top: 70px; /* Adjust based on the profile image position */
+  right: 10px; /* Align with the profile container */
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1000;
+}
 .profile-container {
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.profile-container .profile {
-  cursor: pointer;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-/* Guest Info */
-#guest {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#guest p {
-  margin: 0;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-#guest a {
-  font-size: 14px;
-  color: #007BFF;
-  text-decoration: none;
-  margin-top: 10px;
-}
-
-#guest a:hover {
-  text-decoration: underline;
-}
-
-/* User Info */
-#userProfile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#userProfile p {
-  margin: 0;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-#userProfile a {
-  font-size: 14px;
-  color: #007BFF;
-  text-decoration: none;
-}
-
-#userProfile a:hover {
-  text-decoration: underline;
-}
-
-/* Login Button Styling */
-#loginBtn {
-  font-size: 14px;
-  color: #007BFF;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
-}
-
-#loginBtn:hover {
-  text-decoration: underline;
+  position: relative;
 }

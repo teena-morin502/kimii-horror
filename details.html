@@ -16,11 +16,11 @@
             <div id="result-container"></div>
         </div>
         <div class="profile-container">
-            <a href="#guest" id="profileLink"><img src="user.png" alt="profile" width="60px" height="60px" class="profile"></a> 
-            <div id="guest" style="display: none;">
-                <p>Guest</p>
-                <a href="login.html">Login</a>
-            </div>  
+            <div class="dropdown-card" id="dropdownCard" style="display: none;">
+                <a href="login.html" id="loginBtn">Login</a>
+                <a href="#" id="logoutBtn" style="display: none;">Logout</a>
+            </div>
+        </div>
             </nav>
 </header>
     <main id="movie-details">
@@ -70,11 +70,60 @@
             </div>
         `;
         detailsContainer.innerHTML = movieDetails;
-        document.getElementById('profileLink').addEventListener('click', function() {
-        document.getElementById('guest').style.display = 'block';
-    });
     </script>
-    <script></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+    
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAaJ8_qJrVVJnYlSdLQ1D5vaVRpS79GZ1E",
+            authDomain: "kimii-horror.firebaseapp.com",
+            projectId: "kimii-horror",
+            storageBucket: "kimii-horror.firebasestorage.app",
+            messagingSenderId: "425936807279",
+            appId: "1:425936807279:web:35d001bc3eb90dd49ff49a",
+            measurementId: "G-7KM8QRZTCR"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+    
+        // DOM Elements
+        const profileLink = document.getElementById("profileLink");
+        const dropdownCard = document.getElementById("dropdownCard");
+        const loginBtn = document.getElementById("loginBtn");
+        const logoutBtn = document.getElementById("logoutBtn");
+    
+        // Toggle Dropdown
+        profileLink.addEventListener("click", (event) => {
+            event.preventDefault();
+            dropdownCard.style.display = dropdownCard.style.display === "none" ? "block" : "none";
+        });
+    
+        // Handle Login/Logout Display
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                loginBtn.style.display = "none";
+                logoutBtn.style.display = "block";
+            } else {
+                loginBtn.style.display = "block";
+                logoutBtn.style.display = "none";
+            }
+        });
+    
+        // Logout Action
+        logoutBtn.addEventListener("click", async (event) => {
+            event.preventDefault();
+            try {
+                await signOut(auth);
+                alert("Logged out successfully.");
+            } catch (error) {
+                console.error("Error during logout:", error);
+            }
+        });
+    </script>
 
 </body>
 </html>

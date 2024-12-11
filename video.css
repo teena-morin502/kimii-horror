@@ -13,6 +13,7 @@ body{
 #movie-title {
     margin-bottom: 20px;
     font-size: 24px;
+    color: #bbb;
 }
 
 .video-js {
@@ -115,4 +116,68 @@ footer {
     transform: scale(1.2);
   }
   
-  
+  /* search */
+#result-container {
+  position: absolute;
+  top: 50px;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+  max-height: 300px; 
+  overflow-y: auto;
+}
+
+#result-container .movie-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px; 
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #222;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#result-container .movie-card img {
+  width: 70px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+#result-container .movie-card div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; 
+}
+
+#result-container .movie-card h3 {
+  font-size: 16px;
+  color: white;
+  margin: 0;
+}
+
+
+#result-container .movie-card p {
+  font-size: 14px;
+  color: #bbb; 
+  margin: 0;
+}
+.dropdown-card {
+  position: absolute;
+  top: 70px; /* Adjust based on the profile image position */
+  right: 10px; /* Align with the profile container */
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1000;
+}
+.profile-container {
+  position: relative;
+}
