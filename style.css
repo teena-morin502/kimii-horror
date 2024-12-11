@@ -273,8 +273,6 @@ footer {
 }
 .dropdown-card {
   position: absolute;
-  top: 70px; /* Adjust based on the profile image position */
-  right: 10px; /* Align with the profile container */
   background-color: white;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 5px;

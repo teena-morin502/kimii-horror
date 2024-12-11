@@ -43,3 +43,20 @@ async function filterMovies() {
 }
 
 searchInput.addEventListener('input', filterMovies);
+
+const queryParams = new URLSearchParams({
+    movie_name: movie.movie_name || 'Unknown',
+    description: movie.description || 'No description available',
+    image_url: movie.image_url || '',
+    rating: movie.rating || 'N/A',
+    genre: movie.gener?.join(', ') || 'Unknown',
+    cast: movie.details?.cast?.join(', ') || 'Unknown',
+    director: movie.details?.director || 'Unknown',
+    producer: movie.details?.producer || 'Unknown',
+    duration: movie.details?.duration || 'N/A',
+    language: movie.details?.language?.join(', ') || 'Unknown',
+    year: movie.details?.year || 'Unknown'
+}).toString();
+
+
+movieLink.href = `details.html?${queryParams}`;

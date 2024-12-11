@@ -126,13 +126,13 @@
  
             for (let i = 0; i < movieArray.length; i++) {
     const movie = movieArray[i];
-
     const slide = document.createElement('div');
     slide.classList.add('swiper-slide');
     slide.innerHTML = `
-        <img src="${movie.swiper}" alt="${movie.movie_name}" width='1490px' height='600px'>
+        <img src="${movie.swiper}" alt="${movie.movie_name}" width='1490px' height='500px'>
     `;
     titleMoviesContainer.appendChild(slide);
+    
 }
 
             const swiper = new Swiper('.swiper', {
