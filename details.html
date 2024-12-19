@@ -6,6 +6,7 @@
     <title>Movie Details</title>
     <link rel="stylesheet" href="details.css">
     <script src="search.js" type="module" defer></script> 
+    <script src="profile.js" type="module" defer></script> 
 </head>
 <body>
     <header class="navBar">
@@ -15,12 +16,16 @@
             <input type="text" class="search" id="filter" placeholder="search....">
             <div id="result-container"></div>
         </div>
-        <div class="profile-container">
-            <div class="dropdown-card" id="dropdownCard" style="display: none;">
-                <a href="login.html" id="loginBtn">Login</a>
-                <a href="#" id="logoutBtn" style="display: none;">Logout</a>
+<div class="profile-container">
+            <a href="#" id="profileLink">
+                <img src="user.png" alt="profile" width="60px" height="60px" class="profile">
+            </a>
+            <div class="profile-container">
+                <div class="dropdown-card" id="dropdownCard" style="display: none;">
+                    <a href="login.html" id="loginBtn">Login</a>
+                    <a href="#" id="logoutBtn" style="display: none;">Logout</a>
+                </div>
             </div>
-        </div>
             </nav>
 </header>
     <main id="movie-details">
@@ -42,35 +47,79 @@
             </div>
     
     </footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const detailsContainer = document.getElementById('movie-details');
 
-    <script>
-        // Parse URL Parameters
-        const params = new URLSearchParams(window.location.search);
+    if (!detailsContainer) {
+        console.error('Error: Movie details container not found in the DOM.');
+        return;
+    }
 
-        // Extract and display movie details
-        const detailsContainer = document.getElementById('movie-details');
-        const movieDetails = `
-            <div class="movie-card">
-                <img src="${params.get('image_url')}" alt="${params.get('movie_name')}" class="searchImage" width="300">
-                <div class="details">
-                <h2>${params.get('movie_name')}</h2>
-                <p><strong>Description:</strong> ${params.get('description')}</p>
-                <p><strong>Rating:</strong> ${params.get('rating')}</p>
-                <p><strong>Genre:</strong> ${params.get('genre')}</p>
-                <p><strong>Cast:</strong> ${params.get('cast')}</p>
-                <p><strong>Director:</strong> ${params.get('director')}</p>
-                <p><strong>Producer:</strong> ${params.get('producer')}</p>
-                <p><strong>Duration:</strong> ${params.get('duration')}</p>
-                <p><strong>Language:</strong> ${params.get('language')}</p>
-                <p><strong>Year:</strong> ${params.get('year')}</p>
-                <a href="video.html?video_url=${encodeURIComponent(params.get('video_url'))}&movie_name=${encodeURIComponent(params.get('movie_name'))}" id="watch-now">
-                <button class="button">Watch Now</button>
-                </a>
-            <div>
+    // Retrieve the selected movie from localStorage
+    const movieDetails = localStorage.getItem('selectedMovie');
+
+    if (!movieDetails) {
+        detailsContainer.innerHTML = '<p>No movie selected. Please go back and select a movie.</p>';
+        return;
+    }
+
+    try {
+        const movie = JSON.parse(movieDetails);
+
+        detailsContainer.innerHTML = `
+            <!-- Movie Container -->
+            <div class="movie-details-container">
+                <!-- Movie Poster -->
+                <div class="movie-poster">
+                    <img src="${movie.image_url}" alt="${movie.movie_name}" width="300px" height="400px" >
+                </div>
+
+                <!-- Movie Information -->
+                <div class="movie-info">
+                    <!-- Movie Name -->
+                    <h1 class="movie-name">${movie.movie_name}</h1>
+
+                    <!-- Duration and Rating Boxes -->
+                    <div class="movie-meta">
+                        <!-- Duration Box -->
+                        <span class="movie-duration">${movie.details?.duration || 'N/A'}</span>
+                        <span class="movie-year">${movie.details?.year || 'Unknown'}</span>
+                        <span class="movie-rating">${movie.rating || 'N/A'}/5</span>
+                    </div>
+
+                    <p class="movie-description">${movie.description}</p>
+
+                    <button class="login-button">Login to Watch</button>
+                </div>
             </div>
-        `;
-        detailsContainer.innerHTML = movieDetails;
-    </script>
+
+            <!-- More Information -->
+            <div class="more-info">
+                <h2>More Information</h2>
+                <p><strong>Language:</strong> ${movie.details?.language?.join(', ') || 'Unknown'}</p>
+                <p><strong>Cast:</strong> ${movie.details?.cast?.join(', ') || 'Unknown'}</p>
+                <p><strong>Director:</strong> ${movie.details?.director || 'Unknown'}</p>
+                <p><strong>Producer:</strong> ${movie.details?.producer || 'Unknown'}</p>
+            </div>
+
+            <!-- Recommended Movies -->
+            <div class="recommended-section">
+                <h2>Recommended Movies</h2>
+                <div class="recommended-container">
+                    <div class="recommended-item"></div>
+                    <div class="recommended-item"></div>
+                    <div class="recommended-item"></div>
+                    <div class="recommended-item"></div>
+                </div>
+            </div>
+        `;    } catch (error) {
+        console.error('Error parsing movie details:', error);
+        detailsContainer.innerHTML = '<p>Error loading movie details. Please try again.</p>';
+    }
+});
+
+   </script> 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
         import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";

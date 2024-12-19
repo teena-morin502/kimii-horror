@@ -6,8 +6,11 @@
     <title>Kimii horror</title>
     <link  rel ="stylesheet" href="style.css">
     <script src="home.js" type="module" defer></script>
-    <script src="search.js" type="module" defer></script>  
+    <script src="search.js" type="module" defer></script> 
+    <script src="profile.js" type="module" defer></script>   
     <!-- Link Swiper's CSS  -->
+
+    
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
     .swiper-button-next,
@@ -30,7 +33,7 @@
     <nav class="header">
         <div style="position: relative; width: 100%;">
             <input type="text" class="search" id="filter" placeholder="search....">
-            <div id="result-container"></div>
+            <span id="result-container"></span>
         </div>
         <div class="profile-container">
             <a href="#" id="profileLink">
@@ -77,17 +80,11 @@
 
 <!-- thriller movie -->
 <div class="title">
-  <h2 id="thriller">THRILLERS</h2>
+  <h2 id="recomended">RECOMENDED</h2>
 </div>
-<div class="thriller_movie_container" id="thrillerMoviesContainer">
+<div class="recomended_movie_container" id="recomendedMoviesContainer">
 </div>
 
-<!-- based on supernatural -->
-<div class="title">
-    <h2 id="supernatural">SUPERNATURAL</h2>
-</div>
-<div class="supernatural_movie_container" id="supernaturalMovieContainer">
-</div>
 <div class="arrow" onclick="scrollToTop()">^</div>
 </article>
 <footer>
@@ -164,59 +161,7 @@
     });
   }
 </script>
-<script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-    import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
 
-    // Firebase configuration
-    const firebaseConfig = {
-        apiKey: "AIzaSyAaJ8_qJrVVJnYlSdLQ1D5vaVRpS79GZ1E",
-        authDomain: "kimii-horror.firebaseapp.com",
-        projectId: "kimii-horror",
-        storageBucket: "kimii-horror.firebasestorage.app",
-        messagingSenderId: "425936807279",
-        appId: "1:425936807279:web:35d001bc3eb90dd49ff49a",
-        measurementId: "G-7KM8QRZTCR"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-
-    // DOM Elements
-    const profileLink = document.getElementById("profileLink");
-    const dropdownCard = document.getElementById("dropdownCard");
-    const loginBtn = document.getElementById("loginBtn");
-    const logoutBtn = document.getElementById("logoutBtn");
-
-    // Toggle Dropdown
-    profileLink.addEventListener("click", (event) => {
-        event.preventDefault();
-        dropdownCard.style.display = dropdownCard.style.display === "none" ? "block" : "none";
-    });
-
-    // Handle Login/Logout Display
-    onAuthStateChanged(auth, (user) => {
-        if (user) {
-            loginBtn.style.display = "none";
-            logoutBtn.style.display = "block";
-        } else {
-            loginBtn.style.display = "block";
-            logoutBtn.style.display = "none";
-        }
-    });
-
-    // Logout Action
-    logoutBtn.addEventListener("click", async (event) => {
-        event.preventDefault();
-        try {
-            await signOut(auth);
-            alert("Logged out successfully.");
-        } catch (error) {
-            console.error("Error during logout:", error);
-        }
-    });
-</script>
 
 </body>
 </html>

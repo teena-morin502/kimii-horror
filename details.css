@@ -3,142 +3,30 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     background-color: #121212; /* Dark theme background */
-    color: white; /* White text for contrast */
+    color: white;
     line-height: 1.6;
 }
 
 /* Header Styles */
 header {
-    background-color: rgba(0, 0, 0, 0.929);
-    padding: 15px 20px;
-    color: white;
-    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.9);
     height: 70px;
 }
+
 .navBar {
-  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeaR2VmVMc9wCa0tQxbhksU7kkoIlqTqGpXg&s);
-  display: flex;
-  background-size: cover;
-  background-position: center;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeaR2VmVMc9wCa0tQxbhksU7kkoIlqTqGpXg&s');
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    background-size: cover;
+    background-position: center;
     padding: 15px 20px;
-    height: 70px;
-  }
-  
-  .header {
+}
+
+.header {
     display: flex;
     align-items: center;
     gap: 30px;
-  }
-
-
-footer {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-  }
-  
-  /* Footer Left: Kimii Horror Logo and Copyright */
-  .footer-left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  
-  .footer-left img {
-    width: 150px;
-  }
-  
-  .copy {
-    font-size: 16px;
-    color: blanchedalmond;
-  }
-  
-  /* Social Media Icons */
-  .social {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-  }
-  
-  .media {
-    height: 40px;
-    width: 40px;
-    border-radius: 100%;
-    border: 2px solid white;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .media:hover {
-    transform: scale(1.2);
-  }
-
-
-
-/* Movie Card Styles */
-.movie-card {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    margin:20px;
-}
-
-.movie-card img {
-    border-radius: 10px;
-    max-width: 100%;
-    height: auto;
-    box-shadow: 0 4px 10px rgba(54, 53, 53, 0.5);
-    margin:30px;
-}
-.details{
-    margin:30px;
-}
-.movie-card h2 {
-    font-size: 2rem;
-    margin: 0;
-    color: #e50914; /* Red for emphasis */
-}
-
-.movie-card p {
-    margin: 5px 0;
-    font-size: 18px;
-}
-
-.movie-card p strong {
-    color: #e50914; /* Highlighted labels */
-}
-
-.button {
-    background-color: #e50914; /* Horror red theme */
-    color: white;
-    font-size: 1rem;
-    font-family: 'Arial', sans-serif;
-    padding: 10px 20px;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    box-shadow: 0 4px 10px rgba(153, 110, 110, 0.5);
-}
-
-button:hover {
-    background-color: #c40812; /* Darker red for hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
-}
-
-button:active {
-    transform: scale(0.98); /* Slightly shrink on click */
-    background-color: #a3060f; /* Even darker red for click */
-}
-
-button:focus {
-    outline: 2px solid #e50914; /* Focus indicator */
-    outline-offset: 2px;
 }
 
 .search {
@@ -150,26 +38,179 @@ button:focus {
     border: 1px solid white;
     width: 400px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-  }
-  
-  .search:focus {
+}
+
+.search:focus {
     box-shadow: 0 0 10px rgb(255, 50, 54);
     transform: scale(1.05);
     outline: none;
-  }
-  
-  .profile {
+}
+
+.profile-container {
+    position: relative;
+}
+
+.profile {
     border-radius: 50%;
     border: 2px solid white;
     transition: transform 0.3s ease;
-  }
-  
-  .profile:hover {
+}
+
+.profile:hover {
     transform: rotate(360deg);
-  }
-  
+}
+
+.dropdown-card {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background-color: rgba(20, 20, 20, 0.95);
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* Footer Styles */
+footer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #444;
+}
+
+.footer-left img {
+    width: 150px;
+}
+
+.copy {
+    font-size: 14px;
+    color: blanchedalmond;
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.media {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: 2px solid white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.media:hover {
+    transform: scale(1.2);
+}
+
+/* Movie Details Section */
+.movie-details-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(18, 18, 18, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.movie-poster img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.movie-info {
+    flex: 1;
+}
+
+.movie-name {
+    font-size: 2.5em;
+    color: #e63946;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.movie-meta {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.movie-meta span {
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.movie-duration {
+    background-color: #444;
+    color: #fff;
+}
+
+.movie-rating {
+    background-color: #ef4e4e;
+    color: #fff;
+}
+
+.movie-year {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #ffffff;
+}
+
+.movie-description {
+    line-height: 1.5;
+    margin: 10px 0;
+    color: #f0f0f0;
+}
+
+.login-button {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #e63946;
+    color: white;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #bf2929;
+    transform: scale(1.05);
+}
+
+/* More Information */
+.more-info {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    border-top: 1px solid #444;
+}
+
+.more-info h2 {
+    color: white;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.more-info p {
+    margin: 5px 0;
+    color: #ccc;
+}
+
 /* search */
 #result-container {
+  display: none;
   position: absolute;
   top: 50px;
   background-color: rgba(0, 0, 0, 0.9);
@@ -179,7 +220,6 @@ button:focus {
   z-index: 9999;
   display: flex;
   flex-direction: column; 
-  gap: 10px;
   max-height: 300px; 
   overflow-y: auto;
 }
@@ -187,7 +227,7 @@ button:focus {
 #result-container .movie-card {
   display: flex;
   align-items: flex-start;
-  gap: 10px; 
+  margin-bottom: 10px;
   padding: 10px;
   border-radius: 8px;
   background-color: #222;
@@ -219,17 +259,4 @@ button:focus {
   font-size: 14px;
   color: #bbb; 
   margin: 0;
-}
-.dropdown-card {
-  position: absolute;
-  top: 70px; /* Adjust based on the profile image position */
-  right: 10px; /* Align with the profile container */
-  background-color: white;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  padding: 10px;
-  z-index: 1000;
-}
-.profile-container {
-  position: relative;
 }

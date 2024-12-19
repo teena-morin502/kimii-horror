@@ -4,13 +4,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-a{
+a {
   text-decoration: none;
 }
 
+/* Body Background and Animation */
 body {
   font-family: 'Cinzel Decorative', serif;
-  background-color: rgb(20, 20, 20); /* Dark background */
+  background-color: rgb(20, 20, 20);
   color: white;
   position: relative;
   overflow-x: hidden;
@@ -31,89 +32,126 @@ body::before {
 
 @keyframes floatGhost {
   0%, 100% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
   50% {
-      transform: translateY(-20px);
+    transform: translateY(-20px);
   }
 }
 
-/* Header and Navigation */
+/* Header and Navigation Bar */
 .navBar {
   background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeaR2VmVMc9wCa0tQxbhksU7kkoIlqTqGpXg&s);
   display: flex;
-  background-size: cover;
-  background-position: center;
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
   height: 70px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .header {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 40px; /* Increased gap for cleaner spacing */
 }
 
-
-
-
-
-/* Search and Profile Animations */
+/* Search Input */
 .search {
   background: transparent;
   height: 40px;
   border-radius: 20px;
-  padding: 0px 20px;
+  padding: 0 20px;
   color: white;
   border: 1px solid white;
   width: 400px;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .search:focus {
-  box-shadow: 0 0 10px rgb(255, 50, 54);
+  box-shadow: 0 0 15px rgba(255, 50, 54, 0.8);
   transform: scale(1.05);
   outline: none;
 }
 
+/* Profile Image */
 .profile {
   border-radius: 50%;
   border: 2px solid white;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .profile:hover {
-  transform: rotate(360deg);
+  transform: rotate(360deg) scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-/* Movie Sections */
+/* Dropdown Card */
+.dropdown-card {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 10px;
+  z-index: 1000;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.dropdown-card a {
+  display: block;
+  padding: 5px 10px;
+  color: black;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-card a:hover {
+  background-color: rgba(255, 50, 54, 0.1);
+  border-radius: 5px;
+}
+
+/* Movie Section Styles */
+.title {
+  padding: 20px 25px;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: rgb(255, 50, 54);
+  letter-spacing: 2px;
+}
+
 .movie_slide {
   flex: 0 0 auto;
   width: 200px;
   height: 300px;
   border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .movie_slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.movie_slide:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(255, 50, 54, 0.5);
 }
 
 .movie_name {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
   text-align: center;
   color: white;
-  font-size: 18px;
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 5px;
+  padding: 8px;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -122,45 +160,28 @@ body::before {
   opacity: 1;
 }
 
-.movie_slide:hover {
-  transform: scale(1.1);
-  z-index: 2;
-}
-
-/* Title Styling */
-.title {
-  padding: 20px 25px;
-  font-size: 26px;
-  text-transform: uppercase;
-  color: rgb(255, 50, 54);
-}
-
 /* Movie Containers */
 .top_10_movie_container,
-.thriller_movie_container,
-.supernatural_movie_container,
+.recomended_movie_container,
 .real_horror_movie_container {
   display: flex;
-  gap: 16px;
+  gap: 20px; /* Improved spacing */
   padding: 10px 25px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
-/* Footer Section */
+/* Footer */
 footer {
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Footer Left: Kimii Horror Logo and Copyright */
+/* Footer Left */
 .footer-left {
   display: flex;
   flex-direction: column;
@@ -170,6 +191,7 @@ footer {
 
 .footer-left img {
   width: 150px;
+  filter: drop-shadow(0px 4px 6px rgba(255, 50, 54, 0.5));
 }
 
 .copy {
@@ -181,22 +203,23 @@ footer {
 .social {
   display: flex;
   gap: 15px;
-  align-items: center;
 }
 
 .media {
   height: 40px;
   width: 40px;
-  border-radius: 100%;
+  border-radius: 50%;
   border: 2px solid white;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
 }
 
 .media:hover {
   transform: scale(1.2);
+  box-shadow: 0 6px 12px rgba(255, 50, 54, 0.8);
 }
 
-/* Arrow for Article Section */
+/* Back to Top Arrow */
 .arrow {
   font-size: 24px;
   color: white;
@@ -204,6 +227,7 @@ footer {
   padding-top: 60px;
   padding-left: 1450px;
   animation: bounce 1.5s infinite;
+  transition: all 0.3s ease;
 }
 
 @keyframes bounce {
@@ -221,6 +245,7 @@ footer {
 }
 /* search */
 #result-container {
+  display: none;
   position: absolute;
   top: 50px;
   background-color: rgba(0, 0, 0, 0.9);
@@ -230,7 +255,6 @@ footer {
   z-index: 9999;
   display: flex;
   flex-direction: column; 
-  gap: 10px;
   max-height: 300px; 
   overflow-y: auto;
 }
@@ -238,7 +262,7 @@ footer {
 #result-container .movie-card {
   display: flex;
   align-items: flex-start;
-  gap: 10px; 
+  margin-bottom: 10px;
   padding: 10px;
   border-radius: 8px;
   background-color: #222;
@@ -270,15 +294,4 @@ footer {
   font-size: 14px;
   color: #bbb; 
   margin: 0;
-}
-.dropdown-card {
-  position: absolute;
-  background-color: white;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  padding: 10px;
-  z-index: 1000;
-}
-.profile-container {
-  position: relative;
 }
