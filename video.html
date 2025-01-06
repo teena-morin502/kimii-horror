@@ -64,7 +64,7 @@
     // Retrieve the current movie from localStorage
     const currentMovie = JSON.parse(localStorage.getItem('currentMovie'));
     const recommendedMoviesContainer = document.getElementById('recommended-grid');
-    const currentMoviVideoUrl = (localStorage.getItem('currentMovieVideoUrl'));
+    const currentMoviVideoUrl = JSON.parse(localStorage.getItem('currentMovie'));
 
     if (currentMovie) {
       // Populate movie details and breadcrumb
@@ -83,7 +83,7 @@
       const iframe = document.createElement('iframe');
       iframe.width = '800';
       iframe.height = '450';
-      iframe.src = currentMoviVideoUrl;
+      iframe.src = embedUrl;
       iframe.frameBorder = '0';
       iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
       iframe.allowFullscreen = true;
