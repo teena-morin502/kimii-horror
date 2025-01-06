@@ -84,7 +84,6 @@ body::before {
 }
 
 .profile:hover {
-  transform: rotate(360deg) scale(1.1);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
@@ -199,11 +198,7 @@ footer {
   color: blanchedalmond;
 }
 
-/* Social Media Icons */
-.social {
-  display: flex;
-  gap: 15px;
-}
+
 
 .media {
   height: 40px;

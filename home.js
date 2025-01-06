@@ -32,21 +32,20 @@ async function loadMovies() {
             movieImage.height = 300;
 
             const movieLink = document.createElement('a');
-            movieLink.href = 'details.html'; 
-            movieLink.addEventListener('click', () => {
-                localStorage.setItem('selectedMovie', JSON.stringify(movie));
-            });
+            const encodedMovieName = encodeURIComponent(movie.movie_name || 'Unknown Movie');
+            movieLink.href = `details.html?id=${movie.id}&movie_name=${encodedMovieName}`;
+
 
             movieLink.appendChild(movieDiv);
             movieDiv.appendChild(movieImage);
 
-            if (movie.rating >=3) {
+            if (movie.rating >=4) {
                 top10Container.appendChild(movieLink.cloneNode(true));
             }
 
             if (movie.gener?.includes('docudrama')) {
                 realHorrorContainer.appendChild(movieLink);
-            }else if (movie.gener?.includes('Horror')) {
+            }else{
                 recomendedContainer.appendChild(movieLink);
             }
         });

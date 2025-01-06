@@ -56,9 +56,6 @@ header {
     transition: transform 0.3s ease;
 }
 
-.profile:hover {
-    transform: rotate(360deg);
-}
 
 .dropdown-card {
     position: absolute;
@@ -259,4 +256,4 @@ footer {
   font-size: 14px;
   color: #bbb; 
   margin: 0;
-}
+}   

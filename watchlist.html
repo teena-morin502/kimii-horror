@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watchlist</title>
+    <link rel="stylesheet" href="watchlist.css">
+    <script src="search.js" type="module" defer></script> 
+    <script src="profile.js" type="module" defer></script>  
+</head>
+<body>
+    <header class="navBar">
+        <img src="kimiihorror.png" alt="website logo" width="250px">
+        <nav class="header">
+            <div style="position: relative; width: 100%;">
+                <input type="text" class="search" id="filter" placeholder="search....">
+                <div id="result-container"></div>
+            </div>
+
+            <div class="profile-container">
+                <a href="#" id="profileLink">
+                    <img src="user.png" alt="profile" width="60px" height="60px" class="profile">
+                </a>
+                <div class="dropdown-card" id="dropdownCard" style="display: none;">
+                    <a href="login.html" id="loginBtn">Login</a>
+                    <a href="#" id="logoutBtn" style="display: none;">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="watchlist-section">
+            <h1>Your Watchlist</h1>
+            <div id="watchlistContainer" class="watchlist-container">
+                <!-- Movie cards will be dynamically inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <img src="kimiihorror.png" alt="Kimii Horror Logo" class="kimii" width="150px">
+            <p class="copy">© Kimii Horror 2024</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fetch watchlist from localStorage
+        function loadWatchlist() {
+            const watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
+            const watchlistContainer = document.getElementById('watchlistContainer');
+    
+            // Clear container before rendering
+            watchlistContainer.innerHTML = '';
+    
+            if (watchlist.length === 0) {
+                watchlistContainer.innerHTML = '<p>Your watchlist is empty. Start adding movies!</p>';
+                return;
+            }
+    
+            watchlist.forEach(movie => {
+                const movieCard = document.createElement('div');
+                movieCard.classList.add('movie-card');
+    
+                movieCard.innerHTML = `
+                    <img src="${movie.image_url}" alt="${movie.movie_name}" class="movie-image" data-id="${movie.id}">
+                    <div class="movie-info">
+                        <h3>${movie.movie_name}</h3>
+                        <p>Rating: ${movie.rating}</p>
+                        <button class="remove-button" data-id="${movie.id}">Remove</button>
+                    </div>
+                `;
+    
+                watchlistContainer.appendChild(movieCard);
+            });
+    
+            // Add event listeners for "Remove" buttons
+            document.querySelectorAll('.remove-button').forEach(button => {
+                button.addEventListener('click', removeFromWatchlist);
+            });
+    
+            // Add event listeners for movie images
+            document.querySelectorAll('.movie-image').forEach(image => {
+                image.addEventListener('click', (event) => {
+                    const movieId = event.target.getAttribute('data-id');
+                    window.location.href = `details.html?id=${movieId}`;
+                });
+            });
+        }
+    
+        // Remove a movie from the watchlist
+        function removeFromWatchlist(event) {
+            const movieId = event.target.getAttribute('data-id');
+            let watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
+    
+            watchlist = watchlist.filter(movie => movie.id !== movieId);
+            localStorage.setItem('watchlist', JSON.stringify(watchlist));
+    
+            alert('Movie removed from watchlist!');
+            loadWatchlist();
+        }
+    
+        // Load the watchlist when the page is ready
+        document.addEventListener('DOMContentLoaded', loadWatchlist);
+    </script>
+    
+</body>
+</html>

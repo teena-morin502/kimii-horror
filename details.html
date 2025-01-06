@@ -6,173 +6,149 @@
     <title>Movie Details</title>
     <link rel="stylesheet" href="details.css">
     <script src="search.js" type="module" defer></script> 
-    <script src="profile.js" type="module" defer></script> 
+    <script src="profile.js" type="module" defer></script>   
 </head>
 <body>
     <header class="navBar">
         <img src="kimiihorror.png" alt="website logo" width="250px">
-    <nav class="header">
-        <div style="position: relative; width: 100%;">
-            <input type="text" class="search" id="filter" placeholder="search....">
-            <div id="result-container"></div>
-        </div>
-<div class="profile-container">
-            <a href="#" id="profileLink">
-                <img src="user.png" alt="profile" width="60px" height="60px" class="profile">
-            </a>
+        <nav class="header">
+            <div style="position: relative; width: 100%;">
+                <input type="text" class="search" id="filter" placeholder="search....">
+                <div id="result-container"></div>
+            </div>
+            <div class="watchlist-container">
+                <a href="watchlist.html" id="watchlistLink">Watchlist</a>
+            </div>
             <div class="profile-container">
+                <a href="#" id="profileLink">
+                    <img src="user.png" alt="profile" width="60px" height="60px" class="profile">
+                </a>
                 <div class="dropdown-card" id="dropdownCard" style="display: none;">
                     <a href="login.html" id="loginBtn">Login</a>
                     <a href="#" id="logoutBtn" style="display: none;">Logout</a>
                 </div>
             </div>
-            </nav>
-</header>
+        </nav>
+    </header>
+
     <main id="movie-details">
         <!-- Movie details will be dynamically populated -->
     </main>
 
-    
     <footer>
         <div class="footer-left">
-            <img src="kimiihorror.png" alt="Kimii Horror Logo"  class="kimii"width="150px">
+            <img src="kimiihorror.png" alt="Kimii Horror Logo" class="kimii" width="150px">
             <p class="copy">© Kimii Horror 2024</p>
         </div>
-       <div class="social">
-                <img src="https://static.vecteezy.com/system/resources/previews/022/484/516/non_2x/google-mail-gmail-icon-logo-symbol-free-png.png" alt="gmail" style="width: 40px;  border-radius:100%;"  class="media">
-                <img src="https://cdn-icons-png.freepik.com/256/15707/15707884.png?semt=ais_hybrid" alt="facebook"style="width: 40px; border-radius: 100%;" class="media">
-                <img src="https://cdn-icons-png.freepik.com/256/2496/2496112.png?semt=ais_hybrid" alt="whatsapp"style="width: 40px; border-radius: 100%;" class="media">
-                <img src="https://cdn-icons-png.freepik.com/256/15707/15707869.png?semt=ais_hybrid" alt="instagram"style="width: 40px; border-radius: 100%;" class="media">
-                <img src="https://cdn.pixabay.com/photo/2021/12/27/10/50/telegram-6896827_1280.png" alt="telegram"style="width: 40px; border-radius: 100%;" class="media">
-            </div>
-    
     </footer>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const detailsContainer = document.getElementById('movie-details');
 
-    if (!detailsContainer) {
-        console.error('Error: Movie details container not found in the DOM.');
-        return;
-    }
+    <script>
+        // Watchlist storage
+        let watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
 
-    // Retrieve the selected movie from localStorage
-    const movieDetails = localStorage.getItem('selectedMovie');
+        // Add to Watchlist
+        function addToWatchlist(movie) {
+            if (!watchlist.find(item => item.id === movie.id)) {
+                watchlist.push(movie);
+                localStorage.setItem('watchlist', JSON.stringify(watchlist));
+                updateWatchlistCount();
+            }
+        }
 
-    if (!movieDetails) {
-        detailsContainer.innerHTML = '<p>No movie selected. Please go back and select a movie.</p>';
-        return;
-    }
+        // Remove from Watchlist
+        function removeFromWatchlist(movieId) {
+            watchlist = watchlist.filter(movie => movie.id !== movieId);
+            localStorage.setItem('watchlist', JSON.stringify(watchlist));
+            updateWatchlistCount(); // Update the watchlist count
+            alert('Movie removed from watchlist!');
+        }
 
-    try {
-        const movie = JSON.parse(movieDetails);
+        // Load Movie Details
+        async function loadMovieDetails() {
+            const detailsContainer = document.getElementById('movie-details');
+            const urlParams = new URLSearchParams(window.location.search);
+            const movieId = urlParams.get('id');
 
-        detailsContainer.innerHTML = `
-            <!-- Movie Container -->
-            <div class="movie-details-container">
-                <!-- Movie Poster -->
-                <div class="movie-poster">
-                    <img src="${movie.image_url}" alt="${movie.movie_name}" width="300px" height="400px" >
-                </div>
+            if (!movieId) {
+                detailsContainer.innerHTML = '<p>No movie selected. Please go back and select a movie.</p>';
+                return;
+            }
 
-                <!-- Movie Information -->
-                <div class="movie-info">
-                    <!-- Movie Name -->
-                    <h1 class="movie-name">${movie.movie_name}</h1>
+            try {
+                const response = await fetch('movies.json');
+                const data = await response.json();
+                const movie = data.movies.find(m => m.id === movieId);
 
-                    <!-- Duration and Rating Boxes -->
-                    <div class="movie-meta">
-                        <!-- Duration Box -->
-                        <span class="movie-duration">${movie.details?.duration || 'N/A'}</span>
-                        <span class="movie-year">${movie.details?.year || 'Unknown'}</span>
-                        <span class="movie-rating">${movie.rating || 'N/A'}/5</span>
-                    </div>
+                if (!movie) {
+                    detailsContainer.innerHTML = '<p>Movie not found. Please try again.</p>';
+                    return;
+                }
 
-                    <p class="movie-description">${movie.description}</p>
-
-                    <button class="login-button">Login to Watch</button>
-                </div>
-            </div>
-
-            <!-- More Information -->
-            <div class="more-info">
+                detailsContainer.innerHTML = `
+                    <div class="movie-details-container">
+                        <div class="movie-poster">
+                            <img src="${movie.image_url}" alt="${movie.movie_name}" width="300" height="400">
+                        </div>
+                        <div class="movie-info">
+                            <h1>${movie.movie_name}</h1>
+                            <div class="movie-meta">
+                                <span>${movie.details?.duration || 'N/A'}</span>
+                                <span>${movie.details?.year || 'Unknown'}</span>
+                                <span>${movie.rating || 'N/A'}/5</span> 
+                           </div>
+                            <p>${movie.description}</p>
+                            <button class="login-button" id="watch-button">Watch Now</button>
+                            <button class="watchlist-button" id="add-watchlist-button">Add to Watchlist</button>
+                        </div>
+                     </div>   
+                <div class="more-info">    
                 <h2>More Information</h2>
                 <p><strong>Language:</strong> ${movie.details?.language?.join(', ') || 'Unknown'}</p>
                 <p><strong>Cast:</strong> ${movie.details?.cast?.join(', ') || 'Unknown'}</p>
                 <p><strong>Director:</strong> ${movie.details?.director || 'Unknown'}</p>
                 <p><strong>Producer:</strong> ${movie.details?.producer || 'Unknown'}</p>
             </div>
+                `;
 
-            <!-- Recommended Movies -->
-            <div class="recommended-section">
-                <h2>Recommended Movies</h2>
-                <div class="recommended-container">
-                    <div class="recommended-item"></div>
-                    <div class="recommended-item"></div>
-                    <div class="recommended-item"></div>
-                    <div class="recommended-item"></div>
-                </div>
-            </div>
-        `;    } catch (error) {
-        console.error('Error parsing movie details:', error);
-        detailsContainer.innerHTML = '<p>Error loading movie details. Please try again.</p>';
-    }
-});
+                // Check if the movie is already in the watchlist
+                const isInWatchlist = watchlist.some(item => item.id === movie.id);
+                const watchlistButton = document.getElementById('add-watchlist-button');
+                
+                // Update the button text if the movie is in the watchlist
+                if (isInWatchlist) {
+                    watchlistButton.textContent = 'Remove from Watchlist';
+                }
 
-   </script> 
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-    
-        // Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyAaJ8_qJrVVJnYlSdLQ1D5vaVRpS79GZ1E",
-            authDomain: "kimii-horror.firebaseapp.com",
-            projectId: "kimii-horror",
-            storageBucket: "kimii-horror.firebasestorage.app",
-            messagingSenderId: "425936807279",
-            appId: "1:425936807279:web:35d001bc3eb90dd49ff49a",
-            measurementId: "G-7KM8QRZTCR"
-        };
-    
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-    
-        // DOM Elements
-        const profileLink = document.getElementById("profileLink");
-        const dropdownCard = document.getElementById("dropdownCard");
-        const loginBtn = document.getElementById("loginBtn");
-        const logoutBtn = document.getElementById("logoutBtn");
-    
-        // Toggle Dropdown
-        profileLink.addEventListener("click", (event) => {
-            event.preventDefault();
-            dropdownCard.style.display = dropdownCard.style.display === "none" ? "block" : "none";
-        });
-    
-        // Handle Login/Logout Display
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                loginBtn.style.display = "none";
-                logoutBtn.style.display = "block";
-            } else {
-                loginBtn.style.display = "block";
-                logoutBtn.style.display = "none";
-            }
-        });
-    
-        // Logout Action
-        logoutBtn.addEventListener("click", async (event) => {
-            event.preventDefault();
-            try {
-                await signOut(auth);
-                alert("Logged out successfully.");
+                // Toggle Add/Remove movie in watchlist
+                watchlistButton.addEventListener('click', () => {
+                    if (isInWatchlist) {
+                        removeFromWatchlist(movie.id);
+                        watchlistButton.textContent = 'Add to Watchlist';
+                    } else {
+                        addToWatchlist(movie);
+                        watchlistButton.textContent = 'Remove from Watchlist';
+                    }
+                });
+
+                // Watch Now button
+                document.getElementById('watch-button').addEventListener('click', () => {
+                    // Save the movie details to localStorage
+                    localStorage.setItem('currentMovie', JSON.stringify(movie)); // Store current movie
+
+                    // Redirect to the video page
+                    window.location.href = 'video.html?id=' + movie.id; // Pass movie ID to video page
+                });
+
             } catch (error) {
-                console.error("Error during logout:", error);
+                console.error('Error loading movie details:', error);
+                detailsContainer.innerHTML = '<p>Error loading movie details. Please try again.</p>';
             }
+        }
+
+        // Load the movie details and update the watchlist count
+        document.addEventListener('DOMContentLoaded', () => {
+            loadMovieDetails(); // Load the movie details when page is ready
         });
     </script>
-
 </body>
 </html>

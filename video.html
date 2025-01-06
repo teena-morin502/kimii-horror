@@ -1,87 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watch Video</title>
-    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet">
-    <link rel="stylesheet" href="video.css">
-    <script src="search.js" type="module" defer></script>  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Movie</title>
+  <!-- Video.js CSS -->
+  <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet">
+  <!-- Video.js JavaScript -->
+  <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
+  <!-- YouTube Plugin -->
+  <script src="https://unpkg.com/videojs-youtube/dist/Youtube.min.js"></script>
 </head>
 <body>
-    <header class="navBar">
-        <img src="kimiihorror.png" alt="website logo" width="250px">
+  <header class="navBar">
+    <img src="kimiihorror.png" alt="website logo" width="250px">
     <nav class="header">
-        <div style="position: relative; width: 100%;">
-            <input type="text" class="search" id="filter" placeholder="search....">
-            <div id="result-container"></div>
-        </div>
+      <a href="index.html">Home</a>
+      <a href="watchlist.html">Watchlist</a>
+    </nav>
+  </header>
 
-        <div class="profile-container">
-            <div class="dropdown-card" id="dropdownCard" style="display: none;">
-                <a href="login.html" id="loginBtn">Login</a>
-                <a href="#" id="logoutBtn" style="display: none;">Logout</a>
-            </div>
-            </nav>
-</header>
-<main id="video-container">
-    <h2 id="movie-title"></h2>
-    <video id="video-player" class="video-js" controls preload="auto" width="800" height="450">
-    </video>
-</main>
-    <footer>
-        <div class="footer-left">
-            <img src="kimiihorror.png" alt="Kimii Horror Logo" width="150px">
-            <p class="copy">© Kimii Horror 2024</p>
-        </div>
-       <div class="social">
-                <img src="https://static.vecteezy.com/system/resources/previews/022/484/516/non_2x/google-mail-gmail-icon-logo-symbol-free-png.png" alt="gmail" style="width: 40px;  border-radius:100%;"  class="media">
-                <img src="https://cdn-icons-png.freepik.com/256/15707/15707884.png?semt=ais_hybrid" alt="facebook"style="width: 40px; border-radius: 100%;" class="media">
-                <img src="https://cdn-icons-png.freepik.com/256/2496/2496112.png?semt=ais_hybrid" alt="whatsapp"style="width: 40px; border-radius: 100%;" class="media">
-                <img src="https://cdn-icons-png.freepik.com/256/15707/15707869.png?semt=ais_hybrid" alt="instagram"style="width: 40px; border-radius: 100%;" class="media">
-                <img src="https://cdn.pixabay.com/photo/2021/12/27/10/50/telegram-6896827_1280.png" alt="telegram"style="width: 40px; border-radius: 100%;" class="media">
-            </div>
-    
-    </footer>
-    <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
-    
-    <!-- Now load the YouTube plugin script -->
-    <script src="https://cdn.jsdelivr.net/npm/videojs-youtube@2.10.0/dist/Youtube.min.js"></script>
+  <main>
+    <!-- Movie Name as the Page Header -->
+    <section id="movie-header">
+      <h1 id="movie-title">Loading...</h1>
+    </section>
 
-    <script>
-        // Parse URL Parameters to get the video URL and Movie Title
-        const params = new URLSearchParams(window.location.search);
-        const videoUrl = params.get('video_url');
-        const movieTitle = params.get('movie_name');
+    <!-- Breadcrumbs -->
+    <nav id="breadcrumbs">
+      <a href="index.html">Home</a> > <span id="breadcrumb-movie-name">Loading...</span>
+    </nav>
 
-        // Set the movie title
-        const movieTitleElement = document.getElementById('movie-title');
-        movieTitleElement.textContent = movieTitle || 'Unknown Movie';
+    <!-- Video Player -->
+    <section id="video-section">
+      <div id="video-container">
+        <!-- The video will be loaded here -->
+      </div>
+    </section>
 
-        // Initialize Video.js player
-        const videoPlayer = videojs('video-player', {
-            controls: true,
-            autoplay: false,
-            preload: 'auto',
-            fluid: true
+    <!-- Movie Description -->
+    <section id="movie-details">
+      <h2>Description</h2>
+      <p id="movie-description">Loading movie description...</p>
+    </section>
+
+    <!-- Recommended Movies -->
+    <section id="recommended-movies">
+      <h2>Recommended Movies</h2>
+      <div class="recommended-grid" id="recommended-grid">
+        <!-- Recommended movies will be dynamically populated -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <img src="kimiihorror.png" alt="Kimii Horror Logo" class="kimii" width="150px">
+      <p class="copy">© Kimii Horror 2024</p>
+    </div>
+  </footer>
+
+  <script>
+    // Retrieve the current movie from localStorage
+    const currentMovie = JSON.parse(localStorage.getItem('currentMovie'));
+    const recommendedMoviesContainer = document.getElementById('recommended-grid');
+    const currentMoviVideoUrl = (localStorage.getItem('currentMovieVideoUrl'));
+
+    if (currentMovie) {
+      // Populate movie details and breadcrumb
+      document.getElementById('movie-title').textContent = currentMovie.movie_name;
+      document.getElementById('breadcrumb-movie-name').textContent = currentMovie.movie_name;
+      document.getElementById('movie-description').textContent = currentMovie.description;
+
+      // Correctly format the YouTube URL if it's not already in the embed format
+      let embedUrl = currentMovie.details.video_url;
+      if (embedUrl.includes('watch?v=')) {
+        embedUrl = embedUrl.replace('watch?v=', 'embed/');
+      }
+
+      // Create an iframe element for the video
+      const videoContainer = document.getElementById('video-container');
+      const iframe = document.createElement('iframe');
+      iframe.width = '800';
+      iframe.height = '450';
+      iframe.src = currentMoviVideoUrl;
+      iframe.frameBorder = '0';
+      iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      videoContainer.appendChild(iframe);
+
+      // Load recommended movies (excluding the current one)
+      fetch('movies.json')
+        .then(response => response.json())
+        .then(data => {
+          const allMovies = data.movies.filter(movie => movie.id !== currentMovie.id);
+
+          // Randomly select up to 10 movies
+          const recommendedMovies = allMovies.sort(() => 0.5 - Math.random()).slice(0, 10);
+
+          recommendedMovies.forEach(movie => {
+            const movieCard = document.createElement('div');
+            movieCard.classList.add('movie-card');
+            movieCard.innerHTML = `
+              <img src="${movie.image_url}" alt="${movie.movie_name}" class="movie-card-img">
+              <h3>${movie.movie_name}</h3>
+              <p>Rating: ${movie.rating}/5</p>
+              <button onclick="viewMovie(${movie.id})">View Details</button>
+            `;
+            recommendedMoviesContainer.appendChild(movieCard);
+          });
         });
+    } else {
+      document.body.innerHTML = '<p>No movie selected. Please go back and select a movie.</p>';
+    }
 
-        // Check if videoUrl is valid and load the video
-        if (videoUrl) {
-            // Check if the URL is from YouTube
-            if (videoUrl.includes('youtube.com')) {
-                videoPlayer.src({
-                    src: videoUrl,
-                    type: 'video/youtube'
-                });
-            }        
-        } else {
-            // Fallback if no video URL is found
-            movieTitleElement.textContent = 'Video not available';
-            videoPlayer.poster('https://via.placeholder.com/800x450.png?text=Video+Not+Available');
-            console.error('Video URL is missing or invalid.');
-        }
-    </script>
-   
-    </body>
+    // View details for a recommended movie
+    function viewMovie(movieId) {
+      fetch('movies.json')
+        .then(response => response.json())
+        .then(data => {
+          const movie = data.movies.find(m => m.id === movieId);
+          if (movie) {
+            localStorage.setItem('currentMovie', JSON.stringify(movie));
+            window.location.href = 'video.html';
+          }
+        });
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navBar {
+      background-color: #222;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    .header a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    #movie-header h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #breadcrumbs {
+      margin: 10px 20px;
+    }
+
+    #breadcrumbs a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    #breadcrumbs span {
+      color: #555;
+    }
+
+    #video-section {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    #movie-details {
+      margin: 20px;
+    }
+
+    #recommended-movies {
+      margin: 20px;
+    }
+
+    .recommended-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .movie-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .movie-card-img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</body>
 </html>
