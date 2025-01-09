@@ -10,31 +10,39 @@
 </head>
 <body>
     <header class="navBar">
-        <img src="kimiihorror.png" alt="website logo" width="250px">
-        <nav class="header">
-            <div style="position: relative; width: 100%;">
-                <input type="text" class="search" id="filter" placeholder="search....">
-                <div id="result-container"></div>
-            </div>
-            <div class="watchlist-container">
-                <a href="watchlist.html" id="watchlistLink">Watchlist</a>
-            </div>
-            <div class="profile-container">
-                <a href="#" id="profileLink">
-                    <img src="user.png" alt="profile" width="60px" height="60px" class="profile">
-                </a>
-                <div class="dropdown-card" id="dropdownCard" style="display: none;">
-                    <a href="login.html" id="loginBtn">Login</a>
-                    <a href="#" id="logoutBtn" style="display: none;">Logout</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+        <a href="index.html"><img src="kimiihorror.png" alt="website logo" width="250px"></a>
+          <nav class="header">
+              <div style="position: relative; width: 100%;">
+                  <input type="text" class="search" id="filter" placeholder="search....">
+                  <span id="result-container"></span>
+              </div>
+              <div class="watchlist-container">
+                  <a href="watchlist.html" id="watchlistLink">Watchlist</a>
+              </div>
+              <div class="profile-container">
+                  <a href="#" id="profileLink">
+                      <img src="user.png" alt="profile" width="60px" height="60px" class="profile">
+                  </a>
+                  <div class="profile-container">
+                      <div class="dropdown-card" id="dropdownCard" style="display: none;">
+                          <a href="login.html" id="loginBtn">Login</a>
+                          <a href="#" id="logoutBtn" style="display: none;">Logout</a>
+                      </div>
+                  </div>
+              </div>
+          </nav>
+      </header>
 
     <main id="movie-details">
         <!-- Movie details will be dynamically populated -->
     </main>
-
+    <section id="recommended-movies">
+        <h2>Recommended Movies</h2>
+        <div class="recommended-grid" id="recommended-grid">
+            <!-- Recommended movies will be dynamically populated -->
+        </div>
+    </section>
+    
     <footer>
         <div class="footer-left">
             <img src="kimiihorror.png" alt="Kimii Horror Logo" class="kimii" width="150px">
@@ -65,85 +73,106 @@
 
         // Load Movie Details
         async function loadMovieDetails() {
-            const detailsContainer = document.getElementById('movie-details');
-            const urlParams = new URLSearchParams(window.location.search);
-            const movieId = urlParams.get('id');
+    const detailsContainer = document.getElementById('movie-details');
+    const recommendedMoviesContainer = document.getElementById('recommended-grid');
+    const urlParams = new URLSearchParams(window.location.search);
+    const movieId = urlParams.get('id');
 
-            if (!movieId) {
-                detailsContainer.innerHTML = '<p>No movie selected. Please go back and select a movie.</p>';
-                return;
-            }
+    if (!movieId) {
+        detailsContainer.innerHTML = '<p>No movie selected. Please go back and select a movie.</p>';
+        return;
+    }
 
-            try {
-                const response = await fetch('movies.json');
-                const data = await response.json();
-                const movie = data.movies.find(m => m.id === movieId);
+    try {
+        const response = await fetch('movies.json');
+        const data = await response.json();
+        const movie = data.movies.find(m => m.id === movieId);
 
-                if (!movie) {
-                    detailsContainer.innerHTML = '<p>Movie not found. Please try again.</p>';
-                    return;
-                }
+        if (!movie) {
+            detailsContainer.innerHTML = '<p>Movie not found. Please try again.</p>';
+            return;
+        }
 
-                detailsContainer.innerHTML = `
-                    <div class="movie-details-container">
-                        <div class="movie-poster">
-                            <img src="${movie.image_url}" alt="${movie.movie_name}" width="300" height="400">
-                        </div>
-                        <div class="movie-info">
-                            <h1>${movie.movie_name}</h1>
-                            <div class="movie-meta">
-                                <span>${movie.details?.duration || 'N/A'}</span>
-                                <span>${movie.details?.year || 'Unknown'}</span>
-                                <span>${movie.rating || 'N/A'}/5</span> 
-                           </div>
-                            <p>${movie.description}</p>
-                            <button class="login-button" id="watch-button">Watch Now</button>
-                            <button class="watchlist-button" id="add-watchlist-button">Add to Watchlist</button>
-                        </div>
-                     </div>   
-                <div class="more-info">    
+        // Populate movie details
+        detailsContainer.innerHTML = `
+            <div class="movie-details-container">
+                <div class="movie-poster">
+                    <img src="${movie.image_url}" alt="${movie.movie_name}" width="300" height="400">
+                </div>
+                <div class="movie-info">
+                    <h1>${movie.movie_name}</h1>
+                    <div class="movie-meta">
+                        <span>${movie.details?.duration || 'N/A'}</span>
+                        <span>${movie.details?.year || 'Unknown'}</span>
+                        <span>${movie.rating || 'N/A'}/5</span>
+                    </div>
+                    <p>${movie.description}</p>
+                    <div class="button-container">
+                        <button class="login-button" id="watch-button">Watch Now</button>
+                        <button class="watchlist-button" id="add-watchlist-button">Add to Watchlist</button>
+                    </div>
+                </div>
+            </div>
+            <div class="more-info">
                 <h2>More Information</h2>
                 <p><strong>Language:</strong> ${movie.details?.language?.join(', ') || 'Unknown'}</p>
                 <p><strong>Cast:</strong> ${movie.details?.cast?.join(', ') || 'Unknown'}</p>
                 <p><strong>Director:</strong> ${movie.details?.director || 'Unknown'}</p>
                 <p><strong>Producer:</strong> ${movie.details?.producer || 'Unknown'}</p>
             </div>
-                `;
+        `;
 
-                // Check if the movie is already in the watchlist
-                const isInWatchlist = watchlist.some(item => item.id === movie.id);
-                const watchlistButton = document.getElementById('add-watchlist-button');
-                
-                // Update the button text if the movie is in the watchlist
-                if (isInWatchlist) {
-                    watchlistButton.textContent = 'Remove from Watchlist';
-                }
+        // Watch Now functionality
+        document.getElementById('watch-button').addEventListener('click', () => {
+            localStorage.setItem('currentMovie', JSON.stringify(movie));
+            window.location.href = 'video.html?id=' + movie.id;
+        });
 
-                // Toggle Add/Remove movie in watchlist
-                watchlistButton.addEventListener('click', () => {
-                    if (isInWatchlist) {
-                        removeFromWatchlist(movie.id);
-                        watchlistButton.textContent = 'Add to Watchlist';
-                    } else {
-                        addToWatchlist(movie);
-                        watchlistButton.textContent = 'Remove from Watchlist';
-                    }
-                });
-
-                // Watch Now button
-                document.getElementById('watch-button').addEventListener('click', () => {
-                    // Save the movie details to localStorage
-                    localStorage.setItem('currentMovie', JSON.stringify(movie)); // Store current movie
-
-                    // Redirect to the video page
-                    window.location.href = 'video.html?id=' + movie.id; // Pass movie ID to video page
-                });
-
-            } catch (error) {
-                console.error('Error loading movie details:', error);
-                detailsContainer.innerHTML = '<p>Error loading movie details. Please try again.</p>';
-            }
+        // Watchlist functionality
+        const isInWatchlist = watchlist.some(item => item.id === movie.id);
+        const watchlistButton = document.getElementById('add-watchlist-button');
+        if (isInWatchlist) {
+            watchlistButton.textContent = 'Remove from Watchlist';
         }
+
+        watchlistButton.addEventListener('click', () => {
+            if (isInWatchlist) {
+                removeFromWatchlist(movie.id);
+                watchlistButton.textContent = 'Add to Watchlist';
+            } else {
+                addToWatchlist(movie);
+                watchlistButton.textContent = 'Remove from Watchlist';
+            }
+        });
+
+        // Load recommended movies (excluding the current one)
+        const allMovies = data.movies.filter(m => m.id !== movie.id);
+        const recommendedMovies = allMovies.sort(() => 0.5 - Math.random()).slice(0, 10);
+
+        recommendedMovies.forEach(recommendedMovie => {
+            const movieCard = document.createElement('div');
+            movieCard.classList.add('movie-card');
+
+            const movieImage = document.createElement('img');
+            movieImage.src = recommendedMovie.image_url;
+            movieImage.alt = recommendedMovie.movie_name;
+            movieImage.classList.add('movie-card-img');
+
+            // Create link for the recommended movie
+            const movieLink = document.createElement('a');
+            const encodedMovieName = encodeURIComponent(recommendedMovie.movie_name || 'Unknown Movie');
+            movieLink.href = `details.html?id=${recommendedMovie.id}&movie_name=${encodedMovieName}`;
+            movieLink.appendChild(movieImage);
+
+            movieCard.appendChild(movieLink);
+            recommendedMoviesContainer.appendChild(movieCard);
+        });
+    } catch (error) {
+        console.error('Error loading movie details:', error);
+        detailsContainer.innerHTML = '<p>Error loading movie details. Please try again.</p>';
+    }
+}
+
 
         // Load the movie details and update the watchlist count
         document.addEventListener('DOMContentLoaded', () => {

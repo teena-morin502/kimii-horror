@@ -10,25 +10,28 @@
 </head>
 <body>
     <header class="navBar">
-        <img src="kimiihorror.png" alt="website logo" width="250px">
-        <nav class="header">
-            <div style="position: relative; width: 100%;">
-                <input type="text" class="search" id="filter" placeholder="search....">
-                <div id="result-container"></div>
-            </div>
-
-            <div class="profile-container">
-                <a href="#" id="profileLink">
-                    <img src="user.png" alt="profile" width="60px" height="60px" class="profile">
-                </a>
-                <div class="dropdown-card" id="dropdownCard" style="display: none;">
-                    <a href="login.html" id="loginBtn">Login</a>
-                    <a href="#" id="logoutBtn" style="display: none;">Logout</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-
+        <a href="index.html"><img src="kimiihorror.png" alt="website logo" width="250px"></a>
+          <nav class="header">
+              <div style="position: relative; width: 100%;">
+                  <input type="text" class="search" id="filter" placeholder="search....">
+                  <span id="result-container"></span>
+              </div>
+              <div class="watchlist-container">
+                  <a href="watchlist.html" id="watchlistLink">Watchlist</a>
+              </div>
+              <div class="profile-container">
+                  <a href="#" id="profileLink">
+                      <img src="user.png" alt="profile" width="60px" height="60px" class="profile">
+                  </a>
+                  <div class="profile-container">
+                      <div class="dropdown-card" id="dropdownCard" style="display: none;">
+                          <a href="login.html" id="loginBtn">Login</a>
+                          <a href="#" id="logoutBtn" style="display: none;">Logout</a>
+                      </div>
+                  </div>
+              </div>
+          </nav>
+      </header>
     <main>
         <div class="watchlist-section">
             <h1>Your Watchlist</h1>
@@ -45,6 +48,7 @@
         </div>
     </footer>
 
+    
     <script>
         // Fetch watchlist from localStorage
         function loadWatchlist() {

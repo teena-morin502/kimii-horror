@@ -4,21 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Watch Movie</title>
-  <!-- Video.js CSS -->
   <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet">
-  <!-- Video.js JavaScript -->
   <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
-  <!-- YouTube Plugin -->
   <script src="https://unpkg.com/videojs-youtube/dist/Youtube.min.js"></script>
+  <script src="search.js" type="module" defer></script> 
+  <script src="profile.js" type="module" defer></script> 
+  <link rel="stylesheet" href="video.css">
+
 </head>
 <body>
-  <header class="navBar">
-    <img src="kimiihorror.png" alt="website logo" width="250px">
-    <nav class="header">
-      <a href="index.html">Home</a>
-      <a href="watchlist.html">Watchlist</a>
-    </nav>
-  </header>
+    <header class="navBar">
+        <a href="index.html"><img src="kimiihorror.png" alt="website logo" width="250px"></a>
+          <nav class="header">
+              <div style="position: relative; width: 100%;">
+                  <input type="text" class="search" id="filter" placeholder="search....">
+                  <span id="result-container"></span>
+              </div>
+              <div class="watchlist-container">
+                  <a href="watchlist.html" id="watchlistLink">Watchlist</a>
+              </div>
+              <div class="profile-container">
+                  <a href="#" id="profileLink">
+                      <img src="user.png" alt="profile" width="60px" height="60px" class="profile">
+                  </a>
+                  <div class="profile-container">
+                      <div class="dropdown-card" id="dropdownCard" style="display: none;">
+                          <a href="login.html" id="loginBtn">Login</a>
+                          <a href="#" id="logoutBtn" style="display: none;">Logout</a>
+                      </div>
+                  </div>
+              </div>
+          </nav>
+      </header>
 
   <main>
     <!-- Movie Name as the Page Header -->
@@ -89,27 +106,40 @@
       iframe.allowFullscreen = true;
       videoContainer.appendChild(iframe);
 
-      // Load recommended movies (excluding the current one)
-      fetch('movies.json')
-        .then(response => response.json())
-        .then(data => {
-          const allMovies = data.movies.filter(movie => movie.id !== currentMovie.id);
+// Load recommended movies (excluding the current one)
+fetch('movies.json')
+  .then(response => response.json())
+  .then(data => {
+    const allMovies = data.movies.filter(movie => movie.id !== currentMovie.id);
 
-          // Randomly select up to 10 movies
-          const recommendedMovies = allMovies.sort(() => 0.5 - Math.random()).slice(0, 10);
+    // Randomly select up to 10 movies
+    const recommendedMovies = allMovies.sort(() => 0.5 - Math.random()).slice(0, 10);
 
-          recommendedMovies.forEach(movie => {
-            const movieCard = document.createElement('div');
-            movieCard.classList.add('movie-card');
-            movieCard.innerHTML = `
-              <img src="${movie.image_url}" alt="${movie.movie_name}" class="movie-card-img">
-              <h3>${movie.movie_name}</h3>
-              <p>Rating: ${movie.rating}/5</p>
-              <button onclick="viewMovie(${movie.id})">View Details</button>
-            `;
-            recommendedMoviesContainer.appendChild(movieCard);
-          });
-        });
+    recommendedMovies.forEach(movie => {
+      // Create a container for the movie card
+      const movieCard = document.createElement('div');
+      movieCard.classList.add('movie-card');
+
+      // Create an image element for the movie
+      const movieImage = document.createElement('img');
+      movieImage.src = movie.image_url;
+      movieImage.alt = movie.movie_name;
+      movieImage.classList.add('movie-card-img');
+
+      // Create a link for the movie
+      const movieLink = document.createElement('a');
+      const encodedMovieName = encodeURIComponent(movie.movie_name || 'Unknown Movie');
+      movieLink.href = `details.html?id=${movie.id}&movie_name=${encodedMovieName}`;
+      movieLink.appendChild(movieImage); // Wrap the image inside the link
+
+      // Append the link to the movie card
+      movieCard.appendChild(movieLink);
+
+      // Add the movie card to the recommended movies grid
+      recommendedMoviesContainer.appendChild(movieCard);
+    });
+  });
+
     } else {
       document.body.innerHTML = '<p>No movie selected. Please go back and select a movie.</p>';
     }
@@ -127,85 +157,5 @@
         });
     }
   </script>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    .navBar {
-      background-color: #222;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 20px;
-    }
-
-    .header a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-
-    #movie-header h1 {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    #breadcrumbs {
-      margin: 10px 20px;
-    }
-
-    #breadcrumbs a {
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    #breadcrumbs span {
-      color: #555;
-    }
-
-    #video-section {
-      display: flex;
-      justify-content: center;
-      margin: 20px 0;
-    }
-
-    #movie-details {
-      margin: 20px;
-    }
-
-    #recommended-movies {
-      margin: 20px;
-    }
-
-    .recommended-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 20px;
-    }
-
-    .movie-card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 10px;
-      text-align: center;
-    }
-
-    .movie-card-img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-
-    footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
-  </style>
 </body>
 </html>

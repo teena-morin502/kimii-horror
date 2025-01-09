@@ -1,123 +1,51 @@
-*{
-    margin: 0%;
-}
-body{
-    font-family: 'Cinzel Decorative', serif;
-    background-color: rgb(20, 20, 20); 
-}
-#video-container {
-    text-align: center;
-    padding: 20px;
+/* General Styling */
+body {
+  font-family: 'Cinzel Decorative', serif;
+  background-color: rgb(20, 20, 20); /* Dark background */
+  color: white; /* White text for readability */
+  margin: 0;
+  padding: 0;
 }
 
-#movie-title {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #bbb;
-}
-
-.video-js {
-    margin: 0 auto;
-    max-width: 100%;
-    border: 3px solid #fff;
-    border-radius: 10px;
-}
-/* Header and Navigation */
+/* Header and Navigation Bar */
 .navBar {
-    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeaR2VmVMc9wCa0tQxbhksU7kkoIlqTqGpXg&s);
-    display: flex;
-    background-size: cover;
-    background-position: center;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    height: 70px;
-  }
-  
-  .header {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-  }
-  
-  
-  
-  
-  
-  /* Search and Profile Animations */
-  .search {
-    background: transparent;
-    height: 40px;
-    border-radius: 20px;
-    padding: 0px 20px;
-    color: white;
-    border: 1px solid white;
-    width: 400px;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-  }
-  
-  .search:focus {
-    box-shadow: 0 0 10px rgb(255, 50, 54);
-    transform: scale(1.05);
-    outline: none;
-  }
-  
-  .profile {
-    border-radius: 50%;
-    border: 2px solid white;
-    transition: transform 0.3s ease;
-  }
-  
-  .profile:hover {
-    transform: rotate(360deg);
-  }
-  /* Footer Section */
-footer {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-  }
-  
-  /* Footer Left: Kimii Horror Logo and Copyright */
-  .footer-left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  
-  .footer-left img {
-    width: 150px;
-  }
-  
-  .copy {
-    font-size: 16px;
-    color: blanchedalmond;
-  }
-  
-  /* Social Media Icons */
-  .social {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-  }
-  
-  .media {
-    height: 40px;
-    width: 40px;
-    border-radius: 100%;
-    border: 2px solid white;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .media:hover {
-    transform: scale(1.2);
-  }
-  
-  /* search */
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeaR2VmVMc9wCa0tQxbhksU7kkoIlqTqGpXg&s);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  height: 70px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Increased gap for cleaner spacing */
+}
+
+/* Search Input */
+.search {
+  background: transparent;
+  height: 40px;
+  border-radius: 20px;
+  padding: 0 20px;
+  color: white;
+  border: 1px solid white;
+  width: 400px;
+  transition: all 0.3s ease;
+}
+
+.search:focus {
+  box-shadow: 0 0 15px rgba(255, 50, 54, 0.8);
+  transform: scale(1.05);
+  outline: none;
+}
+/* search */
 #result-container {
+  display: none;
   position: absolute;
   top: 50px;
   background-color: rgba(0, 0, 0, 0.9);
@@ -127,7 +55,6 @@ footer {
   z-index: 9999;
   display: flex;
   flex-direction: column; 
-  gap: 10px;
   max-height: 300px; 
   overflow-y: auto;
 }
@@ -135,7 +62,7 @@ footer {
 #result-container .movie-card {
   display: flex;
   align-items: flex-start;
-  gap: 10px; 
+  margin-bottom: 10px;
   padding: 10px;
   border-radius: 8px;
   background-color: #222;
@@ -168,16 +95,180 @@ footer {
   color: #bbb; 
   margin: 0;
 }
+
+
+/* Profile Image */
+.profile {
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+}
+
+.profile:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+#watchlistLink{
+  color:blanchedalmond;
+  font-size: 20px;
+}
+#watchlistLink:hover{
+  color: #e63946;
+}
+
+/* Dropdown Card */
 .dropdown-card {
   position: absolute;
-  top: 70px; /* Adjust based on the profile image position */
-  right: 10px; /* Align with the profile container */
   background-color: white;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
   padding: 10px;
   z-index: 1000;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
 }
-.profile-container {
+
+.dropdown-card a {
+  display: block;
+  padding: 5px 10px;
+  color: black;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-card a:hover {
+  background-color: rgba(255, 50, 54, 0.1);
+  border-radius: 5px;
+}
+.header a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.header a:hover {
+  color: #ff2d1f; /* Red hover effect */
+}
+
+/* Movie Header */
+#movie-header h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #ff2d1f; /* Red title for emphasis */
+}
+
+/* Breadcrumbs */
+#breadcrumbs {
+  margin: 10px 20px;
+}
+
+#breadcrumbs a {
+  color: #ff2d1f; /* Red links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#breadcrumbs a:hover {
+  color: #fff; /* White hover effect */
+}
+
+#breadcrumbs span {
+  color: #bbb; /* Light gray for inactive breadcrumb */
+}
+
+/* Video Section */
+#video-section {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+
+/* Movie Details */
+#movie-details {
+  margin: 20px;
+}
+
+#movie-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ff2d1f; /* Red section title */
+}
+
+#movie-details p {
+  font-size: 16px;
+  color: #ccc; /* Light gray for text */
+}
+
+/* Recommended Movies */
+#recommended-movies {
+  margin: 20px;
+}
+
+#recommended-movies h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ff2d1f; /* Red section title */
+}
+
+.recommended-grid {
+  display: flex;
+  gap: 20px; /* Improved spacing */
+  padding: 10px 25px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.movie-card {
+  flex: 0 0 auto;
+  width: 200px;
+  /* height: 300px; */
+  border-radius: 10px;
+  overflow: hidden;
   position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
+
+.movie-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(255, 50, 54, 0.5);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer Left */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-left img {
+  width: 150px;
+  filter: drop-shadow(0px 4px 6px rgba(255, 50, 54, 0.5));
+}
+
+.copy {
+  font-size: 16px;
+  color: blanchedalmond;
+}
+
+

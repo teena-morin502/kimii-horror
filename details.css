@@ -1,7 +1,10 @@
 /* Global Styles */
+*{
+text-decoration: none;
+}
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Cinzel Decorative', serif;
     background-color: #121212; /* Dark theme background */
     color: white;
     line-height: 1.6;
@@ -56,18 +59,36 @@ header {
     transition: transform 0.3s ease;
 }
 
-
+#watchlistLink{
+    color:blanchedalmond;
+    font-size: 20px;
+}
+#watchlistLink:hover{
+    color: #e63946;
+}
+/* Dropdown Card */
 .dropdown-card {
     position: absolute;
-    top: 70px;
-    right: 10px;
-    background-color: rgba(20, 20, 20, 0.95);
-    color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     padding: 10px;
     z-index: 1000;
-}
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .dropdown-card a {
+    display: block;
+    padding: 5px 10px;
+    color: black;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-card a:hover {
+    background-color: rgba(255, 50, 54, 0.1);
+    border-radius: 5px;
+  }
 
 /* Footer Styles */
 footer {
@@ -207,53 +228,157 @@ footer {
 
 /* search */
 #result-container {
-  display: none;
-  position: absolute;
-  top: 50px;
-  background-color: rgba(0, 0, 0, 0.9);
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  z-index: 9999;
-  display: flex;
-  flex-direction: column; 
-  max-height: 300px; 
-  overflow-y: auto;
+    display: none;
+    position: absolute;
+    top: 50px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column; 
+    max-height: 300px; 
+    overflow-y: auto;
+  }
+  
+  #result-container .movie-card {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #222;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #result-container .movie-card img {
+    width: 70px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  #result-container .movie-card div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+  }
+  
+  #result-container .movie-card h3 {
+    font-size: 16px;
+    color: white;
+    margin: 0;
+  }
+  
+  
+  #result-container .movie-card p {
+    font-size: 14px;
+    color: #bbb; 
+    margin: 0;
+  }
+  
+  
+/* Container for Buttons */
+.button-container {
+    display: flex; /* Arrange buttons in a row */
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 15px; /* Space between buttons */
+    margin-top: 20px; /* Add spacing above the buttons */
+  }
+  
+  /* Watch Now Button Styling */
+  #watch-button {
+    background-color: #b71c1c; /* Dark red */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 12px 25px; /* Larger padding for prominence */
+    font-size: 18px; /* Slightly larger text */
+    font-weight: bold; /* Bold text */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  }
+  
+  #watch-button:hover {
+    background-color: #8e0000; /* Darker red on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+  }
+  
+  #watch-button:active {
+    background-color: #600000; /* Even darker red on active/click */
+    transform: translateY(0); /* Reset lift effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  }
+  
+  /* Watchlist Button Styling */
+  #add-watchlist-button {
+    background-color: #444; /* Dark gray */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 8px 15px; /* Smaller padding for smaller size */
+    font-size: 14px; /* Smaller text size */
+    font-weight: bold; /* Bold text */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  }
+  
+  #add-watchlist-button:hover {
+    background-color: #333; /* Darker gray on hover */
+    transform: translateY(-1px); /* Slight lift effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  }
+  
+  #add-watchlist-button:active {
+    background-color: #222; /* Even darker gray on active/click */
+    transform: translateY(0); /* Reset lift effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }
+  /* Recommended Movies Section */
+#recommended-movies {
+    margin: 30px;
 }
 
-#result-container .movie-card {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 8px;
-  background-color: #222;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+#recommended-movies h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-#result-container .movie-card img {
-  width: 70px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 4px;
+.recommended-grid {
+    display: flex;
+    gap: 20px; /* Improved spacing */
+    padding: 10px 25px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
-#result-container .movie-card div {
-  display: flex;
-  flex-direction: column;
-  gap: 5px; 
+.movie-card {
+    flex: 0 0 auto;
+    width: 200px;
+    /* height: 300px; */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  }
+
+
+.movie-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(255, 50, 54, 0.5);
 }
 
-#result-container .movie-card h3 {
-  font-size: 16px;
-  color: white;
-  margin: 0;
+.movie-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-
-#result-container .movie-card p {
-  font-size: 14px;
-  color: #bbb; 
-  margin: 0;
-}   
+  

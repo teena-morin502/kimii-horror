@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 a {
   text-decoration: none;
@@ -17,27 +18,7 @@ body {
   overflow-x: hidden;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: 150px;
-  opacity: 0.1;
-  animation: floatGhost 6s infinite;
-  z-index: -1;
-}
 
-@keyframes floatGhost {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
 
 /* Header and Navigation Bar */
 .navBar {
@@ -87,6 +68,7 @@ body::before {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
+
 /* Dropdown Card */
 .dropdown-card {
   position: absolute;
@@ -109,6 +91,36 @@ body::before {
 .dropdown-card a:hover {
   background-color: rgba(255, 50, 54, 0.1);
   border-radius: 5px;
+}
+#watchlistLink{
+  color:blanchedalmond;
+  font-size: 20px;
+}
+#watchlistLink:hover{
+  color: #e63946;
+}
+.swiper-image {
+    transition: opacity 1.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0.3;
+}
+
+/* Style for the movie card below Swiper images */
+.movie_slide {
+    width: 220px;
+    height: 340px;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie_slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Movie Section Styles */
@@ -161,7 +173,7 @@ body::before {
 
 /* Movie Containers */
 .top_10_movie_container,
-.recomended_movie_container,
+.recommended_movie_container,
 .real_horror_movie_container {
   display: flex;
   gap: 20px; /* Improved spacing */
@@ -199,20 +211,6 @@ footer {
 }
 
 
-
-.media {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  border: 2px solid white;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
-}
-
-.media:hover {
-  transform: scale(1.2);
-  box-shadow: 0 6px 12px rgba(255, 50, 54, 0.8);
-}
 
 /* Back to Top Arrow */
 .arrow {
@@ -290,3 +288,4 @@ footer {
   color: #bbb; 
   margin: 0;
 }
+

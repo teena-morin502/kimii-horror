@@ -5,6 +5,7 @@
             "movie_name": "The Exorcist",
             "description": "The Exorcism tells the story of Anthony Miller, an actor who starts acting strangely while working on a horror movie. His daughter Lee notices his odd behavior and fears something evil might be involved. As things get worse, Lee teams up with a priest to save her father from a dark force. The battle against the demon pushes them to their limits, leading to a dramatic exorcism. It's a story about family, faith, and fighting against evil.",
             "image_url": "https://i.ebayimg.com/images/g/73cAAOSwGyxkuaw~/s-l400.jpg",
+            "gener": ["Horror", "Supernatural", "Psychological Thriller","Docudrama."],
             "swiper":"https://m.media-amazon.com/images/M/MV5BOGQ3NzMwNGUtYWU0Mi00MWU4LWFmYzYtY2Y5OGJjN2Q3YzQxXkEyXkFqcGdeQVRoaXJkUGFydHlJbmdlc3Rpb25Xb3JrZmxvdw@@._V1_QL75_UX500_CR0,0,500,281_.jpg",
             "card":"card-the exocrist.png",
             "rating":4.5, 
@@ -25,6 +26,8 @@
         "image_url": "https://m.media-amazon.com/images/I/5147F62RsML._AC_UF1000,1000_QL80_.jpg",
         "swiper":"https://roseshavethoughts.com/wp-content/uploads/2013/11/the-conjuring-movie-2013-desktop-hd-wallpaper.jpg",
         "card":"card-conjuring.png",
+        "gener": ["Supernatural Horror","Docudrama."],
+
         "rating": 4,
         "details": {
           "cast": ["Patrick Wilson", "Vera Farmiga", "Lili Taylor", "Ron Livingston"],
@@ -40,9 +43,11 @@
         "id":"3",
         "movie_name": "The Ring",
         "description": "A cursed videotape causes anyone who watches it to die seven days later. Journalist Rachel investigates the mysterious deaths linked to the tape and uncovers the tragic story of Samara, a girl with psychic abilities who was killed by her mother. Rachel discovers the way to survive is by copying the tape and showing it to someone else. The cycle of horror continues as she grapples with the consequences of her actions..",
-        "image_url": "https://m.media-amazon.com/images/M/MV5BNDA2NTg2NjE4Ml5BMl5BanBnXkFtZTYwMjYxMDg5._V1_FMjpg_UX1000_.jpg",
+        "image_url": "https://i.pinimg.com/originals/54/27/91/542791eeceb1a715961ca3c28c569a25.jpg",
         "swiper":"https://littleredhorror.wordpress.com/wp-content/uploads/2020/06/ring4yh9.png",
         "card":"card-the ring.png",
+        "gener": ["Supernatural Horror","Mystery"],
+
         "rating":3.4,
         "details": {
           "cast": ["Naomi Watts", "Martin Henderson", "Brian Cox", "Daveigh Chase"],
@@ -51,386 +56,350 @@
           "duration": "1hr 55mins",
           "year": 2002,
           "language": ["English"],
-          "video_url":"https://www.youtube.com/embed/RR8hEsb0CPY?si=EKwHGyJiZ0spxDzH"
+          "video_url":"https://www.youtube.com/embed/RR8hEsb0CPY?si=MAtHai0sREzunu8O"
         }
       },
       {
         "id":"4",
         "movie_name": "Halloween",
         "description": "On Halloween night in 1963, six-year-old Michael Myers murders his sister and is institutionalized. Fifteen years later, he escapes and returns to his hometown of Haddonfield to stalk and kill teenagers, including babysitter Laurie Strode. As his psychiatrist Dr. Loomis hunts him, Michael methodically targets his victims with relentless precision. Laurie fights back, narrowly surviving multiple attacks. The film ends with Michael mysteriously vanishing after being shot, leaving his evil presence lingering.",
-        "image_url": "https://i.ebayimg.com/00/s/MTQxNFgxMDAw/z/L7cAAOSwhWZgU7Z8/$_57.JPG?set_id=8800005007",
-        "gener": ["Horror", "Thriller"],
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlhnL06iNN3HEwnz_JJ-wnpsy_Tz1Gw8asiUuwLttenBX7c0MuJO0rO6P6m65A7gpJiX4&usqp=CAU",
+        "gener": ["Slasher Horror"],
         "swiper":"https://m.media-amazon.com/images/M/MV5BM2E1ZGRjMjYtNDhmOC00MzUwLTlhNzYtNDNiYjYxMjM3YmZkXkEyXkFqcGdeQWpnYW1i._V1_.jpg",
-        "card":"",
+        "card":"card-halloween.png",
          "rating": 3.2,
         "details": {
           "cast": ["Jamie Lee Curtis", "Donald Pleasence", "Tony Moran", "Nick Castle"],
           "director": "John Carpenter",
           "producer": "Debra Hill",
-          "duration": "91 mins",
+          "duration": " 1hr 31mins",
           "year": 1978,
           "language": ["English"],
-          "video_url":"https://www.youtube.com/embed/ek1ePFp-nBI?si=4DOQzkT5d66MPXjQ"
+          "video_url":"https://www.youtube.com/embed/ek1ePFp-nBI?si=mKfyenSPzVz9S2YF"
         }
       },
       {
         "id":"5",
         "movie_name": "Sinister",
-        "description": "True-crime writer Ellison Oswalt discovers a box of home movies that put his family in great danger as he uncovers a supernatural force tied to the horrific events.",
-        "image_url": "https://m.media-amazon.com/images/M/MV5BMjI5MTg1Njg0Ml5BMl5BanBnXkFtZTcwNzg2Mjc4Nw@@._V1_FMjpg_UX1000_.jpg",
-        "gener": ["Horror", "Supernatural", "Thriller"],
-        "swiper":"data:image/jpeg;base64,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",
-        "card":"",
+        "description": "Sinister follows true-crime writer Ellison Oswalt, who moves his family into a house where previous owners were murdered. He discovers disturbing Super 8 films of families being killed, which leads him to uncover a supernatural entity, Bughuul, who consumes children. As Ellison digs deeper, his family becomes ensnared in a terrifying cycle of death.",
+        "image_url": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11670095_p_v10_ak.jpg",
+        "gener": ["Supernatural horror", "Thriller"],
         "rating": 3,
         "details": {
           "cast": ["Ethan Hawke", "Juliet Rylance", "Fred Thompson", "James Ransone"],
           "director": "Scott Derrickson",
           "producer": "Jason Blum",
-          "duration":" 110 mins",
+          "duration":" 1hr 49mins",
           "year": 2012,
           "language": ["English"],
-          "video_url":"https://www.youtube.com/embed/1wHOsphaw8c?si=FUwRY5oWQwaNDz_G"
+          "video_url":"https://www.youtube.com/embed/1wHOsphaw8c?si=oAlM4_S4tdsDw34l"
         }
       },
       {
         "id":"6",
         "movie_name": "Insidious",
-        "description": "A family looks to prevent evil spirits from trapping their comatose child in a realm called The Further.",
+        "description": "A married couple’s son, Dalton, falls into a coma after an attic accident. The family experiences paranormal events and learns that Dalton has the ability to astral project, becoming trapped in a supernatural realm called 'The Further.' To rescue him, Josh, his father, must enter The Further and confront demonic entities.",
         "image_url": "https://image.tmdb.org/t/p/original/tmlDFIUpGRKiuWm9Ixc6CYDk4y0.jpg",
-        "gener": ["Horror", "Supernatural"],
-        "swiper":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsEHH6QWCJ_299Fe193Upgnd1Px0bAqPbsCw&s",
-        "card":"",
+        "gener": ["thriller.", "Supernatural horror"],
         "rating": 2.5,
         "details": {
           "cast": ["Patrick Wilson", "Rose Byrne", "Lin Shaye"],
           "director": "James Wan",
           "producer": "Oren Peli",
-          "duration": "103 mins",
+          "duration": "1hr 43mins",
           "year": 2010,
           "language": ["English"],
-          "video_url":"https://www.youtube.com/embed/ZuQuOnYnr3Q?si=2QuhS_1QqGTiL06g"
+          "video_url":"https://www.youtube.com/embed/62rpZcMYa0A?si=XuMZzRyBP2HQWtnt"
         }
       },
       {
         "id":"7",
         "movie_name": "IT",
-        "description": "A group of bullied kids band together when a monster, taking the appearance of a clown, begins hunting children.",
-        "image_url": "https://upload.wikimedia.org/wikipedia/en/5/5a/It_%282017%29_poster.jpg",
-        "gener": ["Horror", "Mystery","Thriller"],
-        "swiper":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShrKnj4tkm8NF9icvMRkhbYDcTcPwns6CxuQbVvrRAzhRkSy_6VFgsC3ui8j_LwSRVXVQ&usqp=CAU",
-        "card":"",
+        "description": "A group of outcast children in the town of Derry, Maine, known as the 'Losers Club,' confronts a shape-shifting entity, Pennywise the Dancing Clown, who preys on their fears. Together, they face terrifying manifestations of their individual worst fears while uncovering the truth about Pennywise's 27-year cycle of feeding on children. They eventually confront Pennywise in his lair beneath an abandoned house, defeat him, and make a blood oath to return as adults if he ever resurfaces.",
+        "image_url": "https://m.media-amazon.com/images/I/81Q2fgQpBrL._AC_SX148_SY213_QL70_.jpg",
+        "gener": ["monster Horror", "Mystery","Thriller"],
         "rating": 4,
         "details": {
           "cast": ["Jaeden Lieberher", "Bill Skarsgård", "Finn Wolfhard"],
           "director": "Andy Muschietti",
           "producer": "Dan Lin",
-          "duration": "135 mins",
+          "duration": " 2hr 15mins",
           "year": 2017,
           "language": ["English"],
-          "video_url":"https://www.youtube.com/embed/FnCdOQsX5kc?si=YgUof-SyjSgLQFtv"
+          "video_url":"https://www.youtube.com/embed/xKJmEC5ieOk?si=w3dsT4tRQXFcBCp5"
         }
       }
     ,
     {
       "id":"8",
       "movie_name": "Demonte Colony",
-      "description": "A group of friends visit a deserted colony, only to experience supernatural horrors. The horror intensifies as they uncover the dark secrets of the place.",
+      "description": "Four friends visit a haunted mansion in Chennai, where strange occurrences begin to plague them after their visit. They uncover the dark history of the mansion, involving a vengeful spirit and a cursed diamond necklace. As supernatural events intensify, the friends realize they are being targeted by the ghost of Lord John De Monte. With each passing moment, they struggle to escape the curse, leading to their eventual demise.",
       "image_url": "https://www.justwatch.com/images/poster/321354041/s166/demonte-colony",
-      "swiper":"https://sund-images.sunnxt.com/7245/1600x1200_DemonteColonyTamil_7245_110c2609-539a-4fba-9448-59fad30b3723.jpg",
-      "card":"",
       "gener": ["Horror", "Thriller"],
       "rating": 3.4,
       "details": {
-        "cast": ["Abhishek Singh", "Aadarsh Balakrishna", "Nandita Swetha", "Ramesh Thilak"],
-        "director": "R. Ramkumar",
-        "producer": "R. Ramkumar, D. K. Ranjit",
-        "duration": "121 mins",
+        "cast": ["Arulnithi ", "Arulnithi ", "Sananth ", "Antti Jääskeläinen"],
+        "director": "R. Ajay Gnanamuthu",
+        "producer": "A. S. Ponnusamy",
+        "duration": "1hr 47mins",
         "year": 2015,
         "language": ["Tamil"],
-        "video_url":"https://www.youtube.com/embed/so6-G5pfmtM?si=9ToA7Wyv3OZKx0s9"
+        "video_url":"https://www.youtube.com/embed/c7gTbFSyn7I?si=D2WGc-K6-uYfSQk2"
       }
     },
     {
       "id":"9",
       "movie_name": "Arunthathi",
-      "description": "A woman seeks revenge against those who wronged her and her family, as she becomes involved in a chilling series of supernatural events.",
+      "description": "A woman named Arundhati discovers she is the reincarnation of her great-grandmother Jejamma, who once sacrificed her life to defeat the evil spirit of her cousin, Pasupathi. Pasupathi's spirit, seeking revenge, terrorizes Arundhati's family, forcing her to confront him with the help of a mystical weapon made from Jejamma's bones. Arundhati ultimately sacrifices herself to destroy Pasupathi, but she is later revealed to be Jejamma's reincarnation, ensuring her family’s safety.",
       "image_url": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p194655_v_v8_ab.jpg",
-      "gener": ["Horror","Thriller", "Supernatural"],
-      "swiper":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTOQx-LW9AlqXLAujLMWvQhb_TcLOPhX_NFA&s",
-      "card":"",
+      "gener": ["Horror","Thriller", "Mystery"],
       "rating": 3.8,
       "details": {
-        "cast": ["Jyothika", "Sujatha", "Radhika", "Sundar C"],
-        "director": "Sundar C", 
-        "producer": "A. M. Rathnam",
-        "duration": "155 mins",
+        "cast": ["JAnushka Shetty", "Sonu Sood", "Sayaji Shinde"],
+        "director": "Kodi Ramakrishna", 
+        "producer": "Shyam Prasad Reddy",
+        "duration": "2hr 51mins",
         "year": 2009,
         "language": ["Tamil"],
-        "video_url":"https://www.youtube.com/embed/3OXhA30aJ7M?si=pvkf8lqHpGQeNxAL"
+        "video_url":"https://www.youtube.com/embed/zzF2HOEzPf8?si=gc7tpIrnqIBqV8Br"
       }
     },
     {
       "id":"10",
       "movie_name": "Annabelle",
-      "description": "A couple begins to experience terrifying events when they are gifted a vintage doll that is possessed by an evil spirit.",
+      "description": "A medical student gifts his wife a rare porcelain doll, unknowingly bringing a demonic presence into their home after a violent attack by a cult. As paranormal events escalate, the family must confront the demon that seeks to claim their souls, ultimately leading to a tragic sacrifice. The doll, once thought destroyed, resurfaces in a new home, continuing its cursed existence.",
       "image_url": "https://musicart.xboxlive.com/7/17105100-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080",
-      "swiper":"data:image/jpeg;base64,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",
-      "card":"",
-      "gener": ["Horror", "Supernatural", "Thriller"],
+      "gener": ["Supernatural Horror"],
       "rating": 2.6,
       "details": {
-        "cast": ["Annabelle Wallis", "Ward Horton", "Tony Amendola", "Alfre Woodard"],
+        "cast": ["Annabelle Wallis", "Ward Horton","Alfre Woodard"],
         "director": "John R. Leonetti",
         "producer": "James Wan",
-        "duration": "99 mins",
+        "duration": "1hr 39mins",
         "year": 2014,
         "language": ["English"],
-        "video_url":"https://www.youtube.com/embed/paFgQNPGlsg?si=c1qiwYS209gZoWbd"
+        "video_url":"https://www.youtube.com/embed/paFgQNPGlsg?si=aH9BZYZFM4YnoFOs"
       }
     },
     {
       "id":"11",
       "movie_name": "Final Destination 4",
-      "description": "A group of people survive a deadly accident after a series of premonitions, but they soon realize that Death itself is coming after them one by one.",
+      "description": "A group of people narrowly escape a deadly accident at a stock car race, only to be hunted down by Death, which relentlessly kills them one by one in increasingly gruesome accidents. After a series of premonitions, Nick O'Bannon and his friends try to evade their fates, but Death's plan remains inevitable. As they attempt to break the cycle, they realize that Death's design cannot be avoided.",
       "image_url": "https://preview.redd.it/final-destination-6-updates-news-v0-j2mnwarminzb1.jpg?width=640&crop=smart&auto=webp&s=60293afc2902eca2cd8a314a6a4fedf9c2020664",
-      "gener": ["Horror", "Thriller", "Supernatural"],
-      "swiper":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQM_P0Z9_6N0jSNtKI4XjdygWTzzZFz-0G6Q&s",
-      "card":"",
+      "gener": ["Supernatural Horror"],
       "rating": 2.6,
       "details": {
-        "cast": ["Bobby Campo", "Shantel VanSanten", "Nick Zano"],
+        "cast": ["Bobby Campo", "Shantel VanSanten", "Mykelti Williamson"],
         "director": "David R. Ellis",
         "producer": "Craig Perry",
-        "duration": "82 mins",
+        "duration": "1hr 22mins",
         "year": 2009,
         "language": ["English"],
-        "video_url":"https://www.youtube.com/embed/UpjhMPq-XuU?si=hUe_m2DX6jVzdp1t"
+        "video_url":"https://www.youtube.com/embed/m0xEqGiHjsA?si=aPlOJn5vGrxM0tp1"
       }
     },
     {
       "id":"12",
       "movie_name": "A Quiet Place",
-      "description": "In a post-apocalyptic world, a family is forced to live in silence while hiding from monsters with ultra-sensitive hearing.",
+      "description": "In a post-apocalyptic world, a family must live in silence to avoid being hunted by alien creatures that hunt by sound. The Abbott family communicates using sign language and takes extreme precautions to stay quiet. As Evelyn goes into labor, the family faces terrifying new challenges to survive and protect each other.",
       "image_url": "https://upload.wikimedia.org/wikipedia/en/a/a0/A_Quiet_Place_film_poster.png",
-      "gener": ["Horror", "Thriller", "Drama"],
-      "swiper":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjLFtnMjnYrQ1_ynVaMlqqfc6hlXALkaXXTw&s",
-      "card":"",
+      "gener": ["Post-apocalyptic Horror"],
       "rating": 4.3,
       "details": {
         "cast": ["Emily Blunt", "John Krasinski", "Millicent Simmonds", "Noah Jupe"],
         "director": "John Krasinski",
         "producer": "Michael Bay, Andrew Form, Brad Fuller",
-        "duration": "90 mins",
+        "duration": "1hr 30mins",
         "year": 2018,
         "language": ["English"],
-        "video_url":"https://www.youtube.com/embed/WR7cc5t7tv8?si=O-9RM1sN8LiLrM6G"
+        "video_url":"https://www.youtube.com/embed/WR7cc5t7tv8?si=fy0sWOgbeQtlKm-L"
       }
     },
     {
       "id":"12",
       "movie_name": "Maya",
-      "description": "A supernatural horror thriller about a struggling single mother who becomes entangled in the haunting mysteries surrounding an abandoned movie theater.",
+      "description": "Vasanth, an artist, investigates the vengeful spirit of Maya Matthews, a woman who died in an asylum after murdering her husband. Meanwhile, Apsara, a single mother struggling with financial issues, encounters strange happenings tied to a horror film. As the lines between reality and the supernatural blur, Apsara discovers that Maya is her own mother, and a final deadly encounter ensues.",
       "image_url": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/maya-et00032649-13-11-2020-05-48-07.jpg",
-      "gener": ["Horror", "Thriller"],
-      "swiper":"data:image/jpeg;base64,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",
-      "card":"",
+      "gener": ["Neo-noir Horror"],
       "rating": 3.5,
       "details": {
         "cast": ["Nayanthara", "Aari Arujunan"],
         "director": "Ashwin Saravanan",
-        "producer": "S. R. Prabhu",
-        "duration": "138 mins",
+        "producer": "Potential Studios",
+        "duration": "1hr 52mins",
         "year": 2015,
         "language": ["Tamil"],
-        "video_url":"https://www.youtube.com/embed/7x43dvfqYSE?si=uccNvZJ_j3HxIVET"
+        "video_url":"https://www.youtube.com/embed/7x43dvfqYSE?si=_CNC8G6ZlcJnO258"
       }
     },
     {
       "id":"13",
       "movie_name": "Megalomaniac",
-      "description": "A chilling dive into the mind of a disturbed individual, exploring themes of madness, brutality, and the terrifying depths of human depravity.",
+      "description": "In 1997, the Butcher, a notorious serial killer, strikes and then vanishes without a trace. Years later, his children are forced to carry on his brutal legacy. They fall deeper into darkness as they embrace his wrath and violent tendencies. Caught in a cycle of carnage, they struggle to escape their father's shadow.",
       "image_url": "https://m.media-amazon.com/images/M/MV5BNGY0MTdlMDUtNzNhZC00MWQzLWJiZDAtNjdjODU3ZmM5ZWNhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-      "gener": ["Horror", "Psychological Thriller"],
-      "swiper":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3cvrdX5e6st35eM9I-70qgTIGKvhc7gLVfA&s",
-      "card":"",
+      "gener": ["Slasher revenge thriller", "psychological horror "],
       "rating":3,
       "details": {
         "cast": ["Eline Schumacher", "Benjamin Ramon"],
         "director": "Karim Ouelhaj",
-        "producer": "Hélène Cœur",
-        "duration": "100 mins",
-        "year": 2022,
+        "producer": "Karim Ouelhaj, Florence Saâdi,Nicolas George",
+        "duration": "1hr 58mins",
+        "year": 2023,
         "language": ["French"],
-        "video_url":"https://www.youtube.com/embed/NNd2Zcp1NNA?si=1keELD2YmnSiuEt5"
+        "video_url":"https://www.youtube.com/embed/NNd2Zcp1NNA?si=3A_WPSfGNgSL5JMo"
       }
     },
     {
       "id":"14",
       "movie_name": "Thirteen Ghosts",
-      "description": "A family inherits a luxurious glass mansion, unaware that it houses vengeful spirits and a deadly secret.",
+      "description": "A widower inherits a mansion, only to discover it is haunted by 12 ghosts trapped by a supernatural machine. With the help of a psychic, he must stop the machine and save his children before becoming the 13th ghost himself. The ghosts are freed when the machine malfunctions.",
       "image_url": "https://m.media-amazon.com/images/I/81eWCj5NltS.jpg",
-      "gener": ["Horror", "Supernatural Thriller"],
-      "swiper":"data:image/jpeg;base64,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",
-      "card":"",
+      "gener": ["Supernatural Thriller"],
       "rating":3.6,
       "details": {
         "cast": ["Tony Shalhoub", "Embeth Davidtz", "Matthew Lillard", "Shannon Elizabeth"],
         "director": "Steve Beck",
         "producer": "Gilbert Adler",
-        "duration": "91 mins",
+        "duration": "1hr 31mins",
         "year": 2001,
         "language": ["English"],
-         "video_url":"https://www.youtube.com/embed/hS6EyJQA53Y?si=EFEDBdGezh1R1Vw0"
+         "video_url":"https://www.youtube.com/embed/n1yZl9HVLd0?si=jow0ZNC2ITBj31Yo"
       }
     },
     {
       "id":"15",
       "movie_name": "Ghoul",
-      "description": "A horrifying tale of three filmmakers who venture into Ukraine to document the story of a cannibalistic spirit.",
+      "description": "An American film crew travels to Ukraine to investigate tales of cannibalism during the Holodomor. Their séance to summon a spirit unwittingly calls forth the ghost of Andrei Chikatilo, a notorious serial killer, leading to a series of horrifying deaths. Trapped and hunted, the crew faces a gruesome end.",
       "image_url": "https://m.media-amazon.com/images/M/MV5BMzA2NTMxNzE2M15BMl5BanBnXkFtZTgwOTQwOTU3NDE@._V1_.jpg",
-      "gener": ["Horror", "Supernatural"],
-      "swiper":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRktD-y1Epo0pMvKjR1LJSMHjGOSzqztiJiWA&s",
-      "card":"",
+      "gener": ["Found Footage Horror ", "Docudrama"],
       "rating": 2.8,
       "details": {
         "cast": ["Jennifer Armour", "Alina Golovlyova", "Jeremy Isabella"],
         "director": "Petr Jákl",
         "producer": "Kristian Vamos",
-        "duration": "86 mins",
+        "duration": "1hr 26mins",
         "year": 2015,
         "language": ["English", "Ukrainian"],
-        "video_url":"hhttps://www.youtube.com/embed/c568Z-y2HGE?si=zfaFjvlGJwFurn_x"
+        "video_url":"https://www.youtube.com/embed/zg0N4L4mwFk?si=fwI3rZbu12tZjjNe"
       }
     },
 
     {
       "id":"16",
       "movie_name": "The Amityville Horror",
-      "description": "A chilling story of a family terrorized by paranormal forces in their new home, based on real-life events.",
+      "description": "In 1975, the Lutz family moves into a house with a dark history of a mass murder and malevolent spirits. Paranormal events and a sinister possession drive the father to violence, forcing the family to flee after just 28 days. The haunting is linked to a preacher's violent past and the supernatural influence of the house.",
       "image_url": "https://play-lh.googleusercontent.com/HK4Mu4Fv7DzqpuliW9PrZwhLgColUP4MNq1sHKsBA9RXj3s6k9nXUhq0PECr1gooOcC6Ftr3TFG-wecSRmo",
-      "swiper":"https://www.joblo.com/wp-content/uploads/2023/12/the-amityville-horror-2005-featured-1280x720.jpg",
-      "card":"",
-      "gener": ["Horror", "Supernatural","docudrama"],
+      "gener": ["Supernatural Horror","docudrama"],
       "rating": 3.9,
       "details": {
-        "cast": ["James Brolin", "Margot Kidder", "Rod Steiger"],
-        "director": "Stuart Rosenberg",
-        "producer": "Elliot Geisinger",
-        "duration": "117 mins",
+        "cast": ["Ryan Reynolds", "Melissa George", "Chloë Grace Moretz","Philip Baker Hall"],
+        "director": "Andrew Douglas",
+        "producer": "Michael Bay, Andrew Form, Bradley Fuller",
+        "duration": "1hr 29mins",
         "year": 1979,
         "language": ["English"],
-        "video_url":"https://www.youtube.com/embed/j_Lm2PXb3tk?si=PeRNHiHpbDuSB5F0"
+        "video_url":"https://www.youtube.com/embed/j_Lm2PXb3tk?si=Wfh6bamRHzElFuwF"
       }
     },
     {
       "id":"17",
       "movie_name": "The Conjuring 2",
-      "description": "The Warrens travel to north London to help a single mother whose children are being tormented by an angry spirit.",
+      "description": "In 1977, paranormal investigators Ed and Lorraine Warren travel to England to help the Hodgson family, who are plagued by poltergeist activity in their Enfield council home. The Warrens uncover that a demonic entity, Valak, is manipulating the haunting. With Lorraine's faith and knowledge, they confront the demon to save the family.",
       "image_url": "https://static.wixstatic.com/media/c28f72_5fef23933b2941948a027fff2e10c650~mv2.jpg/v1/fill/w_552,h_782,al_c,lg_1,q_85,enc_avif,quality_auto/c28f72_5fef23933b2941948a027fff2e10c650~mv2.jpg",
-      "gener": ["Horror", "Supernatural", "Mystery","docudrama"],
-      "swiper":"data:image/jpeg;base64,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",
-      "card":"",
+      "gener": ["Supernatural Horror","docudrama"],
       "rating": 4.3,
       "details": {
         "cast": ["Vera Farmiga", "Patrick Wilson", "Madison Wolfe", "Frances O'Connor"],
         "director": "James Wan",
-        "producer": "James Wan",
-        "duration": "134 mins",
+        "producer": "Peter Safran, Rob Cowan,James Wan",
+        "duration": "2hr 14mins",
         "year": 2016,
         "language": ["English"],
-        "video_url":"https://www.youtube.com/embed/VFsmuRPClr4?si=3GpZL214B47MMymW"
+        "video_url":"https://www.youtube.com/embed/VFsmuRPClr4?si=hSGRGQdwjW5ZN39_"
       }
     },
     {
       "id":"18",
       "movie_name": "The Curse of La Llorona",
-      "description": "A social worker and her children are drawn into a frightening supernatural world when a troubled mother is accused of child endangerment and haunted by the ghostly figure of La Llorona.",
+      "description": "In 1973 Los Angeles, a social worker and her children are haunted by La Llorona, a malevolent spirit from Latin American folklore. As the curse threatens their lives, they seek the help of a former priest turned shaman to confront the entity. Together, they uncover the spirit's tragic past and battle to break the curse.",
       "image_url": "https://i-viaplay-com.akamaized.net/viaplay-prod/132/8/1562848858-08ada0cc8fdf2068d822876879047a00e7a3e0bc.jpg?width=400&height=600",
-      "swiper":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxaFiCdYOYJQpJP5yOG7SAn8MRbDkaiqpAOw&s",  
-      "card":"", 
-      "gener": ["Horror", "Supernatural", "Thriller","docudrama"],
+      "swiper":"https://m.media-amazon.com/images/S/pv-target-images/72cc30a5451c60013dd4296be65c5c2c35e2f86faf4f585005d9fc92ce730a32._SX1080_FMjpg_.jpg",  
+      "card":"card-the cruse of la llorona.png", 
+      "gener": [" Supernatural Horror","docudrama"],
       "rating": 2.7,
       "details": {
         "cast": ["Linda Cardellini", "Raymond Cruz", "Patricia Velásquez", "Marisol Ramirez"],
         "director": "Michael Chaves",
-        "producer": "James Wan",
-        "duration": "93 mins",
+        "producer": "James Wan, Gary Dauberman, Emile Gladstone",
+        "duration": "1hr 33mins",
         "year": 2019,
         "language": ["English"],
-        "video_url":"https://www.youtube.com/embed/uOV-xMYQ7sk?si=Q_FTlwV2ZZkbLkwy"
+        "video_url":"https://www.youtube.com/embed/uOV-xMYQ7sk?si=L5W6LNVo8E9QbGKK"
       }
     },
     {
       "id":"19",
       "movie_name": "Veronica",
-      "description": "A young girl is left alone with her siblings and is drawn into a terrifying world after using a Ouija board to contact her deceased father, unleashing a malevolent force.",
+      "description": "a teenage girl, Verónica, conducts a séance with friends during a solar eclipse, unwittingly summoning a dark spirit that attaches itself to her. As paranormal events escalate, she struggles to protect her siblings while uncovering the truth about her possession. Inspired by true events, the story builds to a chilling and tragic conclusion.",
       "image_url": "https://mlmillerwrites.com/wp-content/uploads/2018/10/veronica.jpg",
-    "gener": ["Horror", "Supernatural", "Thriller","docudrama"],
-      "swiper":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbdAs1RN0XcnmdFPjIXp437pxzrm59BimHPA&s",
-      "card":"",
+    "gener": ["Supernatural Horror","docudrama"],
       "rating": 4,
       "details": {
         "cast": ["Sandra Escacena", "Bruna González", "Claudia Placer", "Iván Chavero"],
         "director": "Paco Plaza",
-        "producer": "Rodrigo Cortés",
-        "duration": "105 mins",
+        "producer": "Apache Films, El Expediente La Película AIE",
+        "duration": "1hr 45mins",
         "year": 2017,
         "language": ["Spanish"],
-        "video_url":"https://www.youtube.com/embed/wNlMIvKnjOQ?si=-pJAK3xH6oLjtdEX"
+        "video_url":"https://www.youtube.com/embed/wNlMIvKnjOQ?si=fQJiC5tbH71Hc3wo"
       }
     },
     {
       "id":"20",
       "movie_name": "The Crucifixion",
-      "description": "A journalist investigates a case of a nun's death, leading her to uncover terrifying truths about an alleged demonic possession.",
+      "description": "A journalist investigates the mysterious death of a nun during an exorcism in Romania, uncovering dark secrets and confronting her own loss of faith. As she delves deeper, she becomes entangled with the demon responsible, leading to a harrowing fight for her soul. Inspired by the true events of the Tanacu exorcism case.",
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxoql2teRpBnTAnqLYV8ES90PzrbM8l9wMZLsdZ6m5mDrlELIdSoEaLkj9z9jw8jZZtQ&usqp=CAU",
-      "swiper":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUMrUuhvPmQhCcyvm2UHcC0rL669Bzhiwo-Q&s",
-      "card":"",
-      "gener": ["Horror", "Supernatural", "Mystery","docudrama"],
+      "gener": ["Supernatural Horror"],
       "rating": 3.6,
       "details": {
         "cast": ["Sophie Cookson", "Corneliu Ulici", "Laure Killing"],
         "director": "Xavier Gens",
-        "producer": "Todd Garner",
-        "duration": "90 mins",
+        "producer": "Peter Safran",
+        "duration": "1hr 30mins",
         "year": 2017,
         "language": ["English"],
-         "video_url":"https://www.youtube.com/embed/MjiFUW2nTBU?si=iGQrJx9KRv_1el0U"
+         "video_url":"https://www.youtube.com/embed/cFCP5SFHs14?si=4ArWLamw2tKZHrgo"
       }
     },
     {
       "id":"21",
       "movie_name": "Annabelle: Creation",
-      "description": "The prequel to Annabelle, revealing the origin of the possessed doll as a group of orphans and a nun become its victims.",
+      "description": "A dollmaker and his wife, grieving the loss of their daughter, unknowingly unleash a demon through a possessed doll, terrorizing the orphan girls they take in. As one of the girls, Janice, becomes possessed, the terrifying chain of events leads to a dark origin for the Annabelle doll. The story reveals how the demon's search for a human host begins.",
       "image_url": "https://image.tmdb.org/t/p/original/6LksVLIziTsb1O9TLWNujVSGGcj.jpg",
-      "swiper":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVCK5C_GiLyVCuj8Mq7tJ-R6pQYczspssjhQ&s",
-      "card":"",
-      "gener": ["Horror", "Supernatural", "Thriller","docudrama"],
+      "gener": ["Supernatural Horror","docudrama"],
       "rating": 4.3,
       "details": {
         "cast": ["Stephanie Sigman", "Talitha Bateman", "Anthony LaPaglia"],
         "director": "David F. Sandberg",
         "producer": "Peter Safran",
-        "duration": "109 mins",
+        "duration": "1hr 49mins",
         "year": 2017,
         "language": ["English"],
-        "video_url":"https://www.youtube.com/embed/KisPhy7T__Q?si=BWJ-IB09KC8XWqg7"
+        "video_url":"https://www.youtube.com/embed/KisPhy7T__Q?si=o0NC7ykkXSfeVkxt"
       }
     },
     {
       "id":"22",
       "movie_name": "The Babadook",
-      "description": "A grieving mother battles her son's fear of a monster lurking in their home, only to discover a sinister presence is haunting them.",
+      "description": "A grieving widow, Amelia, struggles with her troubled six-year-old son, Samuel, whose erratic behavior escalates after the discovery of a sinister pop-up book called Mister Babadook. As the mysterious, top-hatted monster begins tormenting their lives, Amelia battles her own sanity while trying to protect her son. The film delves into themes of grief, motherhood, and inner demons, culminating in a haunting confrontation with the Babadook.",
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYWWajw40kgltfYFUOUGEkd9XNnPKjTYVEmCFoP7x79S_B7zu4P9UVmx5Z8QDOlhL3luM&usqp=CAU",
-      "gener": ["Horror", "Psychological","docudrama"],
-      "swiper":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBhm5TxvG92koF1EbC55aFLPUUfl3B4e9v2w&s",
-      "card":"",
+      "gener": ["Psychological supernatural horror"],
       "rating": 4.2,
       "details": {
         "cast": ["Essie Davis", "Noah Wiseman", "Daniel Henshall"],
         "director": "Jennifer Kent",
         "producer": "Kristina Ceyton",
-        "duration": "94 mins",
+        "duration": "1hr 34mins",
         "year": 2014,
         "language": ["English"],
         "video_url":"https://www.youtube.com/embed/EVxOrUjX-bc?si=u6GthC-dfW70Kd2S"
@@ -439,39 +408,35 @@
     {
       "id":"23",
       "movie_name": "The Grudge",
-      "description": "A young woman becomes involved in a terrifying curse after investigating a house where a supernatural entity resides.",
+      "description": "The Grudge follows a curse born from a violent death in a Tokyo house, which haunts and kills anyone who encounters it. Karen Davis, an American exchange student, uncovers the terrifying truth as she becomes entangled in the chain of deaths linked to the vengeful spirits. The nonlinear narrative reveals the backstory of the curse and its horrific consequences.",
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStrNiDirHtLwfBgHInEGvYlPooxI9WTkLpQw&s",
-      "swiper":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLXAXvs8bud1qzT2edWxNjj5BSzSFNQU21lw&s",
-      "card":"",
-      "gener": ["Horror", "Supernatural"],
+      "gener": ["Supernatural horror."],
       "rating": 3.7,
       "details": {
-        "cast": ["Sarah Michelle Gellar", "Jason Behr", "Cleopatra Coleman"],
+        "cast": ["Sarah Michelle Gellar", "Jason Behr", "Clea DuVal","Bill Pullman"],
         "director": "Takashi Shimizu",
         "producer": "Sam Raimi",
-        "duration": "92 mins",
+        "duration": "1hr 31mins",
         "year": 2004,
         "language": ["English"],
-        "video_url":"https://www.youtube.com/embed/O2NKzO-fxwQ?si=JA8XsuDiU_CshV7N"
+        "video_url":"https://www.youtube.com/embed/O2NKzO-fxwQ?si=Pg0iAxNPQT-4zDme"
       }
     },
     {
       "id":"24",
       "movie_name": "Scream",
-      "description": "A group of teenagers is stalked by a masked killer who targets them based on horror movie tropes. As they try to uncover the identity of the killer, they must confront their worst fears.",
+      "description": "Set in the small town of Woodsboro, 'Scream' follows high school student Sidney Prescott as she and her friends are terrorized by a masked serial killer known as Ghostface. The killer exploits horror film clichés while targeting Sidney, revealing a deeper connection to her past. The film combines suspense, humor, and self-aware commentary on the slasher genre.",
       "image_url": "https://image.tmdb.org/t/p/original/xVjk4TPttO1dddHRw5YwKGgQPRP.jpg",
-      "gener": ["Horror", "Mystery", "Thriller","docudrama"],
-      "swiper":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSjj7qf8c8Dj6QYlDOXdN1-0xlJCjzEiWC7w&s",
-      "card":"",
+      "gener": ["Thriller","docudrama"],
       "rating": 3.4,
       "details": {
         "cast": ["Neve Campbell", "Courteney Cox", "David Arquette"],
         "director": "Wes Craven",
         "producer": "Cathy Konrad",
-        "duration": "111 mins",
+        "duration": "1hr 51mins",
         "year": 1996,
         "language": ["English"],
-        "video_url":"https://www.youtube.com/embed/beToTslH17s?si=a3vpdBd7G16VNORZ"
+        "video_url":"https://www.youtube.com/embed/beToTslH17s?si=3Uwuz5_5pmFXXrgJ"
       }
     }
   ]
