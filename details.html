@@ -109,7 +109,7 @@
                     <p>${movie.description}</p>
                     <div class="button-container">
                         <button class="login-button" id="watch-button">Watch Now</button>
-                        <button class="watchlist-button" id="add-watchlist-button">Add to Watchlist</button>
+                        <span class="watchlist-button" id="add-watchlist-button">🤍</span>
                     </div>
                 </div>
             </div>
@@ -132,16 +132,16 @@
         const isInWatchlist = watchlist.some(item => item.id === movie.id);
         const watchlistButton = document.getElementById('add-watchlist-button');
         if (isInWatchlist) {
-            watchlistButton.textContent = 'Remove from Watchlist';
+            watchlistButton.textContent = '❤️';
         }
 
         watchlistButton.addEventListener('click', () => {
             if (isInWatchlist) {
                 removeFromWatchlist(movie.id);
-                watchlistButton.textContent = 'Add to Watchlist';
+                watchlistButton.textContent = '🤍';
             } else {
                 addToWatchlist(movie);
-                watchlistButton.textContent = 'Remove from Watchlist';
+                watchlistButton.textContent ="❤️" ;
             }
         });
 

@@ -314,31 +314,6 @@ footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
   }
   
-  /* Watchlist Button Styling */
-  #add-watchlist-button {
-    background-color: #444; /* Dark gray */
-    color: white; /* White text */
-    border: none; /* No border */
-    padding: 8px 15px; /* Smaller padding for smaller size */
-    font-size: 14px; /* Smaller text size */
-    font-weight: bold; /* Bold text */
-    border-radius: 6px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
-  }
-  
-  #add-watchlist-button:hover {
-    background-color: #333; /* Darker gray on hover */
-    transform: translateY(-1px); /* Slight lift effect */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
-  }
-  
-  #add-watchlist-button:active {
-    background-color: #222; /* Even darker gray on active/click */
-    transform: translateY(0); /* Reset lift effect */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  }
   /* Recommended Movies Section */
 #recommended-movies {
     margin: 30px;

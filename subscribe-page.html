@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe to Kimii Horror</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cinzel Decorative', serif;
+            background: linear-gradient(to bottom, #000000, #2a2a2a);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .subscribe-container {
+            background: linear-gradient(135deg, #ff3236, #550000);
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            width: 450px;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .subscribe-title {
+            font-size: 32px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            color: #ffffff;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .subtitle {
+            font-size: 18px;
+            margin-bottom: 25px;
+            color: #f0f0f0;
+        }
+
+        .price {
+            font-size: 54px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #ffd700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+        }
+
+        .price span {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .features {
+            list-style: none;
+            margin: 25px 0;
+            padding: 0;
+        }
+
+        .features li {
+            margin: 12px 0;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+
+        .features li i {
+            color: #ffd700;
+            font-size: 22px;
+            margin-right: 10px;
+        }
+
+        .subscribe-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(90deg, #ff5559, #ff0004);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .subscribe-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 15px rgba(255, 50, 54, 0.8);
+        }
+
+        .testimonial {
+            margin: 20px 0;
+            font-style: italic;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .testimonial strong {
+            color: #ffd700;
+        }
+
+        .login-message {
+            font-size: 16px;
+            margin-top: 20px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .login-message a {
+            color: rgba(255, 215, 0, 1);
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="subscribe-container" id="subscribeContainer">
+        <h1 class="subscribe-title">Join Kimii Horror</h1>
+        <p class="subtitle">Unlock the scariest movies and exclusive content!</p>
+        <p class="price">$12 <span>/ month</span></p>
+        <ul class="features">
+            <li><i>✔</i> Unlimited access to horror classics</li>
+            <li><i>✔</i> Exclusive behind-the-scenes content</li>
+            <li><i>✔</i> Personalized recommendations</li>
+            <li><i>✔</i> 4K Ultra HD and Dolby sound</li>
+            <li><i>✔</i> Cancel anytime</li>
+        </ul>
+        <p class="testimonial">"<strong>Amazing platform!</strong> I've never seen such rare horror gems before." – <em>John D.</em></p>
+        <button class="subscribe-btn" id="subscribeBtn" onclick="subscribeNow()">Subscribe</button>
+        <p class="login-message" id="loginMessage" style="display: none;">
+            Please <a href="login.html" onclick="redirectToSubscribe()">login</a> to subscribe.
+        </p>
+    </div>
+
+    <script>
+        // Simulating a login system with local storage
+        const loggedInUser = localStorage.getItem("loggedInUser"); // Simulate logged-in user
+        const subscribedUser = localStorage.getItem("subscribedUser"); // Check if user is already subscribed
+
+        const subscribeBtn = document.getElementById("subscribeBtn");
+        const loginMessage = document.getElementById("loginMessage");
+
+        function initializePage() {
+            if (!loggedInUser) {
+                // If user is not logged in
+                subscribeBtn.style.display = "none";
+                loginMessage.style.display = "block";
+            } else if (subscribedUser === loggedInUser) {
+                // If user is already subscribed
+                subscribeBtn.innerText = "Already Subscribed";
+                subscribeBtn.disabled = true;
+                subscribeBtn.style.backgroundColor = "grey";
+            } else {
+                // Show subscribe button for logged-in users
+                loginMessage.style.display = "none";
+                subscribeBtn.style.display = "inline-block";
+            }
+        }
+
+        function subscribeNow() {
+            if (!loggedInUser) {
+                alert("Please login to subscribe.");
+                return;
+            }
+
+            // Store subscription in local storage
+            localStorage.setItem("subscribedUser", loggedInUser);
+
+            // Display success message and disable button
+            alert(`Thank you, ${loggedInUser}! Your subscription is now active.`);
+            subscribeBtn.innerText = "Already Subscribed";
+            subscribeBtn.disabled = true;
+            subscribeBtn.style.backgroundColor = "grey";
+        }
+
+        // Redirect user to login page and store the target page
+        function redirectToSubscribe() {
+            localStorage.setItem("redirectAfterLogin", "subscribe.html");
+        }
+
+        // After login, redirect user back to this page if applicable
+        window.addEventListener("DOMContentLoaded", () => {
+            const redirectPage = localStorage.getItem("redirectAfterLogin");
+            if (redirectPage === "subscribe.html") {
+                localStorage.removeItem("redirectAfterLogin");
+                window.location.href = "subscribe.html";
+            }
+        });
+
+        // Initialize the page based on login and subscription state
+        initializePage();
+    </script>
+</body>
+</html>
+ 

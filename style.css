@@ -5,6 +5,9 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+::-webkit-scrollbar{
+  display: none;
+}
 a {
   text-decoration: none;
 }
@@ -56,41 +59,65 @@ body {
   transform: scale(1.05);
   outline: none;
 }
-
-/* Profile Image */
-.profile {
-  border-radius: 50%;
-  border: 2px solid white;
-  transition: all 0.3s ease;
+/* Profile Section Styling */
+#profileSection {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
-
-.profile:hover {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-}
-
 
 /* Dropdown Card */
 .dropdown-card {
   position: absolute;
-  background-color: white;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 8px;
-  padding: 10px;
-  z-index: 1000;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
+  top: -1px;
+  right:-70px;
+  background-color: #1e1e1e; /* Dark grey dropdown background */
+  color: white;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  text-align: center;
+  padding: 10px 15px;
 }
 
-.dropdown-card a {
+/* Username Display */
+#userNameDisplay {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Dropdown Links */
+.dropdown-btn {
   display: block;
-  padding: 5px 10px;
-  color: black;
-  transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ff3236; /* Horror-themed red */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.dropdown-card a:hover {
-  background-color: rgba(255, 50, 54, 0.1);
-  border-radius: 5px;
+.dropdown-btn:hover {
+  background-color: #e8292e; /* Darker red on hover */
+  transform: scale(1.05);
+}
+
+/* Optional Dropdown Arrow Styling */
+#profileSection::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #1e1e1e; /* Arrow matching dropdown background */
 }
 #watchlistLink{
   color:blanchedalmond;
