@@ -126,6 +126,13 @@ body {
 #watchlistLink:hover{
   color: #e63946;
 }
+#subscribe{
+  color:blanchedalmond;
+  font-size: 20px;
+}
+#subscribe:hover{
+  color: #e63946;
+}
 .swiper-image {
     transition: opacity 1.5s ease-in-out;
 }

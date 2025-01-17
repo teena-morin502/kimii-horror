@@ -24,34 +24,26 @@ async function loadMovies() {
         const storedMovieId = localStorage.getItem('selectedMovieId');
 
         // Populate Swiper (Carousel)
-        movieArray.forEach((movie) => {
-            if (movie.swiper) {
-                const slide = document.createElement('div');
-                slide.classList.add('swiper-slide');
-                slide.style.position = 'relative';
+       // Populate Swiper (Carousel)
+movieArray.forEach((movie) => {
+    if (movie.swiper) {
+        const slide = document.createElement('div');
+        slide.classList.add('swiper-slide');
+        slide.style.position = 'relative';
 
-                // Swiper image
-                const swiperImage = document.createElement('img');
-                swiperImage.src = movie.swiper;
-                swiperImage.alt = movie.movie_name;
-                swiperImage.width = 1490;
-                swiperImage.height = 500;
-                swiperImage.classList.add('swiper-image');
+        // Swiper image
+        const swiperImage = document.createElement('img');
+        swiperImage.src = movie.swiper;
+        swiperImage.alt = movie.movie_name;
+        swiperImage.width = 1500;
+        swiperImage.height = 500;
+        swiperImage.classList.add('swiper-image');
 
-                // Create the card element for the movie
-                const card = createMovieCard(movie);
-                card.style.position = 'absolute';
-                card.style.bottom = '20px'; // Position below the image
-                card.style.left = '50%';
-                card.style.transform = 'translateX(-50%)';
-                card.style.zIndex = '2';
-
-                // Add the card to the slide, ensuring it moves with the image
-                slide.appendChild(swiperImage);
-                slide.appendChild(card);
-                titleMoviesContainer.appendChild(slide);
-            }
-        });
+        // Add the image to the slide
+        slide.appendChild(swiperImage);
+        titleMoviesContainer.appendChild(slide);
+    }
+});
 
         // Initialize Swiper if there are slides
         if (titleMoviesContainer.children.length > 0) {

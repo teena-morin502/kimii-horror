@@ -13,52 +13,52 @@
 
 </head>
 <body>
-    <header class="navBar">
-        <a href="index.html"><img src="kimiihorror.png" alt="website logo" width="250px"></a>
-          <nav class="header">
-              <div style="position: relative; width: 100%;">
-                  <input type="text" class="search" id="filter" placeholder="search....">
-                  <span id="result-container"></span>
-              </div>
-              <div class="watchlist-container">
-                  <a href="watchlist.html" id="watchlistLink">Watchlist</a>
-              </div>
-              <div class="profile-container">
-                  <a href="#" id="profileLink">
-                      <img src="user.png" alt="profile" width="60px" height="60px" class="profile">
-                  </a>
-                  <div class="profile-container">
-                      <div class="dropdown-card" id="dropdownCard" style="display: none;">
-                          <a href="login.html" id="loginBtn">Login</a>
-                          <a href="#" id="logoutBtn" style="display: none;">Logout</a>
-                      </div>
+  <header class="navBar">
+    <a href="index.html"><img src="kimiihorror.png" alt="website logo" width="250px"></a>
+      <nav class="header">
+          <div style="position: relative; width: 100%;">
+              <input type="text" class="search" id="filter" placeholder="search....">
+              <span id="result-container"></span>
+          </div>
+          <div class="watchlist-container">
+              <a href="watchlist.html" id="watchlistLink">Watchlist</a>
+          </div>
+          <a href="subscribe-page.html" id="subscribe">Subscribe</a>
+          <div class="profile-container">
+              <a href="#" id="profileLink">
+                  <img src="user.png" alt="profile" width="60px" height="60px" class="profile">
+              </a>
+              <div id="profileSection">
+                  <div id="dropdownCard" class="dropdown-card" style="display: none;">
+                      <p id="userNameDisplay">Welcome, Guest!</p>
+                      <a href="login.html" id="loginBtn" class="dropdown-btn">Login</a>
+                      <a href="#" id="logoutBtn" class="dropdown-btn" style="display: none;">Logout</a>
                   </div>
               </div>
-          </nav>
-      </header>
-
+              
+              
+              
+          </div>
+      </nav>
+  </header>
   <main>
     <!-- Movie Name as the Page Header -->
     <section id="movie-header">
       <h1 id="movie-title">Loading...</h1>
     </section>
-
-    <!-- Breadcrumbs -->
-    <nav id="breadcrumbs">
-      <a href="index.html">Home</a> > <span id="breadcrumb-movie-name">Loading...</span>
-    </nav>
-
     <!-- Video Player -->
     <section id="video-section">
       <div id="video-container">
         <!-- The video will be loaded here -->
       </div>
     </section>
-
+      <!-- Breadcrumbs -->
+    <nav id="breadcrumbs">
+      <a href="index.html">Home</a> > <span id="breadcrumb-movie-name">Loading...</span>
+    </nav>
     <!-- Movie Description -->
     <section id="movie-details">
-      <h2>Description</h2>
-      <p id="movie-description">Loading movie description...</p>
+      <p id="movie-description" style="font-size: 23px;">Loading movie description...</p>
     </section>
 
     <!-- Recommended Movies -->

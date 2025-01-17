@@ -6,7 +6,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
+a{
+  text-decoration: none;
+}
 /* Header and Navigation Bar */
 .navBar {
   background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeaR2VmVMc9wCa0tQxbhksU7kkoIlqTqGpXg&s);
@@ -25,7 +27,13 @@ body {
   align-items: center;
   gap: 40px; /* Increased gap for cleaner spacing */
 }
-
+#subscribe{
+  color:blanchedalmond;
+  font-size: 20px;
+}
+#subscribe:hover{
+  color: #e63946;
+}
 /* Search Input */
 .search {
   background: transparent;
@@ -97,16 +105,45 @@ body {
 }
 
 
-/* Profile Image */
-.profile {
-  border-radius: 50%;
-  border: 2px solid white;
-  transition: all 0.3s ease;
+/* Profile Section */
+.profile-container {
+    position: relative;
 }
 
-.profile:hover {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+.dropdown-card {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #2c2b2b;
+    color: white;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: none;
+    text-align: center;
 }
+
+.profile-container:hover .dropdown-card {
+    display: block;
+}
+
+.dropdown-btn {
+    display: block;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #ff3236;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dropdown-btn:hover {
+    background-color: #e8292e;
+    transform: scale(1.05);
+}
+
 #watchlistLink{
   color:blanchedalmond;
   font-size: 20px;
@@ -114,41 +151,6 @@ body {
 #watchlistLink:hover{
   color: #e63946;
 }
-
-/* Dropdown Card */
-.dropdown-card {
-  position: absolute;
-  background-color: white;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 8px;
-  padding: 10px;
-  z-index: 1000;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-}
-
-.dropdown-card a {
-  display: block;
-  padding: 5px 10px;
-  color: black;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-card a:hover {
-  background-color: rgba(255, 50, 54, 0.1);
-  border-radius: 5px;
-}
-.header a {
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.header a:hover {
-  color: #ff2d1f; /* Red hover effect */
-}
-
 /* Movie Header */
 #movie-header h1 {
   text-align: center;

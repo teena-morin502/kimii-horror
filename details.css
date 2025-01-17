@@ -1,9 +1,12 @@
 /* Global Styles */
-*{
-text-decoration: none;
-}
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
     font-family: 'Cinzel Decorative', serif;
     background-color: #121212; /* Dark theme background */
     color: white;
@@ -14,16 +17,19 @@ body {
 header {
     background-color: rgba(0, 0, 0, 0.9);
     height: 70px;
-}
-
-.navBar {
-    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeaR2VmVMc9wCa0tQxbhksU7kkoIlqTqGpXg&s');
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeaR2VmVMc9wCa0tQxbhksU7kkoIlqTqGpXg&s');
     background-size: cover;
     background-position: center;
-    padding: 15px 20px;
 }
 
 .header {
@@ -49,82 +55,94 @@ header {
     outline: none;
 }
 
+/* Watchlist Link */
+#watchlistLink {
+    color: blanchedalmond;
+    font-size: 20px;
+}
+
+#watchlistLink:hover {
+    color: #e63946;
+}
+
+/* Subscribe Link */
+#subscribe {
+    color: blanchedalmond;
+    font-size: 20px;
+}
+
+#subscribe:hover {
+    color: #e63946;
+}
+
+/* Profile Section */
 .profile-container {
     position: relative;
 }
 
-.profile {
-    border-radius: 50%;
-    border: 2px solid white;
-    transition: transform 0.3s ease;
-}
-
-#watchlistLink{
-    color:blanchedalmond;
-    font-size: 20px;
-}
-#watchlistLink:hover{
-    color: #e63946;
-}
-/* Dropdown Card */
 .dropdown-card {
     position: absolute;
-    background-color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    padding: 10px;
-    z-index: 1000;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-  }
-  
-  .dropdown-card a {
-    display: block;
-    padding: 5px 10px;
-    color: black;
-    transition: background-color 0.3s ease;
-  }
-  
-  .dropdown-card a:hover {
-    background-color: rgba(255, 50, 54, 0.1);
-    border-radius: 5px;
-  }
+    top: 70px;
+    right: 0;
+    background-color: #1e1e1e;
+    color: white;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: none;
+    text-align: center;
+}
 
-/* Footer Styles */
+.profile-container:hover .dropdown-card {
+    display: block;
+}
+
+.dropdown-btn {
+    display: block;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #ff3236;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dropdown-btn:hover {
+    background-color: #e8292e;
+    transform: scale(1.05);
+}
+
+/* Footer */
 footer {
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid #444;
-}
-
-.footer-left img {
-    width: 150px;
-}
-
-.copy {
-    font-size: 14px;
-    color: blanchedalmond;
-}
-
-.social {
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Footer Left */
+  .footer-left {
     display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.media {
-    height: 40px;
-    width: 40px;
-    border-radius: 100%;
-    border: 2px solid white;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.media:hover {
-    transform: scale(1.2);
-}
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .footer-left img {
+    width: 150px;
+    filter: drop-shadow(0px 4px 6px rgba(255, 50, 54, 0.5));
+  }
+  
+  .copy {
+    font-size: 16px;
+    color: blanchedalmond;
+  }
+  
+  
 
 /* Movie Details Section */
 .movie-details-container {
@@ -144,17 +162,14 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.movie-info {
-    flex: 1;
-}
-
-.movie-name {
+.movie-info h1 {
     font-size: 2.5em;
     color: #e63946;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
+/* Movie Meta - Year without Box */
 .movie-meta {
     display: flex;
     gap: 15px;
@@ -162,25 +177,14 @@ footer {
 }
 
 .movie-meta span {
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-size: 0.9em;
-}
-
-.movie-duration {
-    background-color: #444;
-    color: #fff;
-}
-
-.movie-rating {
-    background-color: #ef4e4e;
-    color: #fff;
-}
-
-.movie-year {
     font-size: 1em;
-    margin: 5px 0;
-    color: #ffffff;
+    color: #f0f0f0;
+}
+
+/* Strong Element Styling */
+strong {
+    color: #ff3236; /* Bright red color */
+    margin-right: 15px; /* Spacing between elements */
 }
 
 .movie-description {
@@ -189,171 +193,78 @@ footer {
     color: #f0f0f0;
 }
 
-.login-button {
-    margin: 20px 0;
-    padding: 10px 20px;
-    background-color: #e63946;
-    color: white;
-    font-size: 1em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+/* Button Container */
+.button-container {
+    display: flex;
+    gap: 20px; /* Increased spacing between buttons */
+    margin-top: 20px;
 }
 
-.login-button:hover {
+#watch-button {
+    background-color: #e63946; /* Red button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    font-size: 16px;
+    border-radius: 25px; /* Rounded */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#watch-button:hover {
     background-color: #bf2929;
+    transform: scale(1.1);
+}
+
+#add-watchlist-button {
+    background-color: #444; /* Dark gray button */
+    color: white;
+    padding: 10px 18px;
+    border: 2px solid #e63946; /* Red border */
+    font-size: 14px;
+    border-radius: 10px; /* Subtle rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+#add-watchlist-button:hover {
+    background-color: #222;
+    border-color: #ff3236; /* Brighter red on hover */
     transform: scale(1.05);
 }
 
-/* More Information */
-.more-info {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #1e1e1e;
-    border-radius: 8px;
-    border-top: 1px solid #444;
-}
-
-.more-info h2 {
-    color: white;
-    font-size: 1.3em;
-    margin-bottom: 15px;
-}
-
-.more-info p {
-    margin: 5px 0;
-    color: #ccc;
-}
-
-/* search */
-#result-container {
-    display: none;
-    position: absolute;
-    top: 50px;
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-    display: flex;
-    flex-direction: column; 
-    max-height: 300px; 
-    overflow-y: auto;
-  }
-  
-  #result-container .movie-card {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #222;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  #result-container .movie-card img {
-    width: 70px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 4px;
-  }
-  
-  #result-container .movie-card div {
-    display: flex;
-    flex-direction: column;
-    gap: 5px; 
-  }
-  
-  #result-container .movie-card h3 {
-    font-size: 16px;
-    color: white;
-    margin: 0;
-  }
-  
-  
-  #result-container .movie-card p {
-    font-size: 14px;
-    color: #bbb; 
-    margin: 0;
-  }
-  
-  
-/* Container for Buttons */
-.button-container {
-    display: flex; /* Arrange buttons in a row */
-    justify-content: flex-start; /* Align buttons to the left */
-    gap: 15px; /* Space between buttons */
-    margin-top: 20px; /* Add spacing above the buttons */
-  }
-  
-  /* Watch Now Button Styling */
-  #watch-button {
-    background-color: #b71c1c; /* Dark red */
-    color: white; /* White text */
-    border: none; /* No border */
-    padding: 12px 25px; /* Larger padding for prominence */
-    font-size: 18px; /* Slightly larger text */
-    font-weight: bold; /* Bold text */
-    border-radius: 6px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
-  }
-  
-  #watch-button:hover {
-    background-color: #8e0000; /* Darker red on hover */
-    transform: translateY(-2px); /* Slight lift effect */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
-  }
-  
-  #watch-button:active {
-    background-color: #600000; /* Even darker red on active/click */
-    transform: translateY(0); /* Reset lift effect */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-  }
-  
-  /* Recommended Movies Section */
-#recommended-movies {
-    margin: 30px;
-}
-
-#recommended-movies h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.recommended-grid {
-    display: flex;
-    gap: 20px; /* Improved spacing */
-    padding: 10px 25px;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-.movie-card {
-    flex: 0 0 auto;
-    width: 200px;
-    /* height: 300px; */
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-  }
-
-
-.movie-card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(255, 50, 54, 0.5);
-}
-
-.movie-card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-  
+      /* Recommended Movies Section */
+      #recommended-movies {
+        margin: 30px;
+    }
+    #recommended-movies h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .recommended-grid {
+        display: flex;
+        gap: 20px; /* Improved spacing */
+        padding: 10px 25px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .movie-card {
+        flex: 0 0 auto;
+        width: 200px;
+        /* height: 300px; */
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+      }
+    .movie-card:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px rgba(255, 50, 54, 0.5);
+    }
+    .movie-card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
