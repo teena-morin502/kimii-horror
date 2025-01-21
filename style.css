@@ -64,12 +64,15 @@ body {
   position: relative;
   display: inline-block;
   cursor: pointer;
+  
 }
-
+.profile{
+  margin-top:20px;
+}
 /* Dropdown Card */
 .dropdown-card {
   position: absolute;
-  top: -1px;
+  top: -6px;
   right:-70px;
   background-color: #1e1e1e; /* Dark grey dropdown background */
   color: white;
@@ -135,12 +138,123 @@ body {
 }
 .swiper-image {
     transition: opacity 1.5s ease-in-out;
+    position:relative;
 }
 
 .fade-out {
     opacity: 0.3;
 }
+/* Movie Details Section */
+.movie-details-container {
+  gap: 30px;
+  max-width: 900px; 
+  padding: 20px;
+  top:90px;
+  position: absolute;
+}
 
+
+.movie-poster img {
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+/* Breadcrumbs */
+#breadcrumbs {
+  margin-left:75px;
+  display: flex;
+}
+
+#breadcrumbs a {
+  color: #ff2d1f; /* Red links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#breadcrumbs a:hover {
+  color: #680303; /* White hover effect */
+}
+
+#breadcrumbs p {
+  color: #bbb; /* Light gray for inactive breadcrumb */
+}
+
+.movie_name {
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+.movie_name h1 {
+  font-size: 2.5em;
+  color: #e63946;
+  font-weight: bold;
+  margin-bottom: 10px; /* Added margin for spacing */
+}
+
+.movie-meta {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.movie-meta span {
+  font-size: 1em;
+  color: #f0f0f0;
+}
+
+strong {
+  color: #ff3236;
+  margin-right: 15px;
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  gap: 20px;
+  margin: 30px;
+  margin-left: 50px;
+
+}
+
+.login-button  {
+  background-color: #e63946;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-button :hover{
+  background-color: #bf2929;
+  transform: scale(1.1);
+}
+
+.watchlist-button{
+  background-color: #444;
+  color: white;
+  padding: 10px 18px;
+  border: 2px solid #e63946;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.watchlist-button:hover {
+  background-color: #222;
+  border-color: #ff3236;
+  transform: scale(1.05);
+}
+
+/* More Info Section */
+.more-info p {
+  margin-left: 50px;
+  margin-bottom: 20px; /* Added margin for spacing */
+}
 /* Style for the movie card below Swiper images */
 .movie_slide {
     width: 220px;
@@ -189,17 +303,7 @@ body {
   box-shadow: 0 8px 16px rgba(255, 50, 54, 0.5);
 }
 
-.movie_name {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 8px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
+
 
 .movie_slide:hover .movie_name {
   opacity: 1;

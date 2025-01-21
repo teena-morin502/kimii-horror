@@ -109,10 +109,13 @@ a{
 .profile-container {
     position: relative;
 }
-
+.profile{
+  margin-top:20px;
+}
+/* Dropdown Card */
 .dropdown-card {
-    position: absolute;
-    top: 70px;
+  position: absolute;
+  top: -6px;
     right: 0;
     background-color: #2c2b2b;
     color: white;

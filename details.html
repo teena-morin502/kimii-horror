@@ -94,28 +94,42 @@
             detailsContainer.innerHTML = '<p>Movie not found. Please try again.</p>';
             return;
         }
-
+        const trailerEmbedUrl = movie.details.video_url.replace('watch?v=', 'embed/');
         // Populate movie details
         detailsContainer.innerHTML = `
-            <div class="movie-details-container">
-                <div class="movie-poster">
-                    <img src="${movie.image_url}" alt="${movie.movie_name}" width="300" height="400">
-                </div>
-                <div class="movie-info">
+        <div class="movie_name">
                     <h1>${movie.movie_name}</h1>
                     <div class="movie-meta">
-                        <span style="font-size: 20px;">${movie.details?.duration || 'N/A'}</span>
+                        <span style="font-size: 20px;" class="movie-meta-box">${movie.details?.duration || 'N/A'}</span>
                         <span style="font-size: 20px;">${movie.details?.year || 'Unknown'}</span>
-                        <span style="font-size: 20px;">${movie.rating || 'N/A'}/5</span>
+                        <span style="font-size: 20px;" class="movie-meta-box">${movie.rating || 'N/A'}/5</span>
                     </div>
-                    <p style="font-size: 23px;">${movie.description}</p>
+                </div>
+           <div class="movie-details-container">
+                <div class="movie-poster">
+                    
+                 <img src="${movie.image_url}" alt="${movie.movie_name}" width="300" height="420">
+                </div>
+                <div class="movie-info">
+                            <div id="video-container">
+                            <iframe
+                                width="800"
+                                height="350"
+                                src="${trailerEmbedUrl}"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
                     <div class="button-container">
-                        <button class="login-button" id="watch-button">Watch Now</button>
+                        <button class="login-button" id="watch-button">Watch now</button>
                         <button class="watchlist-button" id="add-watchlist-button">+</button>
                     </div>
+
                 </div>
             </div>
             <div class="more-info" style="margin-left:30px;">
+                <p style="font-size: 20px;">${movie.description}</p>
                 <h2 style="font-size: 26px;">More Information</h2>
                 <p style="font-size: 23px;"><strong>Language:</strong> ${movie.details?.language?.join(', ') || 'Unknown'}</p>
                 <p style="font-size: 23px;"><strong>Cast:</strong> ${movie.details?.cast?.join(', ') || 'Unknown'}</p>
@@ -138,13 +152,13 @@
         watchlistButton.addEventListener('click', () => {
             if (isInWatchlist) {
                 removeFromWatchlist(movie.id);
-                watchlistButton.textContent = 'Add to Watchlist';
+                watchlistButton.textContent = '+';
             } else {
                 addToWatchlist(movie);
                 watchlistButton.textContent = 'Remove from Watchlist';
             }
-        });
-        // Load recommended movies (excluding the current one)
+        })
+                // Load recommended movies (excluding the current one)
         const allMovies = data.movies.filter(m => m.id !== movie.id);
         const recommendedMovies = allMovies.sort(() => 0.5 - Math.random()).slice(0, 10);
         recommendedMovies.forEach(recommendedMovie => {

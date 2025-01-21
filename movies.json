@@ -16,7 +16,7 @@
               "duration": "1hr 50mins", 
               "year": 1973,
               "language": ["English"],
-              "video_url":"https://www.youtube.com/embed/BU2eYAO31Cc?si=1vWlqANDvSntwb86"
+              "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737352286/oqst5eb0js43gct7dz6m.mp4"
             }
           },
           {
@@ -36,7 +36,7 @@
           "duration": "1hr 53mins",
           "year": 2013,
           "language": ["English"],
-          "video_url":"https://www.youtube.com/embed/k10ETZ41q5o?si=8UIjoJbqS2sAOcS5"
+          "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737352956/zu40ikmopaeh9mjcgmop.mp4"
         }
       },
       {
@@ -56,7 +56,7 @@
           "duration": "1hr 55mins",
           "year": 2002,
           "language": ["English"],
-          "video_url":"https://www.youtube.com/embed/RR8hEsb0CPY?si=MAtHai0sREzunu8O"
+          "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737353178/nc6nzdhpppaarkkkm21q.mp4"
         }
       },
       {
@@ -75,7 +75,7 @@
           "duration": " 1hr 31mins",
           "year": 1978,
           "language": ["English"],
-          "video_url":"https://www.youtube.com/embed/ek1ePFp-nBI?si=mKfyenSPzVz9S2YF"
+          "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737353384/bnag3vs3ka0hcxpj7o9t.mp4"
         }
       },
       {
@@ -92,7 +92,7 @@
           "duration":" 1hr 49mins",
           "year": 2012,
           "language": ["English"],
-          "video_url":"https://www.youtube.com/embed/1wHOsphaw8c?si=oAlM4_S4tdsDw34l"
+          "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737353529/xmflefv4s58ofjfnansc.mp4"
         }
       },
       {
@@ -109,7 +109,7 @@
           "duration": "1hr 43mins",
           "year": 2010,
           "language": ["English"],
-          "video_url":"https://www.youtube.com/embed/62rpZcMYa0A?si=XuMZzRyBP2HQWtnt"
+          "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737353719/t0fbxhizjgmtgamrnqci.mp4"
         }
       },
       {
@@ -126,7 +126,7 @@
           "duration": " 2hr 15mins",
           "year": 2017,
           "language": ["English"],
-          "video_url":"https://www.youtube.com/embed/xKJmEC5ieOk?si=w3dsT4tRQXFcBCp5"
+          "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737354531/esi6j0apjbyc53wz9dk0.mp4"
         }
       }
     ,
@@ -144,7 +144,7 @@
         "duration": "1hr 47mins",
         "year": 2015,
         "language": ["Tamil"],
-        "video_url":"https://www.youtube.com/embed/c7gTbFSyn7I?si=D2WGc-K6-uYfSQk2"
+        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737354715/cfkya9gpbzb3hxvvf5dl.mp4"
       }
     },
     {
@@ -161,7 +161,7 @@
         "duration": "2hr 51mins",
         "year": 2009,
         "language": ["Tamil"],
-        "video_url":"https://www.youtube.com/embed/zzF2HOEzPf8?si=gc7tpIrnqIBqV8Br"
+        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737354943/ayvkehgkjtbvvlbpnn4v.mp4"
       }
     },
     {
@@ -178,14 +178,14 @@
         "duration": "1hr 39mins",
         "year": 2014,
         "language": ["English"],
-        "video_url":"https://www.youtube.com/embed/paFgQNPGlsg?si=aH9BZYZFM4YnoFOs"
+        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737355156/vfib9eaym5g8pbjlz3ru.mp4"
       }
     },
     {
       "id":"11",
       "movie_name": "Final Destination 4",
       "description": "A group of people narrowly escape a deadly accident at a stock car race, only to be hunted down by Death, which relentlessly kills them one by one in increasingly gruesome accidents. After a series of premonitions, Nick O'Bannon and his friends try to evade their fates, but Death's plan remains inevitable. As they attempt to break the cycle, they realize that Death's design cannot be avoided.",
-      "image_url": "https://preview.redd.it/final-destination-6-updates-news-v0-j2mnwarminzb1.jpg?width=640&crop=smart&auto=webp&s=60293afc2902eca2cd8a314a6a4fedf9c2020664",
+      "image_url": "https://100-movie.com/wp-content/uploads/2022/11/nDvntFkWPoh5qVosZOSDNT4QtuA.jpg",
       "gener": ["Supernatural Horror"],
       "rating": 2.6,
       "details": {
@@ -195,7 +195,7 @@
         "duration": "1hr 22mins",
         "year": 2009,
         "language": ["English"],
-        "video_url":"https://www.youtube.com/embed/m0xEqGiHjsA?si=aPlOJn5vGrxM0tp1"
+        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737355518/hstgv7gftiinoahzub70.mp4"
       }
     },
     {
@@ -212,7 +212,7 @@
         "duration": "1hr 30mins",
         "year": 2018,
         "language": ["English"],
-        "video_url":"https://www.youtube.com/embed/WR7cc5t7tv8?si=fy0sWOgbeQtlKm-L"
+        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737355801/nlljockxfih1qi87yrez.mp4"
       }
     },
     {
@@ -229,7 +229,7 @@
         "duration": "1hr 52mins",
         "year": 2015,
         "language": ["Tamil"],
-        "video_url":"https://www.youtube.com/embed/7x43dvfqYSE?si=_CNC8G6ZlcJnO258"
+        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737356208/vkoczmbg8dwsegjchflo.mp4"
       }
     },
     {
@@ -246,7 +246,7 @@
         "duration": "1hr 58mins",
         "year": 2023,
         "language": ["French"],
-        "video_url":"https://www.youtube.com/embed/NNd2Zcp1NNA?si=3A_WPSfGNgSL5JMo"
+        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737356388/akyuqr3hrip4zr5h4jeo.mp4"
       }
     },
     {
@@ -263,7 +263,7 @@
         "duration": "1hr 31mins",
         "year": 2001,
         "language": ["English"],
-         "video_url":"https://www.youtube.com/embed/n1yZl9HVLd0?si=jow0ZNC2ITBj31Yo"
+         "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737359634/rgixdowv4z78obpln81a.mp4"
       }
     },
     {
@@ -280,7 +280,7 @@
         "duration": "1hr 26mins",
         "year": 2015,
         "language": ["English", "Ukrainian"],
-        "video_url":"https://www.youtube.com/embed/zg0N4L4mwFk?si=fwI3rZbu12tZjjNe"
+        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737360305/faovl54ql3womhucw8eh.mp4"
       }
     },
 
@@ -298,7 +298,7 @@
         "duration": "1hr 29mins",
         "year": 1979,
         "language": ["English"],
-        "video_url":"https://www.youtube.com/embed/j_Lm2PXb3tk?si=Wfh6bamRHzElFuwF"
+        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737360542/kteuvpmf6e2dwmp7nqq1.mp4"
       }
     },
     {
@@ -315,7 +315,7 @@
         "duration": "2hr 14mins",
         "year": 2016,
         "language": ["English"],
-        "video_url":"https://www.youtube.com/embed/VFsmuRPClr4?si=hSGRGQdwjW5ZN39_"
+        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737360733/o0w4grbsu6jn6tvoltkx.mp4"
       }
     },
     {
@@ -334,7 +334,7 @@
         "duration": "1hr 33mins",
         "year": 2019,
         "language": ["English"],
-        "video_url":"https://www.youtube.com/embed/uOV-xMYQ7sk?si=L5W6LNVo8E9QbGKK"
+        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737360911/vcojm68xcmwfz9ctc0jx.mp4"
       }
     },
     {
@@ -351,7 +351,7 @@
         "duration": "1hr 45mins",
         "year": 2017,
         "language": ["Spanish"],
-        "video_url":"https://www.youtube.com/embed/wNlMIvKnjOQ?si=fQJiC5tbH71Hc3wo"
+        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737361820/nrhe23enjvq7fhysdnbc.mp4"
       }
     },
     {
@@ -368,7 +368,7 @@
         "duration": "1hr 30mins",
         "year": 2017,
         "language": ["English"],
-         "video_url":"https://www.youtube.com/embed/cFCP5SFHs14?si=4ArWLamw2tKZHrgo"
+         "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737361985/jii2kycfvpmdqjgvpmob.mp4"
       }
     },
     {
@@ -385,7 +385,7 @@
         "duration": "1hr 49mins",
         "year": 2017,
         "language": ["English"],
-        "video_url":"https://www.youtube.com/embed/KisPhy7T__Q?si=o0NC7ykkXSfeVkxt"
+        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737361985/jii2kycfvpmdqjgvpmob.mp4"
       }
     },
     {
@@ -402,7 +402,7 @@
         "duration": "1hr 34mins",
         "year": 2014,
         "language": ["English"],
-        "video_url":"https://www.youtube.com/embed/EVxOrUjX-bc?si=u6GthC-dfW70Kd2S"
+        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737363894/wo1rf9g5akye6fstaqt9.mp4"
       }
     },  
     {
@@ -419,7 +419,7 @@
         "duration": "1hr 31mins",
         "year": 2004,
         "language": ["English"],
-        "video_url":"https://www.youtube.com/embed/O2NKzO-fxwQ?si=Pg0iAxNPQT-4zDme"
+        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737364291/gf3zysvysgz59qtxqvfh.mp4"
       }
     },
     {
@@ -436,7 +436,7 @@
         "duration": "1hr 51mins",
         "year": 1996,
         "language": ["English"],
-        "video_url":"https://www.youtube.com/embed/beToTslH17s?si=3Uwuz5_5pmFXXrgJ"
+        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737364457/hjfo3ngmewsbfq0mawm4.mp4"
       }
     }
   ]
