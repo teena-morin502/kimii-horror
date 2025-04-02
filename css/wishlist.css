@@ -15,11 +15,11 @@ h1 {
     color: rgb(255, 50, 54);
 }
 
-.watchlist-section {
+.wishlist-section {
     padding: 20px;
 }
 
-.watchlist-container {
+.wishlist-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -27,10 +27,11 @@ h1 {
 }
 
 /* Movie Card */
+
+
 .movie-card {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
-    overflow: hidden;
     width: 200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -189,11 +190,11 @@ a {
   border-right: 8px solid transparent;
   border-bottom: 8px solid #1e1e1e; /* Arrow matching dropdown background */
 }
-  #watchlistLink{
+  #wishlistLink{
     color:blanchedalmond;
     font-size: 20px;
   }
-  #watchlistLink:hover{
+  #wishlistLink:hover{
     color: #e63946;
   }
   #subscribe{

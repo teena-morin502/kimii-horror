@@ -2,7 +2,7 @@ import { initializeApp, getApps } from "https://www.gstatic.com/firebasejs/11.5.
 import { getFirestore, collection, query, where, getDocs, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js";
 
-// ✅ Firebase Configuration
+//  Firebase Configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAaJ8_qJrVVJnYlSdLQ1D5vaVRpS79GZ1E",
   authDomain: "kimii-horror.firebaseapp.com",
@@ -13,7 +13,7 @@ const firebaseConfig = {
   measurementId: "G-7KM8QRZTCR",
 };
 
-// ✅ Prevent Multiple Firebase Initializations
+//  Prevent Multiple Firebase Initializations
 const app = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth();
@@ -23,11 +23,11 @@ const loginMessage = document.getElementById("loginMessage");
 
 let userId = null;
 
-// ✅ Check if the user is logged in
+//  Check if the user is logged in
 onAuthStateChanged(auth, async (user) => {
   if (user) {
     userId = user.uid;
-    console.log("✅ User logged in:", userId);
+    console.log(" User logged in:", userId);
     loginMessage.style.display = "none";
     wishlistContainer.style.display = "block";
     await loadWishlist();
@@ -38,12 +38,12 @@ onAuthStateChanged(auth, async (user) => {
   }
 });
 
-// ✅ Fetch wishlist movies from Firebase
+//  Fetch wishlist movies from Firebase
 async function loadWishlist() {
   if (!userId) return;
 
   try {
-    console.log("⏳ Fetching wishlist...");
+    console.log(" Fetching wishlist...");
     const wishlistRef = collection(db, "wishlist");
     const q = query(wishlistRef, where("userId", "==", userId));
     const querySnapshot = await getDocs(q);
@@ -72,7 +72,7 @@ async function loadWishlist() {
       wishlistContainer.appendChild(movieCard);
     });
 
-    // ✅ Attach event listeners
+    //  Attach event listeners
     document.querySelectorAll(".remove-button").forEach((button) => {
       button.addEventListener("click", removeFromWishlist);
     });
@@ -84,19 +84,19 @@ async function loadWishlist() {
       });
     });
 
-    console.log("✅ Wishlist loaded.");
+    console.log(" Wishlist loaded.");
   } catch (error) {
     console.error("❌ Error fetching wishlist:", error);
   }
 }
 
-// ✅ Remove movie from wishlist
+//  Remove movie from wishlist
 async function removeFromWishlist(event) {
   const movieId = event.target.getAttribute("data-id");
   if (!userId) return;
 
   try {
-    console.log(`⏳ Removing movie ${movieId} from wishlist...`);
+    console.log(` Removing movie ${movieId} from wishlist...`);
     const wishlistRef = doc(db, "wishlist", `${userId}_${movieId}`);
     await deleteDoc(wishlistRef);
     showAlert("Movie removed from wishlist!");
