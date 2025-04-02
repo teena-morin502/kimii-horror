@@ -163,7 +163,7 @@ form.addEventListener("submit", async (event) => {
         email: email.value,
       });
       showAlert("Signup successful!", "Your account has been created.", "success", () => {
-        window.location.href = "./../html/index.html"; // Redirect only after user clicks OK
+        window.location.href = "./../index.html"; // Redirect only after user clicks OK
     });
     
     } catch (error) {

@@ -119,7 +119,7 @@ async function setupWishlist(movie) {
 
     onAuthStateChanged(auth, async (user) => {
         if (!user) {
-            wishlistButton.textContent = "💖 Add to Wishlist (Login Required)";
+            wishlistButton.textContent = "💖 Add to Wishlist ";
             wishlistButton.addEventListener("click", () => {
                 window.location.href = "./login.html";
             });

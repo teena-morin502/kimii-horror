@@ -124,7 +124,7 @@ function generateMovieSlideHTML(movie) {
 function generateMovieCardsHTML(movies) {
     return movies.map(movie => `
         <div class="movie_slide">
-            <a href="./details.html?id=${movie.id}">
+            <a href="./html/details.html?id=${movie.id}">
                 <img src="${movie.image_url}" alt="${movie.movie_name}" loading="lazy" width="200" height="300">
             </a>
         </div>
@@ -140,7 +140,7 @@ function attachWatchNowListeners() {
           onAuthStateChanged(auth, async (user) => {
               if (!user) {
                   showAlert("Login Required", "Please log in to watch movies.", "warning", () => {
-                      window.location.href = "./../html/login.html";
+                      window.location.href = "./html/login.html";
                   });
                   return;
               }
@@ -149,10 +149,10 @@ function attachWatchNowListeners() {
               const subSnap = await getDoc(subRef);
 
               if (subSnap.exists()) {
-                  window.location.href = `./../html/video.html?id=${movieId}`;
+                  window.location.href = `./html/video.html?id=${movieId}`;
               } else {
                   showAlert("Subscription Required", "You need a subscription to watch this movie.", "error", () => {
-                      window.location.href = "./../html/subscribe-page.html";
+                      window.location.href = "./html/subscribe-page.html";
                   });
               }
           });
@@ -175,7 +175,7 @@ async function setupWishlist(movie) {
                     "You need to log in to add movies to your wishlist.",
                     "warning",
                     () => {
-                        window.location.href = "./../html/login.html"; // Redirect only after user clicks OK
+                        window.location.href = "./html/login.html"; // Redirect only after user clicks OK
                     }
                 );
             });

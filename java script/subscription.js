@@ -117,7 +117,7 @@ function showThankYouMessage() {
         </div>`;
 
     setTimeout(() => {
-        window.location.href = "index.html"; 
+        window.location.href = "./../index.html"; 
     }, 3000);
 }
 
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             if (subSnap.exists()) {
                 showAlert("🎉 You are already subscribed! Thank you.");
-                window.location.href = "./../html/index.html";
+                window.location.href = "./../index.html";
             }
         }
     });
