@@ -112,7 +112,7 @@ if (!email.value) {
   if (isValid) {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email.value, password.value);
-      alert("Login successful!");
+      showAlert("Login successful!");
       window.location.href = "index.html"; // Redirect to homepage
     } catch (error) {
       // Increment failed attempts counter
@@ -129,14 +129,29 @@ if (!email.value) {
         passwordError.style.color = "red";
       } else {
         console.error("Error:", error);
-        alert("Account not recognized or wrong password entered.");
+        showAlert("Account not recognized or wrong password entered.");
       }
 
       // Alert after 3 failed attempts
       if (failedAttempts >= 10) {
-        alert("Please try later.");
+        showAlert("Please try later.");
         failedAttempts = 0; // Reset the counter
       }
     }
   }
 });
+
+// Show Alert Function (Reused from Details Page)
+function showAlert(title, text, icon, callback = null) {
+  Swal.fire({
+      title: title,
+      text: text,
+      icon: icon,
+      confirmButtonColor: "#D10000",
+      background: "#111",
+      color: "#fff",
+      confirmButtonText: "OK",
+  }).then(() => {
+      if (callback) callback();
+  });
+}

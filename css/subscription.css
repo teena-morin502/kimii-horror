@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel Decorative', serif;
+    background: linear-gradient(to bottom, #000000, #2a2a2a);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.subscription-container {
+    display: flex;
+    gap: 20px;
+}
+
+.subscription-card {
+    background: linear-gradient(135deg, #ff3236, #550000);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.subscription-card:hover {
+    transform: scale(1.05);
+}
+
+.plan-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ffd700;
+}
+
+.plan-price {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.subscribe-btn {
+    background: #ff5559;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.subscribe-btn:hover {
+    background: #ff0004;
+}
+
+.user-details {
+    background: linear-gradient(135deg, #ff5559, #550000);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    display: none;
+}
+.thank-you-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #ff5559, #550000);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    z-index: 999;
+}

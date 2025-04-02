@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../css/signin.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>kimii horror</title>
+    <style></style>
+  </head>
+  <body>
+    <img src="./../kimiihorror.png" width="200px" />
+    <section class="mid">
+      <p>
+        Unlock the door to the otherworldly. The spirits are waiting for you
+      </p>
+      <section class="login">
+        <form id="loginPage" novalidate>
+          <h1>SIGN IN</h1>
+          <label>Email</label>
+          <input type="email" id="email" required />
+          <span id="emailError" style="color: red; display: none"></span>
+          <label>password</label>
+          <div class="see-password">
+            <span id="show-password-toggle">Show</span>
+          </div>
+          <input type="password" id="password" required />
+          <span id="passwordError" style="color: red; display: none"></span>
+
+          <button type="submit" id="login-btn" class="homePage">submit</button>
+          <h4>
+            if you dont have an account?
+            <a href="./index-signin.html" class="span">click here</a>
+          </h4>
+        </form>
+      </section>
+    </section>
+
+    <script type="module" src="./../java script/signin.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js"></script>
+  </body>
+</html>

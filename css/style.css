@@ -122,11 +122,11 @@ body {
   border-right: 8px solid transparent;
   border-bottom: 8px solid #1e1e1e; /* Arrow matching dropdown background */
 }
-#watchlistLink{
+#wishlistLink{
   color:blanchedalmond;
   font-size: 20px;
 }
-#watchlistLink:hover{
+#wishlistLink:hover{
   color: #e63946;
 }
 #subscribe{
@@ -160,25 +160,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
 }
-/* Breadcrumbs */
-#breadcrumbs {
-  margin-left:75px;
-  display: flex;
-}
 
-#breadcrumbs a {
-  color: #ff2d1f; /* Red links */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-#breadcrumbs a:hover {
-  color: #680303; /* White hover effect */
-}
-
-#breadcrumbs p {
-  color: #bbb; /* Light gray for inactive breadcrumb */
-}
 
 .movie_name {
   margin-left: 50px;
@@ -233,7 +215,7 @@ strong {
   transform: scale(1.1);
 }
 
-.watchlist-button{
+ #wishlist-button{
   background-color: #444;
   color: white;
   padding: 10px 18px;
@@ -244,10 +226,26 @@ strong {
   transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
 }
 
-.watchlist-button:hover {
+#wishlist-button:hover {
   background-color: #222;
   border-color: #ff3236;
   transform: scale(1.05);
+}
+/* watch-now botton */
+.watch-button {
+  background-color: #e63946;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.watch-button:hover{
+  background-color: #bf2929;
+  transform: scale(1.1);
 }
 
 /* More Info Section */
@@ -270,6 +268,8 @@ strong {
     height: 100%;
     object-fit: cover;
 }
+
+
 
 /* Movie Section Styles */
 .title {
@@ -374,7 +374,8 @@ footer {
   transform: translateY(-20px);
   color: rgb(255, 50, 54);
 }
-/* search */
+
+/* search bar alignments */
 #result-container {
   display: none;
   position: absolute;
@@ -427,3 +428,50 @@ footer {
   margin: 0;
 }
 
+/* Recommended Movies Section */
+#recommended-movies {
+  margin: 50px;
+}
+h2{
+  padding: 20px 25px;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: rgb(255, 50, 54);
+  letter-spacing: 2px;
+}
+.recommended-grid {
+  display: flex;
+  gap: 20px; /* Adds space between movie slides */
+  padding: 20px 10px;
+  flex-wrap: wrap; /* Ensures images wrap if needed */
+  justify-content: flex-start; /* Aligns items to the left */
+}
+
+.movie_slide {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  width: 200px;
+  height: 300px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  margin-right: 15px; /* Adds space between movie cards */
+}
+
+.movie_slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.movie_slide:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 50, 54, 0.5);
+}
+
+.movie_slide img:hover {
+  transform: scale(1.1);
+}

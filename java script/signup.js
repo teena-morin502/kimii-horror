@@ -162,12 +162,28 @@ form.addEventListener("submit", async (event) => {
         username: username.value,
         email: email.value,
       });
-
-      alert("Signup successful!");
-      window.location.href = "index.html"; // Redirect to login
+      showAlert("Signup successful!", "Your account has been created.", "success", () => {
+        window.location.href = "./../html/index.html"; // Redirect only after user clicks OK
+    });
+    
     } catch (error) {
       console.error(error);
-      alert("An error occurred. Please try again.");
+      showAlert("An error occurred. Please try again.");
     }
   }
 });
+
+// Show Alert Function (Reused from Details Page)
+function showAlert(title, text, icon, callback = null) {
+  Swal.fire({
+      title: title,
+      text: text,
+      icon: icon,
+      confirmButtonColor: "#D10000",
+      background: "#111",
+      color: "#fff",
+      confirmButtonText: "OK",
+  }).then(() => {
+      if (callback) callback();
+  });
+}

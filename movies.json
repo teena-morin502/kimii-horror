@@ -1,141 +1,171 @@
 {
-    "movies":[
-          {
-            "id":"1",
-            "movie_name": "The Exorcist",
-            "description": "The Exorcism tells the story of Anthony Miller, an actor who starts acting strangely while working on a horror movie. His daughter Lee notices his odd behavior and fears something evil might be involved. As things get worse, Lee teams up with a priest to save her father from a dark force. The battle against the demon pushes them to their limits, leading to a dramatic exorcism. It's a story about family, faith, and fighting against evil.",
-            "image_url": "https://i.ebayimg.com/images/g/73cAAOSwGyxkuaw~/s-l400.jpg",
-            "gener": ["Horror", "Supernatural", "Psychological Thriller","Docudrama."],
-            "swiper":"https://m.media-amazon.com/images/M/MV5BOGQ3NzMwNGUtYWU0Mi00MWU4LWFmYzYtY2Y5OGJjN2Q3YzQxXkEyXkFqcGdeQVRoaXJkUGFydHlJbmdlc3Rpb25Xb3JrZmxvdw@@._V1_QL75_UX500_CR0,0,500,281_.jpg",
-            "card":"card-the exocrist.png",
-            "rating":4.5, 
-            "details": {
-              "cast": ["Russell Crowe", "Ryan Simpkins ", "Sam Worthington ", "Chloe Bailey","David Hyde Pierce"],
-              "director": "Joshua John Miller",
-              "producer": "Miramax",
-              "duration": "1hr 50mins", 
-              "year": 1973,
-              "language": ["English"],
-              "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737352286/oqst5eb0js43gct7dz6m.mp4"
-            }
-          },
-          {
-            "id":"2",    
-        "movie_name": "The Conjuring",
-        "description": "The Conjuring follows Ed and Lorraine Warren, paranormal investigators, as they help the Perron family, who are haunted by dark forces in their new farmhouse. Strange events escalate, and the Warrens discover the house is cursed by an evil spirit named Bathsheba. The spirit possesses the mother, Carolyn, and attempts to harm the family. With faith and determination, the Warrens perform an exorcism to save Carolyn and defeat the spirit, restoring peace to the family.",
-        "image_url": "https://m.media-amazon.com/images/I/5147F62RsML._AC_UF1000,1000_QL80_.jpg",
-        "swiper":"https://roseshavethoughts.com/wp-content/uploads/2013/11/the-conjuring-movie-2013-desktop-hd-wallpaper.jpg",
-        "card":"card-conjuring.png",
-        "gener": ["Supernatural Horror","Docudrama."],
-
-        "rating": 4,
-        "details": {
-          "cast": ["Patrick Wilson", "Vera Farmiga", "Lili Taylor", "Ron Livingston"],
-          "director": "James Wan",
-          "producer": "Tony DeRosa-Grund",
-          "duration": "1hr 53mins",
-          "year": 2013,
-          "language": ["English"],
-          "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737352956/zu40ikmopaeh9mjcgmop.mp4"
-        }
-      },
-      {
-        "id":"3",
-        "movie_name": "The Ring",
-        "description": "A cursed videotape causes anyone who watches it to die seven days later. Journalist Rachel investigates the mysterious deaths linked to the tape and uncovers the tragic story of Samara, a girl with psychic abilities who was killed by her mother. Rachel discovers the way to survive is by copying the tape and showing it to someone else. The cycle of horror continues as she grapples with the consequences of her actions..",
-        "image_url": "https://i.pinimg.com/originals/54/27/91/542791eeceb1a715961ca3c28c569a25.jpg",
-        "swiper":"https://littleredhorror.wordpress.com/wp-content/uploads/2020/06/ring4yh9.png",
-        "card":"card-the ring.png",
-        "gener": ["Supernatural Horror","Mystery"],
-
-        "rating":3.4,
-        "details": {
-          "cast": ["Naomi Watts", "Martin Henderson", "Brian Cox", "Daveigh Chase"],
-          "director": "Gore Verbinski",
-          "producer": "Walter F. Parkes Laurie MacDonald",
-          "duration": "1hr 55mins",
-          "year": 2002,
-          "language": ["English"],
-          "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737353178/nc6nzdhpppaarkkkm21q.mp4"
-        }
-      },
-      {
-        "id":"4",
-        "movie_name": "Halloween",
-        "description": "On Halloween night in 1963, six-year-old Michael Myers murders his sister and is institutionalized. Fifteen years later, he escapes and returns to his hometown of Haddonfield to stalk and kill teenagers, including babysitter Laurie Strode. As his psychiatrist Dr. Loomis hunts him, Michael methodically targets his victims with relentless precision. Laurie fights back, narrowly surviving multiple attacks. The film ends with Michael mysteriously vanishing after being shot, leaving his evil presence lingering.",
-        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlhnL06iNN3HEwnz_JJ-wnpsy_Tz1Gw8asiUuwLttenBX7c0MuJO0rO6P6m65A7gpJiX4&usqp=CAU",
-        "gener": ["Slasher Horror"],
-        "swiper":"https://m.media-amazon.com/images/M/MV5BM2E1ZGRjMjYtNDhmOC00MzUwLTlhNzYtNDNiYjYxMjM3YmZkXkEyXkFqcGdeQWpnYW1i._V1_.jpg",
-        "card":"card-halloween.png",
-         "rating": 3.2,
-        "details": {
-          "cast": ["Jamie Lee Curtis", "Donald Pleasence", "Tony Moran", "Nick Castle"],
-          "director": "John Carpenter",
-          "producer": "Debra Hill",
-          "duration": " 1hr 31mins",
-          "year": 1978,
-          "language": ["English"],
-          "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737353384/bnag3vs3ka0hcxpj7o9t.mp4"
-        }
-      },
-      {
-        "id":"5",
-        "movie_name": "Sinister",
-        "description": "Sinister follows true-crime writer Ellison Oswalt, who moves his family into a house where previous owners were murdered. He discovers disturbing Super 8 films of families being killed, which leads him to uncover a supernatural entity, Bughuul, who consumes children. As Ellison digs deeper, his family becomes ensnared in a terrifying cycle of death.",
-        "image_url": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11670095_p_v10_ak.jpg",
-        "gener": ["Supernatural horror", "Thriller"],
-        "rating": 3,
-        "details": {
-          "cast": ["Ethan Hawke", "Juliet Rylance", "Fred Thompson", "James Ransone"],
-          "director": "Scott Derrickson",
-          "producer": "Jason Blum",
-          "duration":" 1hr 49mins",
-          "year": 2012,
-          "language": ["English"],
-          "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737353529/xmflefv4s58ofjfnansc.mp4"
-        }
-      },
-      {
-        "id":"6",
-        "movie_name": "Insidious",
-        "description": "A married couple’s son, Dalton, falls into a coma after an attic accident. The family experiences paranormal events and learns that Dalton has the ability to astral project, becoming trapped in a supernatural realm called 'The Further.' To rescue him, Josh, his father, must enter The Further and confront demonic entities.",
-        "image_url": "https://image.tmdb.org/t/p/original/tmlDFIUpGRKiuWm9Ixc6CYDk4y0.jpg",
-        "gener": ["thriller.", "Supernatural horror"],
-        "rating": 2.5,
-        "details": {
-          "cast": ["Patrick Wilson", "Rose Byrne", "Lin Shaye"],
-          "director": "James Wan",
-          "producer": "Oren Peli",
-          "duration": "1hr 43mins",
-          "year": 2010,
-          "language": ["English"],
-          "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737353719/t0fbxhizjgmtgamrnqci.mp4"
-        }
-      },
-      {
-        "id":"7",
-        "movie_name": "IT",
-        "description": "A group of outcast children in the town of Derry, Maine, known as the 'Losers Club,' confronts a shape-shifting entity, Pennywise the Dancing Clown, who preys on their fears. Together, they face terrifying manifestations of their individual worst fears while uncovering the truth about Pennywise's 27-year cycle of feeding on children. They eventually confront Pennywise in his lair beneath an abandoned house, defeat him, and make a blood oath to return as adults if he ever resurfaces.",
-        "image_url": "https://m.media-amazon.com/images/I/81Q2fgQpBrL._AC_SX148_SY213_QL70_.jpg",
-        "gener": ["monster Horror", "Mystery","Thriller"],
-        "rating": 4,
-        "details": {
-          "cast": ["Jaeden Lieberher", "Bill Skarsgård", "Finn Wolfhard"],
-          "director": "Andy Muschietti",
-          "producer": "Dan Lin",
-          "duration": " 2hr 15mins",
-          "year": 2017,
-          "language": ["English"],
-          "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737354531/esi6j0apjbyc53wz9dk0.mp4"
-        }
-      }
-    ,
+  "movies": [
     {
-      "id":"8",
+      "id": "1",
+      "movie_name": "The Exorcist",
+      "description": "The Exorcism tells the story of Anthony Miller, an actor who starts acting strangely while working on a horror movie. His daughter Lee notices his odd behavior and fears something evil might be involved. As things get worse, Lee teams up with a priest to save her father from a dark force. The battle against the demon pushes them to their limits, leading to a dramatic exorcism. It's a story about family, faith, and fighting against evil.",
+      "image_url": "https://i.ebayimg.com/images/g/73cAAOSwGyxkuaw~/s-l400.jpg",
+      "genre": [
+        "Horror",
+        "Supernatural",
+        "Psychological Thriller",
+        "Docudrama."
+      ],
+      "swiper": "https://m.media-amazon.com/images/M/MV5BOGQ3NzMwNGUtYWU0Mi00MWU4LWFmYzYtY2Y5OGJjN2Q3YzQxXkEyXkFqcGdeQVRoaXJkUGFydHlJbmdlc3Rpb25Xb3JrZmxvdw@@._V1_QL75_UX500_CR0,0,500,281_.jpg",
+      "card": "card-the exocrist.png",
+      "rating": 4.5,
+      "details": {
+        "cast": [
+          "Russell Crowe",
+          "Ryan Simpkins ",
+          "Sam Worthington ",
+          "Chloe Bailey",
+          "David Hyde Pierce"
+        ],
+        "director": "Joshua John Miller",
+        "producer": "Miramax",
+        "duration": "1hr 50mins",
+        "year": 1973,
+        "language": ["English"],
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737352286/oqst5eb0js43gct7dz6m.mp4"
+      }
+    },
+    {
+      "id": "2",
+      "movie_name": "The Conjuring",
+      "description": "The Conjuring follows Ed and Lorraine Warren, paranormal investigators, as they help the Perron family, who are haunted by dark forces in their new farmhouse. Strange events escalate, and the Warrens discover the house is cursed by an evil spirit named Bathsheba. The spirit possesses the mother, Carolyn, and attempts to harm the family. With faith and determination, the Warrens perform an exorcism to save Carolyn and defeat the spirit, restoring peace to the family.",
+      "image_url": "https://m.media-amazon.com/images/I/5147F62RsML._AC_UF1000,1000_QL80_.jpg",
+      "swiper": "https://roseshavethoughts.com/wp-content/uploads/2013/11/the-conjuring-movie-2013-desktop-hd-wallpaper.jpg",
+      "card": "card-conjuring.png",
+      "genre": ["Supernatural Horror", "Docudrama."],
+
+      "rating": 4,
+      "details": {
+        "cast": [
+          "Patrick Wilson",
+          "Vera Farmiga",
+          "Lili Taylor",
+          "Ron Livingston"
+        ],
+        "director": "James Wan",
+        "producer": "Tony DeRosa-Grund",
+        "duration": "1hr 53mins",
+        "year": 2013,
+        "language": ["English"],
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737352956/zu40ikmopaeh9mjcgmop.mp4"
+      }
+    },
+    {
+      "id": "3",
+      "movie_name": "The Ring",
+      "description": "A cursed videotape causes anyone who watches it to die seven days later. Journalist Rachel investigates the mysterious deaths linked to the tape and uncovers the tragic story of Samara, a girl with psychic abilities who was killed by her mother. Rachel discovers the way to survive is by copying the tape and showing it to someone else. The cycle of horror continues as she grapples with the consequences of her actions..",
+      "image_url": "https://i.pinimg.com/originals/54/27/91/542791eeceb1a715961ca3c28c569a25.jpg",
+      "swiper": "https://littleredhorror.wordpress.com/wp-content/uploads/2020/06/ring4yh9.png",
+      "card": "card-the ring.png",
+      "genre": ["Supernatural Horror", "Mystery"],
+
+      "rating": 3.4,
+      "details": {
+        "cast": [
+          "Naomi Watts",
+          "Martin Henderson",
+          "Brian Cox",
+          "Daveigh Chase"
+        ],
+        "director": "Gore Verbinski",
+        "producer": "Walter F. Parkes Laurie MacDonald",
+        "duration": "1hr 55mins",
+        "year": 2002,
+        "language": ["English"],
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737353178/nc6nzdhpppaarkkkm21q.mp4"
+      }
+    },
+    {
+      "id": "4",
+      "movie_name": "Halloween",
+      "description": "On Halloween night in 1963, six-year-old Michael Myers murders his sister and is institutionalized. Fifteen years later, he escapes and returns to his hometown of Haddonfield to stalk and kill teenagers, including babysitter Laurie Strode. As his psychiatrist Dr. Loomis hunts him, Michael methodically targets his victims with relentless precision. Laurie fights back, narrowly surviving multiple attacks. The film ends with Michael mysteriously vanishing after being shot, leaving his evil presence lingering.",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlhnL06iNN3HEwnz_JJ-wnpsy_Tz1Gw8asiUuwLttenBX7c0MuJO0rO6P6m65A7gpJiX4&usqp=CAU",
+      "genre": ["Slasher Horror"],
+      "swiper": "https://m.media-amazon.com/images/M/MV5BM2E1ZGRjMjYtNDhmOC00MzUwLTlhNzYtNDNiYjYxMjM3YmZkXkEyXkFqcGdeQWpnYW1i._V1_.jpg",
+      "card": "card-halloween.png",
+      "rating": 3.2,
+      "details": {
+        "cast": [
+          "Jamie Lee Curtis",
+          "Donald Pleasence",
+          "Tony Moran",
+          "Nick Castle"
+        ],
+        "director": "John Carpenter",
+        "producer": "Debra Hill",
+        "duration": " 1hr 31mins",
+        "year": 1978,
+        "language": ["English"],
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737353384/bnag3vs3ka0hcxpj7o9t.mp4"
+      }
+    },
+    {
+      "id": "5",
+      "movie_name": "Sinister",
+      "description": "Sinister follows true-crime writer Ellison Oswalt, who moves his family into a house where previous owners were murdered. He discovers disturbing Super 8 films of families being killed, which leads him to uncover a supernatural entity, Bughuul, who consumes children. As Ellison digs deeper, his family becomes ensnared in a terrifying cycle of death.",
+      "image_url": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11670095_p_v10_ak.jpg",
+      "genre": ["Supernatural horror", "Thriller"],
+      "rating": 3,
+      "details": {
+        "cast": [
+          "Ethan Hawke",
+          "Juliet Rylance",
+          "Fred Thompson",
+          "James Ransone"
+        ],
+        "director": "Scott Derrickson",
+        "producer": "Jason Blum",
+        "duration": " 1hr 49mins",
+        "year": 2012,
+        "language": ["English"],
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737353529/xmflefv4s58ofjfnansc.mp4"
+      }
+    },
+    {
+      "id": "6",
+      "movie_name": "Insidious",
+      "description": "A married couple’s son, Dalton, falls into a coma after an attic accident. The family experiences paranormal events and learns that Dalton has the ability to astral project, becoming trapped in a supernatural realm called 'The Further.' To rescue him, Josh, his father, must enter The Further and confront demonic entities.",
+      "image_url": "https://image.tmdb.org/t/p/original/tmlDFIUpGRKiuWm9Ixc6CYDk4y0.jpg",
+      "genre": ["thriller.", "Supernatural horror"],
+      "rating": 2.5,
+      "details": {
+        "cast": ["Patrick Wilson", "Rose Byrne", "Lin Shaye"],
+        "director": "James Wan",
+        "producer": "Oren Peli",
+        "duration": "1hr 43mins",
+        "year": 2010,
+        "language": ["English"],
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737353719/t0fbxhizjgmtgamrnqci.mp4"
+      }
+    },
+    {
+      "id": "7",
+      "movie_name": "IT",
+      "description": "A group of outcast children in the town of Derry, Maine, known as the 'Losers Club,' confronts a shape-shifting entity, Pennywise the Dancing Clown, who preys on their fears. Together, they face terrifying manifestations of their individual worst fears while uncovering the truth about Pennywise's 27-year cycle of feeding on children. They eventually confront Pennywise in his lair beneath an abandoned house, defeat him, and make a blood oath to return as adults if he ever resurfaces.",
+      "image_url": "https://m.media-amazon.com/images/I/81Q2fgQpBrL._AC_SX148_SY213_QL70_.jpg",
+      "genre": ["monster Horror", "Mystery", "Thriller"],
+      "rating": 4,
+      "details": {
+        "cast": ["Jaeden Lieberher", "Bill Skarsgård", "Finn Wolfhard"],
+        "director": "Andy Muschietti",
+        "producer": "Dan Lin",
+        "duration": " 2hr 15mins",
+        "year": 2017,
+        "language": ["English"],
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737354531/esi6j0apjbyc53wz9dk0.mp4"
+      }
+    },
+    {
+      "id": "8",
       "movie_name": "Demonte Colony",
       "description": "Four friends visit a haunted mansion in Chennai, where strange occurrences begin to plague them after their visit. They uncover the dark history of the mansion, involving a vengeful spirit and a cursed diamond necklace. As supernatural events intensify, the friends realize they are being targeted by the ghost of Lord John De Monte. With each passing moment, they struggle to escape the curse, leading to their eventual demise.",
       "image_url": "https://www.justwatch.com/images/poster/321354041/s166/demonte-colony",
-      "gener": ["Horror", "Thriller"],
+      "genre": ["Horror", "Thriller"],
       "rating": 3.4,
       "details": {
         "cast": ["Arulnithi ", "Arulnithi ", "Sananth ", "Antti Jääskeläinen"],
@@ -144,49 +174,49 @@
         "duration": "1hr 47mins",
         "year": 2015,
         "language": ["Tamil"],
-        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737354715/cfkya9gpbzb3hxvvf5dl.mp4"
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737354715/cfkya9gpbzb3hxvvf5dl.mp4"
       }
     },
     {
-      "id":"9",
+      "id": "9",
       "movie_name": "Arunthathi",
       "description": "A woman named Arundhati discovers she is the reincarnation of her great-grandmother Jejamma, who once sacrificed her life to defeat the evil spirit of her cousin, Pasupathi. Pasupathi's spirit, seeking revenge, terrorizes Arundhati's family, forcing her to confront him with the help of a mystical weapon made from Jejamma's bones. Arundhati ultimately sacrifices herself to destroy Pasupathi, but she is later revealed to be Jejamma's reincarnation, ensuring her family’s safety.",
       "image_url": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p194655_v_v8_ab.jpg",
-      "gener": ["Horror","Thriller", "Mystery"],
+      "genre": ["Horror", "Thriller", "Mystery"],
       "rating": 3.8,
       "details": {
         "cast": ["JAnushka Shetty", "Sonu Sood", "Sayaji Shinde"],
-        "director": "Kodi Ramakrishna", 
+        "director": "Kodi Ramakrishna",
         "producer": "Shyam Prasad Reddy",
         "duration": "2hr 51mins",
         "year": 2009,
         "language": ["Tamil"],
-        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737354943/ayvkehgkjtbvvlbpnn4v.mp4"
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737354943/ayvkehgkjtbvvlbpnn4v.mp4"
       }
     },
     {
-      "id":"10",
+      "id": "10",
       "movie_name": "Annabelle",
       "description": "A medical student gifts his wife a rare porcelain doll, unknowingly bringing a demonic presence into their home after a violent attack by a cult. As paranormal events escalate, the family must confront the demon that seeks to claim their souls, ultimately leading to a tragic sacrifice. The doll, once thought destroyed, resurfaces in a new home, continuing its cursed existence.",
       "image_url": "https://musicart.xboxlive.com/7/17105100-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080",
-      "gener": ["Supernatural Horror"],
+      "genre": ["Supernatural Horror"],
       "rating": 2.6,
       "details": {
-        "cast": ["Annabelle Wallis", "Ward Horton","Alfre Woodard"],
+        "cast": ["Annabelle Wallis", "Ward Horton", "Alfre Woodard"],
         "director": "John R. Leonetti",
         "producer": "James Wan",
         "duration": "1hr 39mins",
         "year": 2014,
         "language": ["English"],
-        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737355156/vfib9eaym5g8pbjlz3ru.mp4"
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737355156/vfib9eaym5g8pbjlz3ru.mp4"
       }
     },
     {
-      "id":"11",
+      "id": "11",
       "movie_name": "Final Destination 4",
       "description": "A group of people narrowly escape a deadly accident at a stock car race, only to be hunted down by Death, which relentlessly kills them one by one in increasingly gruesome accidents. After a series of premonitions, Nick O'Bannon and his friends try to evade their fates, but Death's plan remains inevitable. As they attempt to break the cycle, they realize that Death's design cannot be avoided.",
       "image_url": "https://100-movie.com/wp-content/uploads/2022/11/nDvntFkWPoh5qVosZOSDNT4QtuA.jpg",
-      "gener": ["Supernatural Horror"],
+      "genre": ["Supernatural Horror"],
       "rating": 2.6,
       "details": {
         "cast": ["Bobby Campo", "Shantel VanSanten", "Mykelti Williamson"],
@@ -195,32 +225,37 @@
         "duration": "1hr 22mins",
         "year": 2009,
         "language": ["English"],
-        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737355518/hstgv7gftiinoahzub70.mp4"
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737355518/hstgv7gftiinoahzub70.mp4"
       }
     },
     {
-      "id":"12",
+      "id": "12",
       "movie_name": "A Quiet Place",
       "description": "In a post-apocalyptic world, a family must live in silence to avoid being hunted by alien creatures that hunt by sound. The Abbott family communicates using sign language and takes extreme precautions to stay quiet. As Evelyn goes into labor, the family faces terrifying new challenges to survive and protect each other.",
       "image_url": "https://upload.wikimedia.org/wikipedia/en/a/a0/A_Quiet_Place_film_poster.png",
-      "gener": ["Post-apocalyptic Horror"],
+      "genre": ["Post-apocalyptic Horror"],
       "rating": 4.3,
       "details": {
-        "cast": ["Emily Blunt", "John Krasinski", "Millicent Simmonds", "Noah Jupe"],
+        "cast": [
+          "Emily Blunt",
+          "John Krasinski",
+          "Millicent Simmonds",
+          "Noah Jupe"
+        ],
         "director": "John Krasinski",
         "producer": "Michael Bay, Andrew Form, Brad Fuller",
         "duration": "1hr 30mins",
         "year": 2018,
         "language": ["English"],
-        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737355801/nlljockxfih1qi87yrez.mp4"
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737355801/nlljockxfih1qi87yrez.mp4"
       }
     },
     {
-      "id":"12",
+      "id": "12",
       "movie_name": "Maya",
       "description": "Vasanth, an artist, investigates the vengeful spirit of Maya Matthews, a woman who died in an asylum after murdering her husband. Meanwhile, Apsara, a single mother struggling with financial issues, encounters strange happenings tied to a horror film. As the lines between reality and the supernatural blur, Apsara discovers that Maya is her own mother, and a final deadly encounter ensues.",
       "image_url": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/maya-et00032649-13-11-2020-05-48-07.jpg",
-      "gener": ["Neo-noir Horror"],
+      "genre": ["Neo-noir Horror"],
       "rating": 3.5,
       "details": {
         "cast": ["Nayanthara", "Aari Arujunan"],
@@ -229,16 +264,16 @@
         "duration": "1hr 52mins",
         "year": 2015,
         "language": ["Tamil"],
-        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737356208/vkoczmbg8dwsegjchflo.mp4"
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737356208/vkoczmbg8dwsegjchflo.mp4"
       }
     },
     {
-      "id":"13",
+      "id": "13",
       "movie_name": "Megalomaniac",
       "description": "In 1997, the Butcher, a notorious serial killer, strikes and then vanishes without a trace. Years later, his children are forced to carry on his brutal legacy. They fall deeper into darkness as they embrace his wrath and violent tendencies. Caught in a cycle of carnage, they struggle to escape their father's shadow.",
       "image_url": "https://m.media-amazon.com/images/M/MV5BNGY0MTdlMDUtNzNhZC00MWQzLWJiZDAtNjdjODU3ZmM5ZWNhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-      "gener": ["Slasher revenge thriller", "psychological horror "],
-      "rating":3,
+      "genre": ["Slasher revenge thriller", "psychological horror "],
+      "rating": 3,
       "details": {
         "cast": ["Eline Schumacher", "Benjamin Ramon"],
         "director": "Karim Ouelhaj",
@@ -246,32 +281,37 @@
         "duration": "1hr 58mins",
         "year": 2023,
         "language": ["French"],
-        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737356388/akyuqr3hrip4zr5h4jeo.mp4"
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737356388/akyuqr3hrip4zr5h4jeo.mp4"
       }
     },
     {
-      "id":"14",
+      "id": "14",
       "movie_name": "Thirteen Ghosts",
       "description": "A widower inherits a mansion, only to discover it is haunted by 12 ghosts trapped by a supernatural machine. With the help of a psychic, he must stop the machine and save his children before becoming the 13th ghost himself. The ghosts are freed when the machine malfunctions.",
       "image_url": "https://m.media-amazon.com/images/I/81eWCj5NltS.jpg",
-      "gener": ["Supernatural Thriller"],
-      "rating":3.6,
+      "genre": ["Supernatural Thriller"],
+      "rating": 3.6,
       "details": {
-        "cast": ["Tony Shalhoub", "Embeth Davidtz", "Matthew Lillard", "Shannon Elizabeth"],
+        "cast": [
+          "Tony Shalhoub",
+          "Embeth Davidtz",
+          "Matthew Lillard",
+          "Shannon Elizabeth"
+        ],
         "director": "Steve Beck",
         "producer": "Gilbert Adler",
         "duration": "1hr 31mins",
         "year": 2001,
         "language": ["English"],
-         "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737359634/rgixdowv4z78obpln81a.mp4"
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737359634/rgixdowv4z78obpln81a.mp4"
       }
     },
     {
-      "id":"15",
+      "id": "15",
       "movie_name": "Ghoul",
       "description": "An American film crew travels to Ukraine to investigate tales of cannibalism during the Holodomor. Their séance to summon a spirit unwittingly calls forth the ghost of Andrei Chikatilo, a notorious serial killer, leading to a series of horrifying deaths. Trapped and hunted, the crew faces a gruesome end.",
       "image_url": "https://m.media-amazon.com/images/M/MV5BMzA2NTMxNzE2M15BMl5BanBnXkFtZTgwOTQwOTU3NDE@._V1_.jpg",
-      "gener": ["Found Footage Horror ", "Docudrama"],
+      "genre": ["Found Footage Horror ", "Docudrama"],
       "rating": 2.8,
       "details": {
         "cast": ["Jennifer Armour", "Alina Golovlyova", "Jeremy Isabella"],
@@ -280,86 +320,106 @@
         "duration": "1hr 26mins",
         "year": 2015,
         "language": ["English", "Ukrainian"],
-        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737360305/faovl54ql3womhucw8eh.mp4"
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737360305/faovl54ql3womhucw8eh.mp4"
       }
     },
 
     {
-      "id":"16",
+      "id": "16",
       "movie_name": "The Amityville Horror",
       "description": "In 1975, the Lutz family moves into a house with a dark history of a mass murder and malevolent spirits. Paranormal events and a sinister possession drive the father to violence, forcing the family to flee after just 28 days. The haunting is linked to a preacher's violent past and the supernatural influence of the house.",
       "image_url": "https://play-lh.googleusercontent.com/HK4Mu4Fv7DzqpuliW9PrZwhLgColUP4MNq1sHKsBA9RXj3s6k9nXUhq0PECr1gooOcC6Ftr3TFG-wecSRmo",
-      "gener": ["Supernatural Horror","docudrama"],
+      "genre": ["Supernatural Horror", "docudrama"],
       "rating": 3.9,
       "details": {
-        "cast": ["Ryan Reynolds", "Melissa George", "Chloë Grace Moretz","Philip Baker Hall"],
+        "cast": [
+          "Ryan Reynolds",
+          "Melissa George",
+          "Chloë Grace Moretz",
+          "Philip Baker Hall"
+        ],
         "director": "Andrew Douglas",
         "producer": "Michael Bay, Andrew Form, Bradley Fuller",
         "duration": "1hr 29mins",
         "year": 1979,
         "language": ["English"],
-        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737360542/kteuvpmf6e2dwmp7nqq1.mp4"
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737360542/kteuvpmf6e2dwmp7nqq1.mp4"
       }
     },
     {
-      "id":"17",
+      "id": "17",
       "movie_name": "The Conjuring 2",
       "description": "In 1977, paranormal investigators Ed and Lorraine Warren travel to England to help the Hodgson family, who are plagued by poltergeist activity in their Enfield council home. The Warrens uncover that a demonic entity, Valak, is manipulating the haunting. With Lorraine's faith and knowledge, they confront the demon to save the family.",
       "image_url": "https://static.wixstatic.com/media/c28f72_5fef23933b2941948a027fff2e10c650~mv2.jpg/v1/fill/w_552,h_782,al_c,lg_1,q_85,enc_avif,quality_auto/c28f72_5fef23933b2941948a027fff2e10c650~mv2.jpg",
-      "gener": ["Supernatural Horror","docudrama"],
+      "genre": ["Supernatural Horror", "docudrama"],
       "rating": 4.3,
       "details": {
-        "cast": ["Vera Farmiga", "Patrick Wilson", "Madison Wolfe", "Frances O'Connor"],
+        "cast": [
+          "Vera Farmiga",
+          "Patrick Wilson",
+          "Madison Wolfe",
+          "Frances O'Connor"
+        ],
         "director": "James Wan",
         "producer": "Peter Safran, Rob Cowan,James Wan",
         "duration": "2hr 14mins",
         "year": 2016,
         "language": ["English"],
-        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737360733/o0w4grbsu6jn6tvoltkx.mp4"
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737360733/o0w4grbsu6jn6tvoltkx.mp4"
       }
     },
     {
-      "id":"18",
+      "id": "18",
       "movie_name": "The Curse of La Llorona",
       "description": "In 1973 Los Angeles, a social worker and her children are haunted by La Llorona, a malevolent spirit from Latin American folklore. As the curse threatens their lives, they seek the help of a former priest turned shaman to confront the entity. Together, they uncover the spirit's tragic past and battle to break the curse.",
       "image_url": "https://i-viaplay-com.akamaized.net/viaplay-prod/132/8/1562848858-08ada0cc8fdf2068d822876879047a00e7a3e0bc.jpg?width=400&height=600",
-      "swiper":"https://m.media-amazon.com/images/S/pv-target-images/72cc30a5451c60013dd4296be65c5c2c35e2f86faf4f585005d9fc92ce730a32._SX1080_FMjpg_.jpg",  
-      "card":"card-the cruse of la llorona.png", 
-      "gener": [" Supernatural Horror","docudrama"],
+      "swiper": "https://m.media-amazon.com/images/S/pv-target-images/72cc30a5451c60013dd4296be65c5c2c35e2f86faf4f585005d9fc92ce730a32._SX1080_FMjpg_.jpg",
+      "card": "card-the cruse of la llorona.png",
+      "genre": [" Supernatural Horror", "docudrama"],
       "rating": 2.7,
       "details": {
-        "cast": ["Linda Cardellini", "Raymond Cruz", "Patricia Velásquez", "Marisol Ramirez"],
+        "cast": [
+          "Linda Cardellini",
+          "Raymond Cruz",
+          "Patricia Velásquez",
+          "Marisol Ramirez"
+        ],
         "director": "Michael Chaves",
         "producer": "James Wan, Gary Dauberman, Emile Gladstone",
         "duration": "1hr 33mins",
         "year": 2019,
         "language": ["English"],
-        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737360911/vcojm68xcmwfz9ctc0jx.mp4"
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737360911/vcojm68xcmwfz9ctc0jx.mp4"
       }
     },
     {
-      "id":"19",
+      "id": "19",
       "movie_name": "Veronica",
       "description": "a teenage girl, Verónica, conducts a séance with friends during a solar eclipse, unwittingly summoning a dark spirit that attaches itself to her. As paranormal events escalate, she struggles to protect her siblings while uncovering the truth about her possession. Inspired by true events, the story builds to a chilling and tragic conclusion.",
       "image_url": "https://mlmillerwrites.com/wp-content/uploads/2018/10/veronica.jpg",
-    "gener": ["Supernatural Horror","docudrama"],
+      "genre": ["Supernatural Horror", "docudrama"],
       "rating": 4,
       "details": {
-        "cast": ["Sandra Escacena", "Bruna González", "Claudia Placer", "Iván Chavero"],
+        "cast": [
+          "Sandra Escacena",
+          "Bruna González",
+          "Claudia Placer",
+          "Iván Chavero"
+        ],
         "director": "Paco Plaza",
         "producer": "Apache Films, El Expediente La Película AIE",
         "duration": "1hr 45mins",
         "year": 2017,
         "language": ["Spanish"],
-        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737361820/nrhe23enjvq7fhysdnbc.mp4"
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737361820/nrhe23enjvq7fhysdnbc.mp4"
       }
     },
     {
-      "id":"20",
+      "id": "20",
       "movie_name": "The Crucifixion",
       "description": "A journalist investigates the mysterious death of a nun during an exorcism in Romania, uncovering dark secrets and confronting her own loss of faith. As she delves deeper, she becomes entangled with the demon responsible, leading to a harrowing fight for her soul. Inspired by the true events of the Tanacu exorcism case.",
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxoql2teRpBnTAnqLYV8ES90PzrbM8l9wMZLsdZ6m5mDrlELIdSoEaLkj9z9jw8jZZtQ&usqp=CAU",
-      "gener": ["Supernatural Horror"],
+      "genre": ["Supernatural Horror"],
       "rating": 3.6,
       "details": {
         "cast": ["Sophie Cookson", "Corneliu Ulici", "Laure Killing"],
@@ -368,15 +428,15 @@
         "duration": "1hr 30mins",
         "year": 2017,
         "language": ["English"],
-         "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737361985/jii2kycfvpmdqjgvpmob.mp4"
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737361985/jii2kycfvpmdqjgvpmob.mp4"
       }
     },
     {
-      "id":"21",
+      "id": "21",
       "movie_name": "Annabelle: Creation",
       "description": "A dollmaker and his wife, grieving the loss of their daughter, unknowingly unleash a demon through a possessed doll, terrorizing the orphan girls they take in. As one of the girls, Janice, becomes possessed, the terrifying chain of events leads to a dark origin for the Annabelle doll. The story reveals how the demon's search for a human host begins.",
       "image_url": "https://image.tmdb.org/t/p/original/6LksVLIziTsb1O9TLWNujVSGGcj.jpg",
-      "gener": ["Supernatural Horror","docudrama"],
+      "genre": ["Supernatural Horror", "docudrama"],
       "rating": 4.3,
       "details": {
         "cast": ["Stephanie Sigman", "Talitha Bateman", "Anthony LaPaglia"],
@@ -385,15 +445,15 @@
         "duration": "1hr 49mins",
         "year": 2017,
         "language": ["English"],
-        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737361985/jii2kycfvpmdqjgvpmob.mp4"
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737361985/jii2kycfvpmdqjgvpmob.mp4"
       }
     },
     {
-      "id":"22",
+      "id": "22",
       "movie_name": "The Babadook",
       "description": "A grieving widow, Amelia, struggles with her troubled six-year-old son, Samuel, whose erratic behavior escalates after the discovery of a sinister pop-up book called Mister Babadook. As the mysterious, top-hatted monster begins tormenting their lives, Amelia battles her own sanity while trying to protect her son. The film delves into themes of grief, motherhood, and inner demons, culminating in a haunting confrontation with the Babadook.",
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYWWajw40kgltfYFUOUGEkd9XNnPKjTYVEmCFoP7x79S_B7zu4P9UVmx5Z8QDOlhL3luM&usqp=CAU",
-      "gener": ["Psychological supernatural horror"],
+      "genre": ["Psychological supernatural horror"],
       "rating": 4.2,
       "details": {
         "cast": ["Essie Davis", "Noah Wiseman", "Daniel Henshall"],
@@ -402,32 +462,37 @@
         "duration": "1hr 34mins",
         "year": 2014,
         "language": ["English"],
-        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737363894/wo1rf9g5akye6fstaqt9.mp4"
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737363894/wo1rf9g5akye6fstaqt9.mp4"
       }
-    },  
+    },
     {
-      "id":"23",
+      "id": "23",
       "movie_name": "The Grudge",
       "description": "The Grudge follows a curse born from a violent death in a Tokyo house, which haunts and kills anyone who encounters it. Karen Davis, an American exchange student, uncovers the terrifying truth as she becomes entangled in the chain of deaths linked to the vengeful spirits. The nonlinear narrative reveals the backstory of the curse and its horrific consequences.",
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStrNiDirHtLwfBgHInEGvYlPooxI9WTkLpQw&s",
-      "gener": ["Supernatural horror."],
+      "genre": ["Supernatural horror."],
       "rating": 3.7,
       "details": {
-        "cast": ["Sarah Michelle Gellar", "Jason Behr", "Clea DuVal","Bill Pullman"],
+        "cast": [
+          "Sarah Michelle Gellar",
+          "Jason Behr",
+          "Clea DuVal",
+          "Bill Pullman"
+        ],
         "director": "Takashi Shimizu",
         "producer": "Sam Raimi",
         "duration": "1hr 31mins",
         "year": 2004,
         "language": ["English"],
-        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737364291/gf3zysvysgz59qtxqvfh.mp4"
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737364291/gf3zysvysgz59qtxqvfh.mp4"
       }
     },
     {
-      "id":"24",
+      "id": "24",
       "movie_name": "Scream",
       "description": "Set in the small town of Woodsboro, 'Scream' follows high school student Sidney Prescott as she and her friends are terrorized by a masked serial killer known as Ghostface. The killer exploits horror film clichés while targeting Sidney, revealing a deeper connection to her past. The film combines suspense, humor, and self-aware commentary on the slasher genre.",
       "image_url": "https://image.tmdb.org/t/p/original/xVjk4TPttO1dddHRw5YwKGgQPRP.jpg",
-      "gener": ["Thriller","docudrama"],
+      "genre": ["Thriller", "docudrama"],
       "rating": 3.4,
       "details": {
         "cast": ["Neve Campbell", "Courteney Cox", "David Arquette"],
@@ -436,9 +501,8 @@
         "duration": "1hr 51mins",
         "year": 1996,
         "language": ["English"],
-        "video_url":"https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737364457/hjfo3ngmewsbfq0mawm4.mp4"
+        "video_url": "https://res.cloudinary.com/dmsp2ubt0/video/upload/v1737364457/hjfo3ngmewsbfq0mawm4.mp4"
       }
     }
   ]
-  
-  }
+}

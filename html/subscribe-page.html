@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kimii Horror Subscription</title>
+    <script src="./../java script/subscription.js" type="module" defer></script>
+    <link rel="stylesheet" href="./../css/subscription.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  </head>
+  <body>
+    <div id="subscriptionSection" class="subscription-container">
+      <div class="subscription-card">
+        <h2 class="plan-title">7 Days Plan</h2>
+        <p class="plan-price">$5</p>
+        <button class="subscribe-btn" onclick="subscribe('7 Days')">
+          Subscribe
+        </button>
+      </div>
+      <div class="subscription-card">
+        <h2 class="plan-title">1 Month Plan</h2>
+        <p class="plan-price">$12</p>
+        <button class="subscribe-btn" onclick="subscribe('1 Month')">
+          Subscribe
+        </button>
+      </div>
+      <div class="subscription-card">
+        <h2 class="plan-title">3 Months Plan</h2>
+        <p class="plan-price">$30</p>
+        <button class="subscribe-btn" onclick="subscribe('3 Months')">
+          Subscribe
+        </button>
+      </div>
+    </div>
+
+    <div id="userDetails" class="user-details">
+      <h2>User Subscription Details</h2>
+      <p><strong>Name:</strong> <span id="userName"></span></p>
+      <p><strong>User ID:</strong> <span id="userId"></span></p>
+      <p><strong>Subscription ID:</strong> <span id="subscriptionId"></span></p>
+      <p>
+        <strong>Subscription Date:</strong> <span id="subscriptionDate"></span>
+      </p>
+      <p><strong>Plan Validity:</strong> <span id="planValidity"></span></p>
+    </div>
+  </body>
+</html>
