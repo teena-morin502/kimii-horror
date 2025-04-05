@@ -76,7 +76,7 @@ async function filterMovies() {
 
       // ✅ On Click, Redirect to Movie Details Page with Firebase ID
       movieCard.addEventListener("click", () => {
-        window.location.href = `details.html?id=${movie.id}`;
+        window.location.href = `./../html/details.html?id=${movie.id}`;
       });
 
       resultContainer.appendChild(movieCard);

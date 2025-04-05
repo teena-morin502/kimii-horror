@@ -1,9 +1,9 @@
-// Import Firebase SDK
+
 import { initializeApp, getApps } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
 import { getFirestore, collection, getDocs, doc, getDoc, setDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js";
 
-// Firebase Configuration
+
 const firebaseConfig = {
     apiKey: "AIzaSyAaJ8_qJrVVJnYlSdLQ1D5vaVRpS79GZ1E",
     authDomain: "kimii-horror.firebaseapp.com",
@@ -14,19 +14,19 @@ const firebaseConfig = {
     measurementId: "G-7KM8QRZTCR"
 };
 
-// Initialize Firebase
+
 const app = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
 
-// Show Alert Function with SweetAlert2
+
 function showAlert(title, text, icon, callback = null) {
   Swal.fire({
       title: title,
       text: text,
       icon: icon,
-      confirmButtonColor: "#D10000", // Kimii Horror Red
-      background: "#111", // Dark theme
+      confirmButtonColor: "#D10000",
+      background: "#111",
       color: "#fff",
       confirmButtonText: "OK",
   }).then(() => {
@@ -34,9 +34,9 @@ function showAlert(title, text, icon, callback = null) {
   });
 }
 
-// Load Movies from Firestore
+// loading the movies from the firebase.....
 async function loadMovies() {
-    console.log("⏳ Loading movies...");
+    console.log(" Loading movies...");
 
     const containers = {
         titleMovies: document.getElementById("titleMoviesContainer"),
@@ -46,9 +46,11 @@ async function loadMovies() {
     };
 
     if (Object.values(containers).some(container => !container)) {
-        console.error("❌ Error: Missing container elements in HTML.");
+        console.error("Error: Missing container elements in HTML.");
         return;
     }
+
+
 
     try {
         const moviesSnapshot = await getDocs(collection(db, "movies"));
@@ -76,7 +78,7 @@ async function loadMovies() {
         movies.forEach((movie) => {
             if (movie.swiper) {
                 containers.titleMovies.innerHTML += generateMovieSlideHTML(movie);
-                setupWishlist(movie);  // Attach wishlist functionality after generating the slide
+                setupWishlist(movie);
             }
         });
 
@@ -85,10 +87,8 @@ async function loadMovies() {
         containers.realHorrorMovies.innerHTML = generateMovieCardsHTML(realHorrorMovies);
         containers.recommendedMovies.innerHTML = generateMovieCardsHTML(recommendedMovies);
 
-        // Attach Watch Now Listeners
+        // Attach Watch Now and swiper code Listeners
         attachWatchNowListeners();
-
-        // Initialize Swiper
         initializeSwiper();
 
     } catch (error) {
@@ -96,7 +96,7 @@ async function loadMovies() {
     }
 }
 
-// Generate Movie Slide HTML for Swiper
+//  HTML for Swiper
 function generateMovieSlideHTML(movie) {
     return `
         <div class="swiper-slide">
@@ -120,7 +120,7 @@ function generateMovieSlideHTML(movie) {
     `;
 }
 
-// Generate Movie Cards HTML for Other Sections (Top 10, Real Horror, Recommended)
+// Generate Movie Cards (Top 10, Real Horror, Recommended)
 function generateMovieCardsHTML(movies) {
     return movies.map(movie => `
         <div class="movie_slide">
@@ -175,7 +175,7 @@ async function setupWishlist(movie) {
                     "You need to log in to add movies to your wishlist.",
                     "warning",
                     () => {
-                        window.location.href = "./html/login.html"; // Redirect only after user clicks OK
+                        window.location.href = "./html/login.html"; 
                     }
                 );
             });

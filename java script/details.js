@@ -162,7 +162,7 @@ async function setupWishlist(movie) {
     });
 }
 
-// 🎥 Load Recommended Movies
+// Load Recommended Movies
 async function loadRecommendedMovies(currentMovieId) {
     const recommendedContainer = document.getElementById("recommended-grid");
     if (!recommendedContainer) return;
@@ -196,8 +196,8 @@ function showAlert(title, text, icon, callback = null) {
         title: title,
         text: text,
         icon: icon,
-        confirmButtonColor: "#D10000", // Kimii Horror Red
-        background: "#111", // Dark theme
+        confirmButtonColor: "#D10000",
+        background: "#111", 
         color: "#fff",
         confirmButtonText: "OK",
     }).then(() => {
